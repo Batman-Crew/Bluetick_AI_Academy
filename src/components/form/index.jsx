@@ -65,19 +65,25 @@ export default function LearningAdvisorForm({ formType, setFormType }) {
       return;
     }
 
-    try {
-      console.log("🌐 Sending data to /api/bigin...");
-      const res = await fetch("/api/bigin", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          ...formData,
-          formType, // ✅ Important for backend
-        }),
-      });
+   try {
+     console.log("🌐 Sending data to Amplify Lambda...");
 
-      const result = await res.json();
-      console.log("📨 Zoho API Response:", result);
+     const API_URL = "https://4tm07os0jl.execute-api.ap-south-1.amazonaws.com/prod/items";
+
+    const res = await fetch(API_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        ...formData,
+        formType, // ✅ Important for backend
+      }),
+    });
+
+    const result = await res.json();
+    console.log("📨 Zoho API Response:", result);
+    } catch (err) {
+    console.error("🔥 Error sending data:", err); 
+  }
 
       if (result.success) {
         setPopupType("success");
@@ -289,3 +295,4 @@ export default function LearningAdvisorForm({ formType, setFormType }) {
     </div>
   );
 }
+
