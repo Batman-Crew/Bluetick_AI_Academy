@@ -8,7 +8,7 @@ export async function POST(req) {
     // -------------------------------------------------
     // ✅ 1. Refresh Zoho Access Token
     // -------------------------------------------------
-    console.log(process.env.ZOHO_REFRESH_TOKEN,process.env.ZOHO_CLIENT_ID,process.env.ZOHO_CLIENT_SECRET); //env check for amlify
+//    console.log(process.env.ZOHO_REFRESH_TOKEN,process.env.ZOHO_CLIENT_ID,process.env.ZOHO_CLIENT_SECRET); //env check for amlify
     const tokenRes = await fetch(
       `https://accounts.zoho.in/oauth/v2/token?refresh_token=${process.env.ZOHO_REFRESH_TOKEN}&client_id=${process.env.ZOHO_CLIENT_ID}&client_secret=${process.env.ZOHO_CLIENT_SECRET}&grant_type=refresh_token`,
       { method: "POST" }
