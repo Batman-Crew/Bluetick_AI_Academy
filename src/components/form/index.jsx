@@ -1,5 +1,4 @@
 'use client';
-
 import { useState } from 'react';
 import Image from 'next/image';
 import Captcha from "@/assets/img/captcha.png";
@@ -57,61 +56,50 @@ export default function LearningAdvisorForm({ formType, setFormType }) {
   // -------------------- Submit --------------------
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("🚀 Form Type:", formType);
-    console.log("📦 Form Data:", formData);
+    console.log("Form Type:", formType);
+    console.log("Form Data:", formData);
 
     if (!validate()) {
-      console.warn("⚠️ Validation failed");
+      console.warn("Validation failed");
       return;
     }
-    
+
     try {
-    console.log("Sending data to Amplify Lambda...");
-    const API_URL = "https://4tm07os0jl.execute-api.ap-south-1.amazonaws.com/prod/items";
+      console.log("Sending data to Amplify Lambda...");
+      const API_URL = "https://4tm07os0jl.execute-api.ap-south-1.amazonaws.com/prod/items";
 
-    const res = await fetch(API_URL, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        ...formData,
-        formType,
-      }),
-    });
+      const res = await fetch(API_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ...formData,
+          formType,
+        }),
+      });
 
-    const result = await res.json();
-    console.log("Zoho API Response:", result);
-
-    if (result.success) {
-      alert("Thank you! We'll contact you soon.");
-    } else {
-      alert("Error: " + (result.error || "Unknown"));
-    }
-  } catch (err) {
-    console.error("Error sending data:", err);
-    alert("Network error. Please try again.");
-  }
-};
+      const result = await res.json();
+      console.log("Zoho API Response:", result);
 
       if (result.success) {
-        setPopupType("success");
-
-        // Different messages per form type
+        let message = "";
         if (formType === "hire") {
-          setPopupMessage("✅ Your hiring enquiry has been received. Our recruitment team will contact you soon.");
+          message = "Your hiring enquiry has been received. Our recruitment team will contact you soon.";
         } else if (formType === "franchisee") {
-          setPopupMessage("✅ Thank you for your interest in our franchise! Our business team will reach out shortly.");
+          message = "Thank you for your interest in our franchise! Our business team will reach out shortly.";
         } else {
-          setPopupMessage("✅ Your registration is successful. Our learning advisor will reach out to you shortly.");
+          message = "Your registration is successful. Our learning advisor will reach out to you shortly.";
         }
 
-        console.log("✅ Lead synced successfully to Zoho Bigin");
+        setPopupType("success");
+        setPopupMessage(message);
+        console.log("Lead synced successfully to Zoho Bigin");
       } else {
         setPopupType("error");
-        setPopupMessage("❌ Zoho Bigin API failed. Please check console logs.");
-        console.error("❌ Zoho Error:", result.error);
+        setPopupMessage("Zoho Bigin API failed. Please check console logs.");
+        console.error("Zoho Error:", result.error);
       }
     } catch (error) {
-      console.error("🚨 Submission error:", error);
+      console.error("Submission error:", error);
       setPopupType("error");
       setPopupMessage("Something went wrong! Please try again.");
     } finally {
@@ -158,6 +146,7 @@ export default function LearningAdvisorForm({ formType, setFormType }) {
           <input
             type="text"
             id="name"
+            name="name"
             value={formData.name}
             onChange={handleChange}
             placeholder="Name"
@@ -171,6 +160,7 @@ export default function LearningAdvisorForm({ formType, setFormType }) {
           <input
             type="email"
             id="email"
+            name="email"
             value={formData.email}
             onChange={handleChange}
             placeholder="Email"
@@ -184,6 +174,7 @@ export default function LearningAdvisorForm({ formType, setFormType }) {
           <input
             type="number"
             id="mobile"
+            name="mobile"
             value={formData.mobile}
             onChange={handleChange}
             placeholder="Mobile"
@@ -197,6 +188,7 @@ export default function LearningAdvisorForm({ formType, setFormType }) {
           <div className="mb-5">
             <select
               id="center"
+              name="center"
               value={formData.center}
               onChange={handleChange}
               className="outline-none bg-white border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5"
@@ -216,6 +208,7 @@ export default function LearningAdvisorForm({ formType, setFormType }) {
             <input
               type="text"
               id="company"
+              name="company"
               value={formData.company}
               onChange={handleChange}
               placeholder="Company Name"
@@ -231,6 +224,7 @@ export default function LearningAdvisorForm({ formType, setFormType }) {
             <input
               type="text"
               id="location"
+              name="location"
               value={formData.location}
               onChange={handleChange}
               placeholder="Location"
@@ -302,5 +296,3 @@ export default function LearningAdvisorForm({ formType, setFormType }) {
     </div>
   );
 }
-
-
