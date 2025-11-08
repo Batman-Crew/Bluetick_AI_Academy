@@ -38,8 +38,9 @@ function Footer({ formType, setFormType }) {
 
     try {
       console.log("📰 Sending newsletter signup → Zoho...");
+      const API_URL = "https://4tm07os0jl.execute-api.ap-south-1.amazonaws.com/prod/items";
 
-      const res = await fetch("/api/bigin", {
+      const res = await fetch(API_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -228,3 +229,4 @@ function Footer({ formType, setFormType }) {
 }
 
 export default Footer;
+
