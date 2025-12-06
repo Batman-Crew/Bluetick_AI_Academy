@@ -1,19 +1,19 @@
-// app/layout.js
-import { Source_Sans_3 } from 'next/font/google';
 import './globals.css';
+import { Source_Sans_3 } from 'next/font/google';
 import Script from 'next/script';
-import MetaPixelTracker from '@/components/MetaPixelTracker'; // ✅ Add client component
+import MetaPixelTracker from '@/components/MetaPixelTracker';
 
 const sourceSans = Source_Sans_3({
   variable: '--font-source-sans',
   subsets: ['latin'],
   weight: ['300', '400', '600', '700'],
+  display: 'swap',  // ⚡ Prevent font blocking
 });
 
 export const metadata = {
   title: 'Digital Marketing Courses in Bangalore – Enroll at BlueTick Academy!',
   description:
-    'BlueTick Academy offers Career oriented Digital Marketing Course in Bangalore. Enroll in basics to advanced Digital Marketing Training in Bangalore. BlueTick Academy is rated as the Top Digital Marketing Training Institute in Bangalore based on faculty experience and placement record.',
+    'BlueTick Academy offers Career oriented Digital Marketing Course in Bangalore.',
   icons: {
     icon: '/icon.png',
   },
@@ -23,54 +23,46 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        {/* =====================================================
-           ✅ Google Tag Manager
-        ===================================================== */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-              })(window,document,'script','dataLayer','GTM-P2CQPT98');`,
-          }}
-        />
-
-        {/* =====================================================
-           ✅ Meta Pixel Base
-        ===================================================== */}
-        <Script id="meta-pixel-base" strategy="afterInteractive">
+        {/* ======================================================
+           ⚡ Google Tag Manager (Async + Non-blocking)
+        ====================================================== */}
+        <Script id="gtm" strategy="afterInteractive">
           {`
-            if (!window.fbq) {
-              !function(f,b,e,v,n,t,s)
-              {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-              n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-              if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-              n.queue=[];t=b.createElement(e);t.async=!0;
-              t.src=v;s=b.getElementsByTagName(e)[0];
-              s.parentNode.insertBefore(t,s)}(window, document,'script',
-              'https://connect.facebook.net/en_US/fbevents.js');
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-P2CQPT98');
+          `}
+        </Script>
 
-              fbq('init', '1197413055574069');
-              fbq('track', 'PageView');
-              console.log('📸 Meta Pixel initialized (base)');
-            }
+        {/* ======================================================
+           ⚡ Meta Pixel Base (Async + Light)
+        ====================================================== */}
+        <Script id="fb-pixel" strategy="afterInteractive">
+          {`
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '1197413055574069');
+            fbq('track', 'PageView');
           `}
         </Script>
 
         <noscript>
-          <img
-            height="1"
-            width="1"
-            style={{ display: 'none' }}
-            src="https://www.facebook.com/tr?id=1197413055574069&ev=PageView&noscript=1"
-            alt="fb-pixel"
-          />
+          <img height="1" width="1" style={{ display: 'none' }} 
+            src="https://www.facebook.com/tr?id=1197413055574069&ev=PageView&noscript=1" 
+            alt="" />
         </noscript>
 
-        {/* =====================================================
-           ✅ Schema Markup
-        ===================================================== */}
+        {/* ======================================================
+           ⚡ Schema Markup
+        ====================================================== */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -79,28 +71,13 @@ export default function RootLayout({ children }) {
               "@type": "Organization",
               name: "BlueTick Academy",
               url: "https://bluetickacademy.com/",
-              logo: "https://bluetickacademy.com/_next/static/media/logo.46adcaad.svg",
-              sameAs: [
-                "https://www.facebook.com/people/BlueTick-Academy/61573772256421/",
-                "https://www.instagram.com/bluetick.academy__/",
-              ],
-              contactPoint: [
-                {
-                  "@type": "ContactPoint",
-                  telephone: "+919606995525",
-                  contactType: "customer service",
-                  email: "info@bluetickacademy.com",
-                  areaServed: "IN",
-                  availableLanguage: ["en", "hi", "kn"],
-                },
-              ],
             }),
           }}
         />
       </head>
 
       <body className={`${sourceSans.variable} antialiased`}>
-        {/* ✅ Google Tag Manager (noscript) */}
+        {/* GTM noscript */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-P2CQPT98"
@@ -110,29 +87,9 @@ export default function RootLayout({ children }) {
           ></iframe>
         </noscript>
 
-        {/* ✅ Inject GA4 */}
-        <Script
-          strategy="afterInteractive"
-          src="https://www.googletagmanager.com/gtag/js?id=G-4VEZHPBX22"
-        />
-        <Script
-          id="gtag-init"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-4VEZHPBX22');
-              console.log("📊 Google Analytics initialized");
-            `,
-          }}
-        />
-
-        {/* ✅ Client-side Meta Pixel tracking */}
+        {/* ⚡Meta Pixel Click Tracking */}
         <MetaPixelTracker />
 
-        {/* ✅ Page Content */}
         {children}
       </body>
     </html>

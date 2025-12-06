@@ -1,10 +1,6 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
-import Background from "@/assets/img/banner.jpg";
-import Worker from "../../../assets/img/contact-us.svg";
 import LearningAdvisorForm from "@/components/form";
-import { ToastContainer } from "react-toastify";
 import { useEffect } from "react";
 
 
@@ -39,12 +35,15 @@ export default function ContactUs({ formType, setFormType }) {
     
     return (
         <>
-            <section style={{
-                backgroundImage: `url(${Background.src})`,
+            <section
+            style={{
+                backgroundImage: "url('/img/banner.jpg')",
                 backgroundPosition: "center",
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
-            }}>
+            }}
+            >
+
                 <div className="container min-[1440px]:max-w-[1440px] mx-auto px-4 pt-[110px] max-[768px]:mt-[-55px] md:pt-[80px]">
 
                     <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2">

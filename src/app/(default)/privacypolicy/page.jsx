@@ -1,17 +1,17 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import Background from "@/assets/img/banner.jpg";
+const banner = "/img/banner.jpg";
 
 export default function PrivacyPolicy() {
     return (
         <>
             <section style={{
-                backgroundImage: `url(${Background.src})`,
-                backgroundPosition: "center",
-                backgroundSize: "cover",
-                backgroundRepeat: "no-repeat",
-            }}>
+          backgroundImage: `url(${banner})`,
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+        }}>
                 <div className="container min-[1440px]:max-w-[1440px] mx-auto px-4 pt-[110px] max-[768px]:mt-[-55px] md:pt-[80px] pb-[30px] md:pb-[50px]">
 
                     <p className="text-[#F3F3F3] text-[25px] md:text-[48px] font-bold font-['Montserrat'] capitalize leading-[28px] md:leading-[60px] mt-[5px] md:mt-[10px] text-center">Privacy Policy</p>

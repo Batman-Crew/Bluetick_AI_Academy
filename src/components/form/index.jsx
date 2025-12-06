@@ -1,8 +1,8 @@
 'use client';
 import { useState } from 'react';
 import Image from 'next/image';
-import Captcha from "@/assets/img/captcha.png";
-import FormBack from "@/assets/img/formback.svg";
+const Captcha = "/img/captcha.png";
+const FormBack = "/img/formback.svg";
 import Popup from '../popup';
 
 export default function LearningAdvisorForm({ formType, setFormType }) {
@@ -123,10 +123,13 @@ export default function LearningAdvisorForm({ formType, setFormType }) {
   return (
     <div className="px-2 md:px-8 relative my-auto">
       <Image
-        src={FormBack}
-        alt="Form Background"
-        className="absolute right-0 bottom-0 z-[-10] h-full"
-      />
+          src={FormBack}
+          alt="Form Background"
+          width={400}
+          height={400}
+          className="absolute right-0 bottom-0 z-[-10] h-full w-auto pointer-events-none select-none"
+        />
+
       <p className="text-center text-[20px] md:text-[24px] font-[500] sm:bg-[#F7F8F9] py-4 sm:border border-[#f5f7f8] mx-[10px] sm:mx-[20px]">
         Speak with Our{" "}
         {formType === "franchisee" || formType === "hire" ? (
@@ -187,7 +190,6 @@ export default function LearningAdvisorForm({ formType, setFormType }) {
         {formType === "default" && (
           <div className="mb-5">
             <select
-              id="center"
               name="center"
               value={formData.center}
               onChange={handleChange}
@@ -207,7 +209,6 @@ export default function LearningAdvisorForm({ formType, setFormType }) {
           <div className="mb-5">
             <input
               type="text"
-              id="company"
               name="company"
               value={formData.company}
               onChange={handleChange}
@@ -223,7 +224,6 @@ export default function LearningAdvisorForm({ formType, setFormType }) {
           <div className="mb-5">
             <input
               type="text"
-              id="location"
               name="location"
               value={formData.location}
               onChange={handleChange}
@@ -273,7 +273,14 @@ export default function LearningAdvisorForm({ formType, setFormType }) {
                 I am not a robot
               </label>
             </span>
-            <Image src={Captcha} alt="captcha" />
+            <Image
+              src={Captcha}
+              alt="captcha"
+              width={60}
+              height={40}
+              className="w-[60px] h-[40px]"
+            />
+
           </div>
         )}
 

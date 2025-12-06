@@ -1,27 +1,33 @@
-import Pho1 from "@/assets/img/photo/1.jpg";
-import Pho2 from "@/assets/img/photo/2.jpg";
-import Pho3 from "@/assets/img/photo/3.jpg";
-import Pho4 from "@/assets/img/photo/4.jpg";
-import Pho5 from "@/assets/img/photo/5.jpg";
-import Pho6 from "@/assets/img/photo/6.jpg";
-import Pho7 from "@/assets/img/photo/7.jpg";
-import Pho8 from "@/assets/img/photo/8.jpg";
-import Pho9 from "@/assets/img/photo/9.jpg";
-import Pho10 from "@/assets/img/photo/10.jpg";
-import Pho11 from "@/assets/img/photo/11.jpg";
-import Pho12 from "@/assets/img/photo/12.jpg";
-import Hcg from "@/assets/img/student/hcg.png";
-import Adverb from "@/assets/img/student/adverb.jpeg";
-import Edumerge from "@/assets/img/student/edumerge.jpeg";
-import Stock from "@/assets/img/student/stock.png";
-import College from "@/assets/img/student/college.png";
-import Foxbro from "@/assets/img/student/foxbro.png";
-import Ecom from "@/assets/img/student/ecom.png";
-import Filpkart from "@/assets/img/company/filpkart.jpg";
-import Amazon from "@/assets/img/amazon.png";
-import EY from "@/assets/img/student/ey.png";
-import Ola from "@/assets/img/student/ola.svg";
-import Decode from "@/assets/img/student/decode.png";
+// Photo paths from /public folder
+const Pho1 = "/img/photo/1.jpg";
+const Pho2 = "/img/photo/2.jpg";
+const Pho3 = "/img/photo/3.jpg";
+const Pho4 = "/img/photo/4.jpg";
+const Pho5 = "/img/photo/5.jpg";
+const Pho6 = "/img/photo/6.jpg";
+const Pho7 = "/img/photo/7.jpg";
+const Pho8 = "/img/photo/8.jpg";
+const Pho9 = "/img/photo/9.jpg";
+const Pho10 = "/img/photo/10.jpg";
+const Pho11 = "/img/photo/11.jpg";
+const Pho12 = "/img/photo/12.jpg";
+
+// Student companies
+const Hcg = "/img/student/hcg.png";
+const Adverb = "/img/student/adverb.jpeg";
+const Edumerge = "/img/student/edumerge.jpeg";
+const Stock = "/img/student/stock.png";
+const College = "/img/student/college.png";
+const Foxbro = "/img/student/foxbro.png";
+const Ecom = "/img/student/ecom.png";
+const EY = "/img/student/ey.png";
+const Ola = "/img/student/ola.svg";
+const Decode = "/img/student/decode.png";
+
+// Companies
+const Filpkart = "/img/company/filpkart.jpg";
+const Amazon = "/img/company/amazon.png";
+
 
 // Accardian All Content Start
 
@@ -320,7 +326,7 @@ or in a classroom setting, a course that blends theoretical knowledge with pract
 Institutions like BlueTick Academy not only provide comprehensive training but also focus on
 personalized mentorship, industry-relevant curriculum, and strong placement support. Their balanced,
 student-focused approach makes them one of the best digital marketing training institutes in Bangalore
-available today.
+available today.http://192.168.0.183:3000/#courses
 
 With a trusted name like BlueTick Academy, you can be confident that your investment in education will
 pave the way for a successful future in digital marketing.
@@ -377,106 +383,104 @@ export const accardiancontentfaq = [
 
 
   // Silder 1 2 Content Start
+export const Student0 = [
+  {
+    id: 1,
+    name: "Jeevan",
+    img: Pho1,
+    company: Filpkart,
+    des: "Didnt expect to learn so much in such a short time! The live projects were the best part coz you actually get to apply what you learn. Trainers are chill and explain stuff in simple terms. Defrecommend if you are serious about digital marketing.",
+  },
+  {
+    id: 2,
+    name: "Keerthi Vasan",
+    img: Pho2,
+    company: EY,
+    des: "I was looking for a digital marketing course that could make me hands on, not just too much in theory. Bluetick Academy was exactly doing that. The assignments were useful and I am able managing marketing campaigns on my own.",
+  },
+];
 
-  export const Student0 = [
-    {
-      id: 1,
-      name: "Jeevan",
-      img: Pho1,
-      company: Filpkart,
-      des: "Didnt expect to learn so much in such a short time! The live projects were the best part coz you actually get to apply what you learn. Trainers are chill and explain stuff in simple terms. Defrecommend if you are serious about digital marketing.",
-    },
-    {
-      id: 2,
-      name: "Keerthi Vasan",
-      img: Pho2,
-      company: EY,
-      des: "I was looking for a digital marketing course that could make me hands on, not just too much in theory. Bluetick Academy was exactly doing that. The assignments were useful and I am able managing marketing campaigns on my own.",
-    },
-  ];
+export const Student1 = [
+  {
+    id: 1,
+    name: "Harini Pandiaraj",
+    img: Pho3,
+    company: Amazon,
+    des: "Blue tick helped me understand how actually works. I learned SEO, Google Ads, and social media marketing from scratch. The live projects were most important of all. Thanks to the trainers.",
+  },
+  {
+    id: 2,
+    name: "Lekha",
+    img: Pho4,
+    company: Ecom,
+    des: "First of all, thanks to the trainers. They actually teach you how to run ads, optimize campaigns, and track results. This course gave me everything I needed to implement digital marketing in my business.",
+  },
+];
 
+export const Student2 = [
+  {
+    id: 1,
+    name: "Bright Prabahar",
+    img: Pho5,
+    company: Ola,
+    des: "The trainers are patient and explain everything clearly. I compared 3-4 institutes before choosing Bluetick Academy and I’m happy about my decision. I am handling huge budget in my company now with the knowledge gained.",
+  },
+  {
+    id: 2,
+    name: "Priyal Bather",
+    img: Pho6,
+    company: Decode,
+    des: "Digital marketing was completely new for me, but the way they teach makes it very easy to understand. I landed in a job and could crack my 2nd interview itself.",
+  },
+];
 
-  export const Student1 = [
-    {
-      id: 1,
-      name: "Harini Pandiaraj",
-      img: Pho3,
-      company: Amazon,
-      des: "Blue tick helped me understand how actually works. I learned SEO, Google Ads, and social media marketing from scratch. The live projects were most important of all. Thanks to the trainers.",
-    },
-    {
-      id: 2,
-      name: "Lekha",
-      img: Pho4,
-      company: Ecom,
-      des: "First of all, thanks to the trainers. They actually teach you how to run ads, optimize campaigns, and track results.This course gave me everything I needed to implement digital marketing in my business.",
-    },
-  ];
+export const Student3 = [
+  {
+    id: 1,
+    name: "Atul",
+    img: Pho7,
+    company: Hcg,
+    des: "One of the best things of Bluetick academy is the practical approach. You actually create the campaign ads sitting in the class itself. The trainers are too good, and they make sure everyone understands before moving to the next topic.",
+  },
+  {
+    id: 2,
+    name: "Akash",
+    img: Pho8,
+    company: Adverb,
+    des: "The course was well-structured and easy to follow. The placement assistance helped me land my first job in digital marketing. I feel so much more confident in handling digital campaigns now.",
+  },
+];
 
-  export const Student2 = [
-    {
-        id: 1,
-        name: "Bright Prabahar",
-        img: Pho5,
-        company: Ola,
-        des: "The trainers are patient and explain everything clearly. I compared 3-4 institutes before choosing Bluetick academy and I’m happy about my decision. I am handling huge budget in my company now with the knowledge gained.",
-      },
-      {
-        id: 2,
-        name: "Priyal Bather",
-        img: Pho6,
-        company: Decode,
-        des: "Digital marketing was completely new for me, but the way they teach makes it very easy to understand. I landed in a job and could crack my 2 nd interview itself.",
-      }
-  ];
+export const Student4 = [
+  {
+    id: 1,
+    name: "Girish",
+    img: Pho9,
+    company: Edumerge,
+    des: "I joined to upskill and switch from sales to digital marketing. The curriculum covers everything in DM. Definitely learned a lot and it feels great to start my career through Bluetick.",
+  },
+  {
+    id: 2,
+    name: "Aswini",
+    img: Pho10,
+    company: Stock,
+    des: "SEO and Google Ads were the toughest topics for me, but the way they taught it made a huge difference. I’ve already started handling projects on my own for my business. I love that they teach you everything step by step.",
+  },
+];
 
-  export const Student3 = [
-    {
-        id: 1,
-        name: "Atul",
-        img: Pho7,
-        company: Hcg,
-        des: "One of the best things of Bluetick academy is the practical approach. You actually create the campaign ads sitting in the class itself. The trainers are too good, and they make sure everyone understands before moving to the next topic.",
-      },
-      {
-        id: 2,
-        name: "Akash",
-        img: Pho8,
-        company: Adverb,
-        des: "The course was well-structured and easy to follow. The placement assistance helped me land my first job in digital marketing. I feel so much more confident in handling digital campaigns now.",
-      }
-  ];
-
-  export const Student4 = [
-    {
-        id: 1,
-        name: "Girish",
-        img: Pho9,
-        company: Edumerge,
-        des: "I joined to upskill and switch from sales to digital marketing. The curriculum covers everything in DM. Definitely learned a lot and it feels great to start my career through bluetick.",
-      },
-      {
-        id: 2,
-        name: "Aswini",
-        img: Pho10,
-        company: Stock,
-        des: "SEO and Google Ads were the toughest topics for me, but the way they taught it made a huge difference. I’ve already started handling projects on my own for my business. I love that they teach you everything step by step.",
-      }
-  ];
-
-  export const Student5 = [
-    {
-        id: 1,
-        name: "Shyam",
-        img: Pho11,
-        company: College,
-        des: "I had tried learning digital marketing on my own but kept getting confused. This course cleared all my doubts. They even helped me complete my first freelance project. Would recommend even for beginners.",
-      },
-      {
-        id: 2,
-        name: "Edwin",
-        img: Pho12,
-        company: Foxbro,
-        des: "Honestly, I was a bit nervous before joining coz I had zero background in marketing. But the trainers made it really easy to understand. Practicing on all the projects in the class gave me confidence. I’m now handling end to end Digital marketing in my company and it’s going great.",
-      }
-  ];
+export const Student5 = [
+  {
+    id: 1,
+    name: "Shyam",
+    img: Pho11,
+    company: College,
+    des: "I had tried learning digital marketing on my own but kept getting confused. This course cleared all my doubts. They even helped me complete my first freelance project. Would recommend even for beginners.",
+  },
+  {
+    id: 2,
+    name: "Edwin",
+    img: Pho12,
+    company: Foxbro,
+    des: "Honestly, I was a bit nervous before joining coz I had zero background in marketing. But the trainers made it really easy to understand. Practicing on all the projects in the class gave me confidence. I’m now handling end-to-end digital marketing in my company and it’s going great.",
+  },
+];
