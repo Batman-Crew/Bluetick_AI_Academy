@@ -22,6 +22,8 @@ import {
 import AISection from "@/components/ai_section/AISection";
 import TechLandscapeHero from "@/components/tech_section/TechLandScape";
 import AIDashboardSection from "@/components/ai_tools/AITools";
+import CourseSection from "@/components/course_section/CourseSection";
+import ApplySection from "@/components/apply_section/ApplySection";
 
 // ------------------- DYNAMIC COMPONENTS -------------------
 const Header = dynamic(() => import("@/components/header"), { ssr: false });
@@ -421,7 +423,7 @@ function HomeClient() {
                         width={18}
                         height={18}
                       />
-                      <p className="text-white text-nowrap text-[16px] md:text-sm mt-2">
+                      <p className="text-white lg:text-nowrap text-[16px] md:text-sm mt-2">
                         {item.text}
                       </p>
                     </div>
@@ -666,8 +668,10 @@ function HomeClient() {
         </section>
         {/* Projects End */}
 
+              <CourseSection />
+
         {/* Courses Start */}
-        <section id="courses" className="my-[40px] md:my-[60px]">
+        {/* <section id="courses" className="my-[40px] md:my-[60px]">
           <div className="container bg-[#F6F6F6] rounded-[25px] min-[1440px]:max-w-[1440px] mx-auto px-4 md:px-8 py-10">
             <p className="bg-gradient-to-b from-[#FD9055] to-[#FE4855] bg-clip-text text-transparent pl-[13px] sm:pl-0 md:text-center text-[23px] md:text-[42px] font-semibold leading-[30px] md:leading-[54.60px]">
               Explore Digital Marketing
@@ -742,7 +746,7 @@ function HomeClient() {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
         {/* Courses End */}
 
         {/* Your Dream Job Start */}
@@ -850,115 +854,9 @@ function HomeClient() {
 
         <TechLandscapeHero />
 
-        {/* Amazon section Start */}
-        <section className="my-[40px] md:my-[60px]">
-          <div className="container min-[1440px]:max-w-[1440px] mx-auto px-4">
-            <p className="text-neutral-800 text-[23px] md:text-[42px] font-semibold leading-[30px] md:leading-[54.60px] sm:flex gap-2">
-              Hear from our
-              <span className="text-[#007BFC] flex gap-2 items-center">
-                BlueTickers{" "}
-                <Image
-                  src="/img/smalllogo.svg"
-                  alt="no-smalllogo"
-                  width={40}
-                  height={40}
-                />
-              </span>
-            </p>
+        <ApplySection />
 
-            <div className="sm:block hidden">
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-5">
-                {allCards.slice(0, visibleCards).map((card) => (
-                  <div
-                    key={card.id}
-                    className="bg-white shadow-lg rounded-2xl overflow-hidden transition-transform duration-300 hover:scale-105"
-                  >
-                    <div className="w-full h-40 flex justify-center items-center bg-gray-100">
-                      <Image
-                        className="w-auto h-full object-contain"
-                        src={card.img}
-                        alt="no-course"
-                        width={200}
-                        height={160}
-                      />
-                    </div>
-
-                    <div className="max-[768px]:pl-3">
-                      <span className="py-3 px-2 flex justify-between border-[#E2E2E2] border-b items-center my-auto">
-                        <p className="font-semibold">{card.name}</p>
-                        <Image
-                          src={card.company}
-                          alt="no-company"
-                          width={80}
-                          height={30}
-                          className="w-[100px] h-[30px] object-contain md:w-[100px] md:h-[40px]"
-                        />
-                      </span>
-                    </div>
-
-                    <div className="p-5">
-                      <p
-                        className={`text-[16px] text-[#282E38] ${
-                          !expandedCards[card.id] ? "line-clamp-2" : ""
-                        }`}
-                      >
-                        {card.des}
-                      </p>
-
-                      <button
-                        onClick={() => toggleExpand(card.id)}
-                        className="mt-2 text-blue-600 transition cursor-pointer"
-                      >
-                        {expandedCards[card.id] ? "Show Less" : "Show More"}
-                      </button>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Mobile sliders */}
-            <ScrollLinked allCards={Student0} />
-            <ScrollLinked allCards={Student1} />
-            <ScrollLinked allCards={Student2} />
-            <ScrollLinked allCards={Student3} />
-            <ScrollLinked allCards={Student4} />
-            <ScrollLinked allCards={Student5} />
-          </div>
-
-          <div className="sm:flex justify-center mt-6 space-x-4 mx-3 hidden">
-            {visibleCards < allCards.length && (
-              <button
-                onClick={handleLoadMore}
-                className="overflow-hidden transition-transform duration-300 hover:scale-105 bg-[#EBF4FF] cursor-pointer max-[640px]:w-full text-[blue] border border-[blue] px-16 py-3 rounded-lg transition"
-              >
-                View More
-              </button>
-            )}
-            {visibleCards > 3 && (
-              <button
-                onClick={handleLoadLess}
-                className="overflow-hidden transition-transform duration-300 hover:scale-105 cursor-pointer bg-red-600 max-[640px]:w-full text-white px-6 py-3 rounded-lg hover:bg-red-700"
-              >
-                View Less
-              </button>
-            )}
-          </div>
-        </section>
-        {/* Amazon section End */}
-
-        {/* testimonial Start */}
-        <section className="my-[40px] md:my-[60px]">
-          <div className="container bg-[#F6F6F6] rounded-[25px] min-[1440px]:max-w-[1440px] mx-auto px-4 sm:px-8 py-10">
-            <p className="sm:text-center text-neutral-800 text-[26px] md:text-[42px] font-semibold leading-[30px] md:leading-[54.60px] pl-[13px] sm:pl-0">
-              Why Choose
-              <br />
-              <span className="text-[#007BFC]">BlueTick</span> Academy?
-            </p>
-            <TestimonialSlider />
-          </div>
-        </section>
-        {/* testimonial End */}
+        
 
 
 
