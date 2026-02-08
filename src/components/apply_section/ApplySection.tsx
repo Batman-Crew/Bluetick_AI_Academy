@@ -8,13 +8,13 @@ const stats = [
         number: "Developers",
         description: "(Java, Python, JS, QA, Analyst, etc.)",
         text: <div>Just calling OpenAI APIs Era is over <br /><span className="font-bold text-orange-600">Start building AI systems</span> </div>,
-        icon: TrendingUp,
+        icon: <img src="/img/AI_BG/card1.png" />,
     },
     {
         number: "Beginner / Non-Technical",
         description: "",
         text: <div>With additional <span className="font-bold text-orange-600">4 weeks</span> of Python bootcamp, we bridge you to the <span className="font-bold text-orange-600">highest paying role in tech! </span></div>,
-        icon: Percent,
+        icon: <img src="/img/AI_BG/card2.png" />,
     },
 ];
 
@@ -49,7 +49,7 @@ const ApplySection = () => {
 
                 {/* Stat Cards */}
                 <div className="mt-10 md:mt-14 w-full grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
-  {stats.map((stat) => (
+  {stats.map((stat,i) => (
     <div
       key={stat.number}
       className="
@@ -64,14 +64,9 @@ const ApplySection = () => {
     >
       {/* Icon */}
       <div
-        className="
-          shrink-0 w-12 h-12 rounded-xl
-          bg-gradient-to-br from-[#ddd6fe] to-[#ede9fe]
-          flex items-center justify-center
-          border border-[#c4b5fd]
-        "
+        className={`w-10 h- 10 md:w-14 md:h-14 flex items-center justify-center `}
       >
-        <stat.icon className="w-6 h-6 text-[#6d28d9]" />
+        {stat.icon}
       </div>
 
       {/* Text */}

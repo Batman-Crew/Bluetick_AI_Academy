@@ -48,11 +48,11 @@ const AIHeroSection = () => {
           </p>
   
           {/* Features */}
-          <ul className="mt-10 sm flex flex-col gap-2 items-center space-y-4">
+          <ul className="mt-10 sm flex flex-col gap-2 items-start space-y-4">
             {features.map(({ icon: Icon, label }) => (
               <li
                 key={label}
-                className="flex items-center gap-3 text-left lg:justify-start justify-center"
+                className="flex items-center gap-3 text-left justify-start"
               >
                 <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary/10">
                   <Icon className="h-5 w-5 text-[#4ecafc]" />

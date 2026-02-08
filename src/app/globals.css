@@ -126,7 +126,9 @@ body {
     @apply bg-background text-foreground;
   }
 }
-
+.root{
+  scroll-behavior: smooth !important;
+}
 /* Hide scrollbars while keeping functionality */
 .hide-scrollbar {
   -ms-overflow-style: none;  /* IE and Edge */
