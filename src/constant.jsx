@@ -470,44 +470,129 @@ trusted name like BlueTick Academy.`
 // Accardian All Content End
 
 
-// Accardian Faq Content Start
+// Accordion FAQ Content Start
 export const accardiancontentfaq = [
-    {
-      title: "What makes Bangalore a great place for digital marketing education?",
-      content:
-        "Bangalore is known as India’s technology hub, hosting a vibrant ecosystem of startups, tech giants, and creative agencies. This dynamic environment offers excellent internship and networking opportunities. Institutes like BlueTick Academy leverage these local advantages to provide students with practical, industry-focused training.",
-    },
-    {
-      title: "How do I decide between online and offline digital marketing classes in Bangalore?",
-      content:
-        "Consider your schedule, learning style, and geographic convenience. Online marketing courses in Bangalore offer flexibility and are ideal for busy professionals, while classroom settings—such as those at BlueTick Academy—provide direct interaction and immediate feedback.",
-    },
-    {
-      title: "Can I transition into digital marketing from a non-marketing background?",
-      content:
-        "Absolutely. A comprehensive Digital Marketing Course is designed for beginners as well as professionals. With a structured curriculum and practical projects, you can build the necessary skills. BlueTick Academy tailors its programs to welcome students from all backgrounds.",
-    },
-    {
-      title: "Are the certifications provided by these courses recognized globally?",
-      content:
-        "BlueTick Academy offers 15 international certificates, including those from Google and HubSpot. The certifications you earn are respected by employers worldwide, boosting your credibility in the digital marketing field.",
-    },
-    {
-      title: "How long does it typically take to complete a digital marketing training in Bangalore?",
-      content:
-        "BlueTick Academy offers flexible durations to suit different career objectives and time commitments. There are two programs – 3 months and 4.5 months, allowing you to choose based on your career goals.",
-    },
-    {
-      title: "Where can I find reviews for the best digital marketing courses in Bangalore?",
-      content:
-        "Check educational forums, social media groups, and reputable review websites. Student testimonials often highlight the effectiveness of programs offered by BlueTick Academy.",
-    },
-    {
-      title: "What should I expect in terms of practical training?",
-      content:
-        "The best courses emphasize hands-on learning through live projects, real-life case studies, and interactive sessions. BlueTick Academy integrates these elements seamlessly, ensuring that you gain the experience needed to succeed.",
-    },
-  ];
+  {
+    title: "What is the current demand for AI Engineers in India compared to traditional software roles?",
+    content:
+      "The landscape of Indian IT is undergoing a tectonic shift. While traditional full-stack and backend roles are seeing a flattening in salary growth, Enterprise AI Engineering is witnessing a 40–60% year-on-year demand surge. Companies in Bangalore and globally are no longer looking for \"prompt engineers\"; they are hiring architects who can build private, secure, and scalable AI systems. This program is designed to move you from \"writing code\" to \"architecting intelligence\".",
+  },
+  {
+    title: "What is the average salary hike I can expect after completing an Enterprise AI certification?",
+    content:
+      "In the current Bangalore market (2025–2026), developers transitioning into AI Engineering roles with 2–5 years of experience are commanding packages ranging from ₹18 LPA to ₹35 LPA, depending on their ability to handle production-grade RAG and Agentic workflows. Our curriculum focuses specifically on these high-value skills to ensure you aren't just \"certified,\" but \"hirable\".",
+  },
+  {
+    title: "Will AI replace my job as a software developer?",
+    content:
+      "AI will not replace developers, but developers using AI will replace those who don’t. The \"Enterprise AI Engineering Program\" at BlueTick Academy teaches you to build the very tools that are automating the industry, positioning you at the top of the value chain rather than the bottom.",
+  },
+  {
+    title: "Why does this program focus on \"Enterprise AI\" instead of just \"GenAI\"?",
+    content:
+      "Most online courses teach you how to call an OpenAI API. Enterprise AI is about what happens behind the firewall. It involves:\n\nData Governance: How to handle structured SQL and unstructured PDF data securely.\n\nOrchestration: Using LangChain and LangGraph to create complex logic.\n\nProductionalization: Moving a model from a notebook to a scalable cloud environment using LLMOps.",
+  },
+  {
+    title: "What are Agentic Workflows and why are they included in the 112-hour curriculum?",
+    content:
+      "The industry is moving from \"Chatbots\" to \"Autonomous Agents.\" Our Milestone 4 covers Agentic Workflows and Multi-Agent Systems (CrewAI/LangGraph). These are systems that can reason, use tools (like SQL Agents), and work in teams to solve business problems without constant human prompting.",
+  },
+  {
+    title: "Will I learn about RAG (Retrieval-Augmented Generation) in depth?",
+    content:
+      "Yes. RAG is the backbone of modern enterprise knowledge systems. We cover the entire stack: Vector Embeddings, Chunking strategies, Vector Databases (ChromaDB/Pinecone), and Reranking to ensure accuracy and reduce hallucinations in AI responses.",
+  },
+  {
+    title: "Does the program cover MLOps and LLMOps?",
+    content:
+      "Absolutely. A model that isn't monitored is a liability. We teach Model Monitoring (MLFlow), Evaluation (LLM-as-a-judge), and Guardrails to ensure your AI systems remain compliant and cost-effective in a production environment.",
+  },
+  {
+    title: "Who are the instructors for the Enterprise AI Engineering Program?",
+    content:
+      "To maintain the highest level of Expertise (E), we do not hire \"professional trainers.\" Your mentors are practicing Lead Data Scientists and AI Architects from Fortune 500 companies like EY, SAP, Kinaxis, and IBM. They bring real-world \"war stories\" from the field into the classroom.",
+  },
+  {
+    title: "Why should I choose a physical classroom in Indiranagar over an online-only course?",
+    content:
+      "BlueTick Academy’s physical campus is located right next to the Indiranagar Metro Station, making it the most accessible hub for tech professionals in Bangalore.\n\nNetworking: You study alongside other 2–3 year experienced devs, building a high-value professional network.\n\nAccountability: 112 hours of live, face-to-face interaction ensures you don't drop out like 90% of MOOC learners.\n\nReal-time Debugging: Get instant feedback on your code and architecture during weekend lab sessions.",
+  },
+  {
+    title: "How credible is BlueTick Academy?",
+    content:
+      "With a 4.9/5 Google Rating and over 10,000+ careers transformed over the last 9+ years, BlueTick Academy is a recognized leader in professional upskilling. Our alumni work at top-tier firms including",
+  },
+  {
+    title: "I am a beginner with no coding background. Can I join?",
+    content:
+      "Yes. While the core program is for developers, we offer a 4-week \"Foundation\" track specifically for non-technical audiences. This covers Python basics, data handling with Pandas/NumPy, and the math required for ML, ensuring you are at par with developers before the main AI Engineering milestones begin.",
+  },
+  {
+    title: "I have 3 years of experience in Java/JS. Do I need to learn Python first?",
+    content:
+      "The program includes Python for AI/ML specifically designed for experienced developers. Since you already understand programming logic, we focus on the libraries (PyTorch, LangChain, FastAPI) that are essential for AI development.",
+  },
+  {
+    title: "How is the 112-hour program structured over 14 weekends?",
+    content:
+      "Saturdays & Sundays: 4 hours per day of live, instructor-led sessions.\n\nTotal Duration: 28 sessions focused on Build → Deploy → Scale.\n\nFormat: Intensive lab work followed by conceptual deep dives.",
+  },
+  {
+    title: "Do you provide placement assistance?",
+    content:
+      "We provide \"Job-Ready\" enablement. This includes portfolio building, resume optimization for AI roles, and direct referrals to our hiring partners where our 10k+ alumni are already placed.",
+  },
+  {
+    title: "Do you cover the new \"Model Context Protocol\" (MCP)?",
+    content:
+      "Yes. We stay at the bleeding edge. Our \"Advanced Learning\" module covers MCP, Multi-modal LLMs (Vision/Voice), and the Enterprise AI Product Development Lifecycle to ensure you are future-proofed against rapid changes in the AI stack.",
+  },
+  {
+    title: "Is there a focus on \"Responsible AI\" and Ethics?",
+    content:
+      "Enterprise AI cannot exist without ethics. We dedicate sessions to Ethics, Responsible AI, and Data Privacy, which are critical for anyone building AI in regulated sectors like Finance (SAP/EY) or Healthcare.",
+  },
+  {
+    title: "Does this program teach LLMs, RAG architectures, and LLMOps?",
+    content:
+      "Yes. The program covers LLM fundamentals, prompt engineering, RAG (retrieval-augmented generation) architecture, vector embeddings, vector DBs (e.g., ChromaDB references in our stack), and LLMOps topics such as observability, evaluation (AI evals), guardrails, cost optimization and MLFlow-style model monitoring. Hands-on labs use modern frameworks (LangChain, LlamaIndex, LangGraph, CrewAI and more).",
+  },
+  {
+    title: "Will I learn to build production RAG systems?",
+    content:
+      "Modules include chunking, embedding, indexing, reranking, and building enterprise document QA (LlamaIndex/LangChain + vector DB examples). You’ll implement at least one full RAG pipeline as a hands-on project.",
+  },
+  {
+    title: "What is the mentor-to-learner ratio and placement success rate?",
+    content:
+      "We stick to 1:30 mentor-to-learner ratio and an advertised career transition success metric (97%) for prior cohorts. Expect live mentor feedback loops and mock interviews as part of the Career Readiness milestone.",
+  },
+  {
+    title: "Are classes live or recorded? Will I get recordings?",
+    content:
+      "All are Live weekend sessions (online + offline). Recordings and lab materials are typically made available for revision; live attendance is encouraged for maximum mentor feedback.",
+  },
+  {
+    title: "What learning materials and cloud/tool access do you provide?",
+    content:
+      "You’ll get curated materials, code templates, and lab instructions. Many practical labs use open-source tools and community/cloud tiers. If third-party paid tools or cloud credits are required, the cohort will be informed in advance and options suggested.",
+  },
+  {
+    title: "What is the program fee and are scholarships available?",
+    content:
+      "Fee details, EMIs, and scholarships are cohort-specific. Contact our learning advisors for the current fee structure and financing options. By keeping the program affordable, we believe in providing the utmost value for money for the investment made by the students for this program.",
+  },
+  {
+    title: "After completion, what roles can I realistically target?",
+    content:
+      "Production AI Engineer, LLM Engineer, Prompt Engineer (senior), ML/Ops Engineer (LLMOps), AI Product Engineer, or roles in teams building RAG systems and agentic orchestration in mid-to-large enterprises.",
+  },
+  {
+    title: "Do you provide lifelong access to materials or alumni community?",
+    content:
+      "Alumni access and community engagement vary by cohort; we’ve an active alumni network and global presence across other countries. Ask learning advisors about post-cohort benefits.",
+  },
+];
 
   // Accardian Faq Content End
 

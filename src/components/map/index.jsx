@@ -17,7 +17,7 @@ const locations = [
   { name: "Saudi Arabia", top: "40%", left: "53%", img: "/img/map/suadi.png" },
   { name: "Turkey", top: "31%", left: "57%", img: "/img/map/turkey.png" },
   { name: "Russia", top: "16%", left: "67%", img: "/img/map/russia.png" },
-  { name: "India", top: "40%", left: "69%", img: "/img/map/india.webp" },
+  { name: "India", top: "40%", left: "69%", img: "/img/map/india.png" },
   { name: "Japan", top: "34%", left: "86%", img: "/img/map/japan.png" },
   { name: "Australia", top: "72%", left: "86%", img: "/img/map/austrila.png" },
 ];
