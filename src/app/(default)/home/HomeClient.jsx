@@ -21,6 +21,7 @@ import {
 } from "@/constant";
 import AISection from "@/components/ai_section/AISection";
 import TechLandscapeHero from "@/components/tech_section/TechLandScape";
+import AIDashboardSection from "@/components/ai_tools/AITools";
 
 // ------------------- DYNAMIC COMPONENTS -------------------
 const Header = dynamic(() => import("@/components/header"), { ssr: false });
@@ -958,6 +959,12 @@ function HomeClient() {
           </div>
         </section>
         {/* testimonial End */}
+
+
+
+
+
+        <AIDashboardSection /> 
 
         {/* Map start */}
         <section className="mb-[20px] max-[768px]:mt-[-15px] md:my-[60px]">
