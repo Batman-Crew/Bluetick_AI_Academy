@@ -21,9 +21,10 @@ import {
 } from "@/constant";
 import AISection from "@/components/ai_section/AISection";
 import TechLandscapeHero from "@/components/tech_section/TechLandScape";
-import AIDashboardSection from "@/components/ai_tools/AITools";
 import CourseSection from "@/components/course_section/CourseSection";
 import ApplySection from "@/components/apply_section/ApplySection";
+import AIHeroSection from "@/components/ai_hero_section/AIHeroSection";
+import AIDashboardSection from "@/components/ai_tools/AITools";
 
 // ------------------- DYNAMIC COMPONENTS -------------------
 const Header = dynamic(() => import("@/components/header"), { ssr: false });
@@ -856,18 +857,16 @@ function HomeClient() {
 
         <ApplySection />
 
+
+        <AIHeroSection />
         
-
-
-
-
-
+        
         <AIDashboardSection /> 
 
         {/* Map start */}
         <section className="mb-[20px] max-[768px]:mt-[-15px] md:my-[60px]">
           <div className="container min-[1440px]:max-w-[1440px] mx-auto px-4">
-            <p className="text-center font-bold text-[16px] md:text-[18px] text-[#FE7C55]">
+            <p className="text-center mt-4 font-bold text-[16px] md:text-[18px] text-[#FE7C55]">
               GLOBAL PRESENCE
             </p>
             <p className="font-semibold text-[26px] md:text-[32px] text-center text-[#242424] mb-10">

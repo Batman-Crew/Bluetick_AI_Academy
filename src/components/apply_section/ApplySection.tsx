@@ -12,6 +12,7 @@ const stats = [
     },
     {
         number: "Beginner / Non-Technical",
+        description: "",
         text: <div>With additional <span className="font-bold text-orange-600">4 weeks</span> of Python bootcamp, we bridge you to the <span className="font-bold text-orange-600">highest paying role in tech! </span></div>,
         icon: Percent,
     },
@@ -48,53 +49,52 @@ const ApplySection = () => {
 
                 {/* Stat Cards */}
                 <div className="mt-10 md:mt-14 w-full grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
-                    {stats.map((stat) => (
-                        <div
-                            key={stat.number}
-                            className="
-      flex items-start gap-4
-      rounded-2xl p-6
-      bg-gradient-to-br from-[#eaf6ff] via-[#f7fbff] to-white
-      border border-[#b6dcff]
-      shadow-[0_0_15px_rgba(180,220,255,0.6)]
-      backdrop-blur-sm
-      transition-all duration-300
-      hover:shadow-[0_0_25px_rgba(150,210,255,0.9)]
-    "
-                        >
-                            {/* Icon */}
-                            <div
-                                className="
-        shrink-0 w-12 h-12 rounded-xl
-        bg-gradient-to-br from-[#cce9ff] to-[#eaf6ff]
-        flex items-center justify-center
-        border border-[#9fd3ff]
+  {stats.map((stat) => (
+    <div
+      key={stat.number}
+      className="
+        flex items-start gap-4
+        rounded-2xl p-6
+        bg-gradient-to-br from-[#eef2ff] via-[#f5f3ff] to-white
+        border border-[#d6ccff]
+        shadow-[0_10px_25px_rgba(120,90,255,0.15)]
+        transition-all duration-300
+        hover:shadow-[0_15px_35px_rgba(120,90,255,0.25)]
       "
-                            >
-                                <stat.icon className="w-6 h-6 text-[#2a6fa8]" />
-                            </div>
+    >
+      {/* Icon */}
+      <div
+        className="
+          shrink-0 w-12 h-12 rounded-xl
+          bg-gradient-to-br from-[#ddd6fe] to-[#ede9fe]
+          flex items-center justify-center
+          border border-[#c4b5fd]
+        "
+      >
+        <stat.icon className="w-6 h-6 text-[#6d28d9]" />
+      </div>
 
-                            {/* Text */}
-                            <div className="flex flex-col gap-2">
-                                <div className="flex flex-col">
+      {/* Text */}
+      <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-1">
 
-                                    <span className="text-xl md:text-3xl font-bold text-orange-600">
-                                        {stat.number}
-                                    </span>
-                                    <span className="text-sm  text-gray-700">
-                                        {stat.description}
-                                    </span>
-                                </div>
+        <span className="text-lg md:text-xl font-bold text-slate-800">
+          {stat.number}
+        </span>
 
+        <span className="text-sm text-slate-600">
+          {stat.description}
+        </span>
+        </div>
 
-                                <span className="text-sm md:text-base font-semibold text-slate-600 mt-1">
-                                    {stat.text}
-                                </span>
-                            </div>
-                        </div>
-                    ))}
+        <span className="text-sm md:text-base font-medium  mt-1">
+          {stat.text}
+        </span>
+      </div>
+    </div>
+  ))}
+</div>
 
-                </div>
 
                 {/* Bottom text */}
 
