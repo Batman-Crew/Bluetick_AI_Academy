@@ -23,6 +23,7 @@ import AISection from "@/components/ai_section/AISection";
 import TechLandscapeHero from "@/components/tech_section/TechLandScape";
 import CourseSection from "@/components/course_section/CourseSection";
 import ApplySection from "@/components/apply_section/ApplySection";
+import UpcomingBatches from "@/components/upcoming_batch/UpcomingBatches";
 import AIHeroSection from "@/components/ai_hero_section/AIHeroSection";
 import AIDashboardSection from "@/components/ai_tools/AITools";
 
@@ -632,6 +633,9 @@ function HomeClient() {
         </section>
         {/* Form End */}
 
+        {/* UpcomingBatches */}
+        <UpcomingBatches />
+
         {/* Projects Start */}
         <section id="from1" className="my-[40px] md:my-[60px] px-4 md:px-6">
           <p className="sm:text-center text-neutral-800 text-[23px] md:text-[42px] font-semibold leading-[30px] md:leading-[54.60px]">
@@ -880,7 +884,7 @@ function HomeClient() {
         {/* Map End */}
 
         {/* Accordions */}
-        <section className="my-[40px] md:my-[60px]">
+        {/* <section className="my-[40px] md:my-[60px]">
           <div className="container min-[1440px]:max-w-[1440px] mx-auto px-8 md:px-4">
             <p className="font-bold text-[26px] md:text-[32px] max-[640px]:pr-2">
               Digital Marketing Courses
@@ -894,6 +898,9 @@ function HomeClient() {
             <Accordion items={accardiancontent} />
           </div>
         </section>
+         */}
+
+        
         <section className="my-[40px] md:my-[60px]">
           <div className="container min-[1440px]:max-w-[1440px] mx-auto px-8 md:px-4">
             <p className="font-bold text-[26px] md:text-[32px] max-[640px]:pr-2">
