@@ -1,0 +1,106 @@
+Title : Explore Curriculum
+           112 Hrs Roadmap : Enterprise AI Stack	
+
+    1. Python for AI/ML [4 days | 8 Hrs] 
+        a) Setting up Python Environment
+        b) Python Basics
+        c) Data Handling with Pandas and Numpy 
+            ▪ NumPy arrays & vectorization
+            ▪ Pandas DataFrames, filtering, joins, groupby
+            ▪ File Handling in Python
+            ▪ OOPS Concepts with Classes and Objects
+        d) Data Visualization (Matplotlib and Seaborn)
+        e) REST APs (FastAPI)
+        f) Building Web Apps (Streamlit)
+    2. AI Overview [1 day | 4 Hrs]
+        a) AI vs ML vs Deep Learning vs GenAI
+        b) Enterprise AI - Maturity Curve
+        c) Enterprise AI Use cases
+        d) Ethics & Responsible AI
+    3. AI Coding [1 day | 4 Hrs]
+        a) Using Cursor for programming
+        b) Context management
+            ▪ Context/Instruction files  (*.md)
+            ▪ Prompting patterns for coding
+            ▪ Spec-Driven Development
+        c) Debugging with AI
+        d) Hands-On - Building App using Cursor
+    4. Machine Learning [6 Days | 24 Hrs]
+        a) Supervised Learning 
+            ▪ Foundation
+                1. ML Workflow
+                2. Train test split
+                3. Features, Labels
+                4. Regression vs Classification
+            ▪ Linear and Logistic Regression
+            ▪ Tree Based Models 
+                1. Decision Tree
+                2. Random Forest
+                3.  Xgboost/LightGBM
+            ▪ Model Evaluation
+                1. Cross Validation
+                2. Regression and Classification Metrics.
+                3. ML Concepts (Overfitting/Underfitting, Bias/Variance)
+                4. Explaniability
+            ▪ Forecasting 
+                1. Time series concepts
+                2. Moving averages
+                3. ARIMA intuition + Stats Models
+                4. ML for Forecasting (Autogluon)
+        b) Unsupervised Learning
+            ▪ K-Means Clustering
+            ▪ DBScan Clustering
+            ▪ PCA
+        c) Productionizing ML Models (MLOps)
+            ▪ MLFlow
+            ▪ Production Model Monitoring
+        d) Deep Learning 
+            ▪ DL Concepts 
+                1. Neural Networks
+                2. Back propagation
+                3. Activation Functions
+                4. CNN & RNN Intuition
+            ▪ Image Classification/Object Detection (YOLO)
+        e) Hands-On - Project 
+    5. GenAI Foundation [2 days | 8 Hrs]
+        a) LLM Overview 
+            ▪ Thinking Models: Reasoning, Chain of Thought
+        b) Prompt Engineering & Evaluation/Optimization
+        c) LLM APIs
+            ▪ Framework - LangChain
+        d) Building Basic Chatbot
+        e) How LLMs Work (Behind Scenes, including Transformers)
+        f) Diffusion Models
+    6. RAG [3 days | 12 Hrs]
+        a) RAG Overview
+            ▪ Vector Embeddings, Chunking, Vector Database, Indexing, Retrieval, Reranking
+        b) Vector Database - CromaDB 
+        c) Graph RAG
+        d) Hands-On - LlamaIndex based Enterprise document QA system
+    7. Agents [4 days | 16 Hrs]
+        a) Agents Intro 
+        b) Agent Workflows
+            ▪ Framework -  LangGraph
+        c) Hands On - SQL Agent
+        d) Context Engineering (Why Agents Fail)
+        e) Long and Short Term Memory in Agents
+        f) Agentic RAG
+        g) Multi-Agent Systems
+            ▪ Framework - CrewAI
+    8. AI Evals / LLMOps [1.5 days | 6 Hrs]
+        a) Evaluation Process
+        b) LLM as Judge
+        c) LLMOps (Observability & Guardrails)
+        d) AI Task Orchestration with n8n
+        e) LLM Cost Optimization
+    9. Advanced Learning [1.5 days | 6 Hrs]
+        a) MCP
+        b) Multi-Modal LLMs
+            ▪ OCR using LLMs
+        c) LLMs Fine-Tuning
+        d) Voice Agents
+        e) Enterprise AI Product Development Lifecycle
+        f) Agents in different Business Domains
+    10. Capstone Project [4 days | 16 Hrs]
+    11. AI – Readiness Assessment
+    12. Mock Interviews

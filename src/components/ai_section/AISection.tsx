@@ -37,13 +37,14 @@ const AISection = () => {
     const [bgImage, setBgImage] = useState("/img/AI_BG/AIBg1.jpg");
 
   return (
-    <section style={{
-        backgroundImage: `url(${bgImage})`,
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-      }}
-      className="py-16 md:py-24 relative overflow-hidden">
+    <section
+    //  style={{
+    //     backgroundImage: `url(${bgImage})`,
+    //     backgroundPosition: "center",
+    //     backgroundSize: "cover",
+    //     backgroundRepeat: "no-repeat",
+    //   }}
+      className="py-16 bg-[#0c142c] md:py-24 relative overflow-hidden">
       {/* Subtle grid background */}
       <div
         className="absolute inset-0 opacity-10"
@@ -63,10 +64,10 @@ const AISection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12 md:mb-16"
         >
-          <h2 className="text-[#98C7F9] text-3xl md:text-5xl font-bold leading-tight">
+          <h2 className="text-white text-3xl md:text-5xl font-bold leading-tight">
             MASTER the
             <br />
-            Full <span className="text-[#FE4855]">AI Stack</span>
+            Full <span className="text-[#4ecafc]">AI Stack</span>
           </h2>
         </motion.div>
 
@@ -83,7 +84,7 @@ const AISection = () => {
             >
               {/* Node */}
               <div className="relative w-full max-w-[280px] md:max-w-[320px]">
-                <div className="border border-[#2a4a6a] bg-[#0f1a2e] rounded-xl px-6 py-3 flex items-center justify-center gap-2 border-[#4ecafc] hover:bg-[#111d33] transition-all duration-300 cursor-default">
+                <div className="border-2 bg-[#0f1a2e] rounded-xl px-6 py-3 flex items-center justify-center gap-2 border-[#4ecafc] hover:bg-[#111d33] transition-all duration-300 cursor-default">
                   <span className="text-lg">{topic.icon}</span>
                   <span className="text-white text-sm md:text-base font-medium">
                     {topic.label}

@@ -7,23 +7,30 @@ const stats = [
   {
     number: "₹12-45L",
     text: "Salary range for 0-2+ years AI Engineers",
-    icon: TrendingUp,
+    icon: <img src="/img/AI_BG/chartimg1.png" />,
   },
   {
     number: "312 %",
     text: "Growth in AI Engineering roles (LinkedIn 2026)",
-    icon: Percent,
+    icon: <img src="/img/AI_BG/chartimg2.png" />,
   },
   {
     number: "30,000+",
     text: "Unfilled AI Engineer jobs in India",
-    icon: Briefcase,
+    icon: <img src="/img/AI_BG/chartimg3.png" />,
   },
 ];
 
 const TechLandscapeHero = () => {
   return (
-    <section className="relative w-full overflow-hidden">
+    <section 
+    style={{
+      backgroundImage: `url(/img/AI_BG/TechBack.png)`,
+      backgroundPosition: "center",
+      backgroundSize: "cover",
+      backgroundRepeat: "no-repeat",
+    }}
+    className="relative w-full overflow-hidden">
       {/* Background images */}
       {/* <img
         src={bgMobile}
@@ -47,24 +54,43 @@ const TechLandscapeHero = () => {
 
         {/* Stat Cards */}
         <div className="mt-10 md:mt-14 w-full grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
-          {stats.map((stat) => (
-            <div
-              key={stat.number}
-              className="flex items-start gap-4 bg-card/80 backdrop-blur-sm rounded-2xl p-6 shadow-md border border-[#2a4a6a]"
-            >
-              <div className="shrink-0 w-12 h-12 rounded-xl bg-secondary flex items-center justify-center">
-                <stat.icon className="w-6 h-6 text-primary" />
-              </div>
-              <div className="flex flex-col">
-                <span className="text-2xl md:text-3xl font-bold text-orange-500">
-                  {stat.number}
-                </span>
-                <span className="text-sm md:text-base font-medium text-muted-foreground mt-1">
-                  {stat.text}
-                </span>
-              </div>
-            </div>
-          ))}
+        {stats.map((stat) => (
+  <div
+    key={stat.number}
+    className="
+      flex items-start gap-4
+      rounded-2xl p-6
+      bg-gradient-to-br from-[#eaf6ff] via-[#f7fbff] to-white
+      border border-[#b6dcff]
+      shadow-[0_0_15px_rgba(180,220,255,0.6)]
+      backdrop-blur-sm
+      transition-all duration-300
+      hover:shadow-[0_0_25px_rgba(150,210,255,0.9)]
+    "
+  >
+    {/* Icon */}
+    <div
+      className="
+        shrink-0 w-12 h-12 rounded-xl
+        flex items-center justify-center
+      "
+    >
+      {stat.icon }
+    </div>
+
+    {/* Text */}
+    <div className="flex flex-col">
+      <span className="text-2xl md:text-3xl font-bold text-[#ff8a00]">
+        {stat.number}
+      </span>
+
+      <span className="text-sm md:text-base font-semibold text-slate-600 mt-1">
+        {stat.text}
+      </span>
+    </div>
+  </div>
+))}
+
         </div>
 
         {/* Bottom text */}
