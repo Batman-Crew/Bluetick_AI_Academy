@@ -19,6 +19,8 @@ import {
   Student4,
   Student5,
 } from "@/constant";
+import AISection from "@/components/ai_section/AISection";
+import TechLandscapeHero from "@/components/tech_section/TechLandScape";
 
 // ------------------- DYNAMIC COMPONENTS -------------------
 const Header = dynamic(() => import("@/components/header"), { ssr: false });
@@ -141,26 +143,26 @@ const allCards = [
 const projects = [
   {
     id: 1,
-    title: "Real Industry Projects",
-    des: "(Work on Live Business)",
+    title: "Enterprise Grade AI Projects",
+    des: "(Not just calling OpenAI APIs)",
     img: "/img/project.svg",
   },
   {
     id: 2,
     title: "100% Hands on Learning",
-    des: "(No Boring Lectures)",
+    des: "(No Boring Theory)",
     img: "/img/bulb.svg",
   },
   {
     id: 3,
-    title: "Earn while you Learn",
-    des: "(Freelancing & Entrepreneurship)",
+    title: "Modern AI Stacks Coverage",
+    des: "(50+ Applied AI Tools)",
     img: "/img/base.svg",
   },
   {
     id: 4,
-    title: "500+ Hiring Partners",
-    des: "(Classroom to Boardroom)",
+    title: "Industry Expert mentors",
+    des: "(Not just Academicians)",
     img: "/img/lence.svg",
   },
 ];
@@ -188,9 +190,9 @@ const courses = [
 ];
 
 const cardData = [
-  { id: 1, img: "/img/training.svg", text: "7+ years in training" },
-  { id: 2, img: "/img/carrers.svg", text: "10k+ Careers" },
-  { id: 3, img: "/img/job.svg", text: "Get Job Ready" },
+  { id: 1, img: "/img/training.svg", text: "9+ years in training" },
+  { id: 2, img: "/img/carrers.svg", text: "10k+ Careers Transformed" },
+  { id: 3, img: "/img/job.svg", text: "Become Enterprise Ready" },
   { id: 4, img: "/img/future.svg", text: "Future Proof" },
 ];
 
@@ -365,20 +367,19 @@ function HomeClient() {
             <div className="grid sm:grid-cols-1 md:grid-cols-1 xl:grid-cols-3 px-3">
               <div>
                 <h2 className="bg-gradient-to-b from-[#FD9055] to-[#FE4855] bg-clip-text text-transparent text-[30px] md:text-[50px] font-[400] md:font-semibold uppercase text-center xl:text-start">
-                  MASTER
+                  ENTERPRISE
                 </h2>
-                <p className="text-[33px] md:text-[68px] leading-[40px] md:leading-[70px] font-[700] md:font-bold text-[#98C7F9] text-center xl:text-start">
-                  DIGITAL <br className="xl:block hidden" /> MARKETING
+                <p className="text-[33px] md:text-[50px] leading-[40px] md:leading-[70px] font-[700] md:font-bold text-[#98C7F9] text-center xl:text-start">
+                  AI ENGINEERING
                 </p>
                 <p className="text-[#FE4855] text-[30px] md:text-[50px] font-[400] md:font-semibold uppercase text-center xl:text-start">
-                  WITH AI
+                  PROGRAM
                 </p>
                 <p className="text-[#ffffff] text-[18px] mb-4 text-center xl:text-start">
                   <strong className="font-[700] md:text-[24px] underline">
-                    2025
+                    2026
                   </strong>{" "}
-                  will be about AI-Powered{" "}
-                  <br className="sm:hidden block" /> Digital Marketing
+                  will be all about Production AI skills{" "}
                 </p>
 
                 <div className="md:block hidden mt-8">
@@ -403,11 +404,11 @@ function HomeClient() {
                 </div>
 
                 <div className="mt-5 bg-[var(--Background-Card)] md:px-3 py-2 md:py-3 max-w-sm md:max-w-[400px] max-[1280px]:mx-auto grid grid-cols-2 gap-2 md:gap-4 rounded-lg border border-[#343683]">
-                  {cardData.map((item, index) => (
+                  {cardData?.map((item, index) => (
                     <div
                       key={item.id}
                       className={`flex flex-col items-center justify-center text-center p-1 ${
-                        index < 2 ? "border-b border-[#343683]" : ""
+                        index < 2 ? "border-b  border-[#343683]" : ""
                       } ${
                         index % 2 === 0 ? "border-r border-[#343683]" : ""
                       }`}
@@ -419,7 +420,7 @@ function HomeClient() {
                         width={18}
                         height={18}
                       />
-                      <p className="text-white text-[16px] md:text-base mt-2">
+                      <p className="text-white text-nowrap text-[16px] md:text-sm mt-2">
                         {item.text}
                       </p>
                     </div>
@@ -443,8 +444,7 @@ function HomeClient() {
                     </div>
                     <span className="rounded-xl px-2 sm:px-3 py-4 bg-gradient-to-b from-[rgba(96,211,247,0.4)] to-[rgba(139,140,249,0.4)] text-center sm:w-[196px] max-[640px]:w-[152px] max-[640px]:h-[125px]">
                       <p className="text-white uppercase text-[11px] md:text-[12px] font-bold md:mt-0.5 mt-1">
-                        Rated based on best trained faculty and latest
-                        curriculum
+                        100% Hands on Learning Build What Companies Want!
                       </p>
                       <Image
                         className="mx-auto max-[768px]:mt-2.5"
@@ -573,6 +573,11 @@ function HomeClient() {
         </section>
         {/* Marquee End */}
 
+
+        {/* Here I need The AI section Here */}
+
+        <AISection /> 
+
         {/* Form Start */}
         <section className="my-[30px] md:my-[50px]">
           <div className="container min-[1440px]:max-w-[1440px] mx-auto px-3 md:px-6">
@@ -626,7 +631,7 @@ function HomeClient() {
         {/* Projects Start */}
         <section id="from1" className="my-[40px] md:my-[60px] px-4 md:px-6">
           <p className="sm:text-center text-neutral-800 text-[23px] md:text-[42px] font-semibold leading-[30px] md:leading-[54.60px]">
-            The BlueTick Advantage
+          The Bluetick-AI Advantage
           </p>
           <div className="container min-[1440px]:max-w-[1440px] mx-auto px-1 sm:px-4">
             <div className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 sm:mt-4">
@@ -746,10 +751,10 @@ function HomeClient() {
               {/* Left Content */}
               <div>
                 <p className="font-bold text-[26px] md:text-[32px]">
-                  Your Dream Job, Our Mission
+                Your Dream AI Career, Our Mission
                   <br />
                   <span className="bg-[#FBE7C1] font-bold">
-                    One Career at a Time!
+                  One transformation at a Time!
                   </span>
                 </p>
                 <div className="grid grid-cols-3 gap-4 mt-4">
@@ -767,7 +772,7 @@ function HomeClient() {
                       10,000<span className="text-[red]">+</span>
                     </p>
                     <p className="text-neutral-700 text-[16px]">
-                      Students Trained
+                    Professionals Upskilled
                     </p>
                   </div>
                   <div className="text-start mt-[40px] px-[2px] md:px-[10px]">
@@ -784,7 +789,7 @@ function HomeClient() {
                       1:15
                     </p>
                     <p className="text-neutral-700 text-[16px]">
-                      Trainers: Student ratio
+                    Mentor-to-Learner Ratio
                     </p>
                   </div>
                   <div className="text-start mt-[40px] px-[2px] md:px-[10px]">
@@ -801,7 +806,7 @@ function HomeClient() {
                       97%
                     </p>
                     <p className="text-neutral-700 text-[16px]">
-                      Placement Success record
+                    Career Transition Success
                     </p>
                   </div>
                 </div>
@@ -841,6 +846,8 @@ function HomeClient() {
           </div>
         </section>
         {/* Your Dream Job End */}
+
+        <TechLandscapeHero />
 
         {/* Amazon section Start */}
         <section className="my-[40px] md:my-[60px]">

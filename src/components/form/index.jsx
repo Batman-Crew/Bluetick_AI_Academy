@@ -238,7 +238,7 @@ export default function LearningAdvisorForm({ formType, setFormType }) {
         {!(formType === "hire" || formType === "franchisee") && (
           <div className="mb-5">
             <p className="text-[#556376] py-2 font-semibold">Learning Mode</p>
-            <div className="flex gap-2">
+            <div className="flex gap-5">
               {["Online", "Offline"].map((mode) => (
                 <label key={mode} className="flex items-center h-5">
                   <input
