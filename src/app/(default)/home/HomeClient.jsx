@@ -21,6 +21,7 @@ import {
 } from "@/constant";
 import AISection from "@/components/ai_section/AISection";
 import TechLandscapeHero from "@/components/tech_section/TechLandScape";
+import AIDashboardSection from "@/components/ai_tools/AITools";
 import CourseSection from "@/components/course_section/CourseSection";
 import ApplySection from "@/components/apply_section/ApplySection";
 
@@ -856,6 +857,12 @@ function HomeClient() {
         <ApplySection />
 
         
+
+
+
+
+
+        <AIDashboardSection /> 
 
         {/* Map start */}
         <section className="mb-[20px] max-[768px]:mt-[-15px] md:my-[60px]">
