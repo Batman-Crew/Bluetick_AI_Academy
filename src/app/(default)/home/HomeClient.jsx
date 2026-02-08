@@ -26,6 +26,8 @@ import ApplySection from "@/components/apply_section/ApplySection";
 import AIHeroSection from "@/components/ai_hero_section/AIHeroSection";
 import AIDashboardSection from "@/components/ai_tools/AITools";
 import TransformationSection from "@/components/transformation_section/TransformationSection";
+import TeamPage from "@/components/team_section/TeamsPage";
+import { Dot } from "lucide-react";
 
 // ------------------- DYNAMIC COMPONENTS -------------------
 const Header = dynamic(() => import("@/components/header"), { ssr: false });
@@ -587,7 +589,12 @@ function HomeClient() {
         <section className="my-[30px] md:my-[50px]">
           <div className="container min-[1440px]:max-w-[1440px] mx-auto px-3 md:px-6">
             <div className="grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 md:gap-10">
-              <div className="flex flex-col justify-center items-center mt-[20px] sm:mt-[40px] lg:mt-1 bg-[#F9F7FF] md:order-1 order-2 pt-5 sm:pt-8">
+              <div style={{
+            backgroundImage: `url(/img/formimage.png)`,
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+          }} className="flex flex-col min-h-96 pt-2 items-center mt-[20px] sm:mt-[40px] lg:mt-1 bg-[#F9F7FF] md:order-1 order-2 pt-5 sm:pt-8">
                 <div className="bg-white rounded-xl p-5 shadow-lg max-[640px]:w-[90%] text-center">
                   <div className="flex gap-2 justify-center">
                     <div className="px-2 flex items-center justify-center bg-black rounded-[100%]">
@@ -602,24 +609,15 @@ function HomeClient() {
                     <span className="text-[20px] md:text-[24px]">
                       In{" "}
                       <strong className="text-[red] text-[24px] md:text-[28px]">
-                        90 days
-                      </strong>{" "}
-                      Get
+                        14 Weekends
+                      </strong>
                     </span>
                   </div>
-                  <p className="text-[20px] md:text-[26px] font-[700]">
-                    Trained | Hired | Ahead
+                  <p className="text-[18px] md:text-[24px] font-[700]">
+                    Build | Deploy | Get Hired as an AI Engineer
                   </p>
                 </div>
-                <div className="flex justify-center w-[100%] xl:w-[80%]">
-                  <Image
-                    src="/img/attachment.svg"
-                    alt="Digital Marketing Courses in Bangalore"
-                    className="max-[1024px]:w-[60%] max-[1300px]:w-[80%]"
-                    width={400}
-                    height={300}
-                  />
-                </div>
+                
               </div>
 
               <div className="md:order-2 order-1 my-auto">
@@ -670,7 +668,12 @@ function HomeClient() {
         </section>
         {/* Projects End */}
 
-              <CourseSection />
+
+        <TeamPage />
+        <div className="" id="courses">
+
+        <CourseSection />
+        </div>
 
         {/* Courses Start */}
         {/* <section id="courses" className="my-[40px] md:my-[60px]">
