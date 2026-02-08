@@ -25,6 +25,7 @@ import CourseSection from "@/components/course_section/CourseSection";
 import ApplySection from "@/components/apply_section/ApplySection";
 import AIHeroSection from "@/components/ai_hero_section/AIHeroSection";
 import AIDashboardSection from "@/components/ai_tools/AITools";
+import TransformationSection from "@/components/transformation_section/TransformationSection";
 
 // ------------------- DYNAMIC COMPONENTS -------------------
 const Header = dynamic(() => import("@/components/header"), { ssr: false });
@@ -857,6 +858,7 @@ function HomeClient() {
 
         <ApplySection />
 
+        <TransformationSection />
 
         <AIHeroSection />
         
