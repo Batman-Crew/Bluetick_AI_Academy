@@ -1,178 +1,103 @@
-import { NextResponse } from 'next/server';
+import { NextResponse } from "next/server";
 
-// Zoho CRM API endpoint
-const ZOHO_API_DOMAIN = process.env.ZOHO_API_DOMAIN || 'https://www.zohoapis.in';
-const ZOHO_CLIENT_ID = process.env.ZOHO_CLIENT_ID;
-const ZOHO_CLIENT_SECRET = process.env.ZOHO_CLIENT_SECRET;
-const ZOHO_REFRESH_TOKEN = process.env.ZOHO_REFRESH_TOKEN;
-
-// Token cache to avoid requesting a new token for every request
-let accessTokenCache = {
-  token: null,
-  expiresAt: null,
-};
-
-/**
- * Get Zoho CRM Access Token
- */
-async function getAccessToken() {
-  // Check if we have a valid cached token
-  if (accessTokenCache.token && accessTokenCache.expiresAt > Date.now()) {
-    console.log('Using cached access token');
-    return accessTokenCache.token;
-  }
-
-  console.log('Requesting new access token from Zoho...');
-  
-
+export async function POST(req) {
   try {
-    const tokenUrl = `https://accounts.zoho.in/oauth/v2/token`;
-    const params = new URLSearchParams({
-      refresh_token: ZOHO_REFRESH_TOKEN,
-      client_id: ZOHO_CLIENT_ID,
-      client_secret: ZOHO_CLIENT_SECRET,
-      grant_type: 'refresh_token',
-    });
+    const body = await req.json();
 
-    const response = await fetch(`${tokenUrl}?${params}`, {
-      method: 'POST',
-    });
+    // Refresh Zoho Access Token
+    const tokenRes = await fetch(
+      `https://accounts.zoho.in/oauth/v2/token?refresh_token=${process.env.ZOHO_REFRESH_TOKEN}&client_id=${process.env.ZOHO_CLIENT_ID}&client_secret=${process.env.ZOHO_CLIENT_SECRET}&grant_type=refresh_token`,
+      { method: "POST" }
+    );
 
-    if (!response.ok) {
-      const errorText = await response.text();
-      throw new Error(`Failed to get access token: ${response.status} - ${errorText}`);
-    }
+    const tokenData = await tokenRes.json();
+    const accessToken = tokenData.access_token;
 
-    const data = await response.json();
-
-    if (!data.access_token) {
-      throw new Error('No access token in response');
-    }
-
-    // Cache the token (expires in 1 hour, cache for 55 minutes)
-    accessTokenCache = {
-      token: data.access_token,
-      expiresAt: Date.now() + (55 * 60 * 1000),
-    };
-
-    console.log('Successfully obtained new access token');
-    return data.access_token;
-  } catch (error) {
-    console.error('Error getting access token:', error);
-    throw error;
-  }
-}
-
-/**
- * Create Lead in Zoho CRM
- */
-async function createZohoLead(leadData, accessToken) {
-  const zohoLeadUrl = `${ZOHO_API_DOMAIN}/crm/v2/Leads`;
-
-  // Map form data to Zoho CRM Lead fields
-  const zohoData = {
-    data: [
-      {
-        Last_Name: leadData.name || 'Unknown',
-        Email: leadData.email,
-        Phone: leadData.mobile,
-        Company: leadData.company || 'Bluetick Academy Lead',
-        Lead_Source: 'Website Form',
-        Description: `
-Form Type: ${leadData.formType || 'default'}
-Learning Mode: ${leadData.learningMode || 'N/A'}
-Coding Experience: ${leadData.codingExperience || 'N/A'}
-Location: ${leadData.location || 'N/A'}
-        `.trim(),
-      },
-    ],
-  };
-
-  console.log('Creating lead in Zoho CRM:', JSON.stringify(zohoData, null, 2));
-
-  try {
-    const response = await fetch(zohoLeadUrl, {
-      method: 'POST',
-      headers: {
-        'Authorization': `Zoho-oauthtoken ${accessToken}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(zohoData),
-    });
-
-    const responseData = await response.json();
-    console.log('Zoho CRM Response:', JSON.stringify(responseData, null, 2));
-
-    if (!response.ok) {
-      // Check for OAuth scope error
-      if (responseData.code === 'OAUTH_SCOPE_MISMATCH') {
-        throw new Error('OAuth scope error: Your Zoho refresh token needs the following scopes: ZohoCRM.modules.ALL,ZohoCRM.settings.ALL. Please regenerate your refresh token with correct scopes. See ZOHO_SETUP_GUIDE.md');
-      }
-      throw new Error(`Zoho CRM API error: ${response.status} - ${JSON.stringify(responseData)}`);
-    }
-
-    return responseData;
-  } catch (error) {
-    console.error('Error creating Zoho lead:', error);
-    throw error;
-  }
-}
-
-/**
- * POST /api/zoho-lead
- * Creates a lead in Zoho CRM
- */
-export async function POST(request) {
-  try {
-    // Validate environment variables
-    if (!ZOHO_CLIENT_ID || !ZOHO_CLIENT_SECRET || !ZOHO_REFRESH_TOKEN) {
-      console.error('Missing Zoho credentials in environment variables');
+    if (!accessToken) {
+      console.error("Token Refresh Failed:", tokenData);
       return NextResponse.json(
-        {
-          success: false,
-          error: 'Server configuration error. Please contact support.'
-        },
+        { success: false, error: "Failed to refresh Zoho access token" },
         { status: 500 }
       );
     }
 
-    const body = await request.json();
-    console.log('Received form submission:', body);
+    // Identify Form Type
+    const formType = body.formType || "default";
 
-    // Validate required fields
-    if (!body.name || !body.email || !body.mobile) {
-      return NextResponse.json(
-        {
-          success: false,
-          error: 'Missing required fields: name, email, or mobile'
-        },
-        { status: 400 }
-      );
+    let leadSource = "Website Form";
+    let leadSourceDetail = "Website Learning Form";
+    let description = `Learning Mode: ${body.learningMode || ""}, Coding Experience: ${body.codingExperience || ""}`;
+
+    if (formType === "hire") {
+      leadSource = "Hire From Us";
+      leadSourceDetail = "Hire From Us Form";
+      description = `Hire enquiry from ${body.name} - ${body.company || ""}`;
     }
 
-    // Get access token
-    const accessToken = await getAccessToken();
+    if (formType === "franchisee") {
+      leadSource = "Franchisee Enquiry";
+      leadSourceDetail = "Franchisee Enquiry Form";
+      description = `Franchise enquiry from ${body.name} - ${body.location || ""}`;
+    }
 
-    // Create lead in Zoho CRM
-    const zohoResponse = await createZohoLead(body, accessToken);
+    if (formType === "newsletter") {
+      leadSource = "Newsletter Signup";
+      leadSourceDetail = "Website Footer Newsletter";
+      description = `Newsletter signup from ${body.email}`;
+      body.name = body.email.split("@")[0] || "Subscriber";
+    }
 
-    // Check if lead was created successfully
-    if (zohoResponse.data && zohoResponse.data[0]?.code === 'SUCCESS') {
+    // Build Zoho Bigin Payload
+    const payload = {
+      data: [
+        {
+          Last_Name: body.name || "Lead",
+          Email: body.email || "",
+          Phone: body.mobile || "",
+          Center: body.center || "",
+          Learning_Mode: body.learningMode || "",
+          Company_Name: body.company || "",
+          Location: body.location || "",
+          Form_Type: formType,
+          Lead_Source: leadSource,
+          Lead_Source_Detail: leadSourceDetail,
+          Website: "AI Academy",
+          Description: description,
+        },
+      ],
+      duplicate_check_fields: ["Email", "Phone"],
+    };
+
+    console.log("Payload to Zoho Bigin:", JSON.stringify(payload, null, 2));
+
+    // Send Data to Zoho Bigin (upsert: update if duplicate, create if new)
+    const zohoRes = await fetch("https://www.zohoapis.in/bigin/v2/Contacts/upsert", {
+      method: "POST",
+      headers: {
+        Authorization: `Zoho-oauthtoken ${accessToken}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(payload),
+    });
+
+    const result = await zohoRes.json();
+    console.log("Zoho Bigin Response:", result);
+
+    if (result?.data?.[0]?.code === "SUCCESS") {
       return NextResponse.json({
         success: true,
-        message: 'Lead created successfully in Zoho CRM',
-        zohoId: zohoResponse.data[0]?.details?.id,
+        message: "Lead successfully added to Zoho Bigin",
       });
-    } else {
-      throw new Error('Failed to create lead in Zoho CRM');
     }
-  } catch (error) {
-    console.error('API Error:', error);
+
     return NextResponse.json(
-      {
-        success: false,
-        error: error.message || 'Failed to process your request. Please try again.'
-      },
+      { success: false, error: result },
+      { status: 400 }
+    );
+  } catch (err) {
+    console.error("Server Error:", err);
+    return NextResponse.json(
+      { success: false, error: err.message },
       { status: 500 }
     );
   }
