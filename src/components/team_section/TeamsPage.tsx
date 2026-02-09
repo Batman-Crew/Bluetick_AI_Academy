@@ -47,16 +47,21 @@ export const profiles = [
 
 const TeamPage = memo(() => {
   return (
-    <section className="mx-auto max-w-7xl bg-background pb-5">
-        <h1 className="text-3xl font-bold text-center text-foreground mb-2">
+    <section
+      className="relative bg-[#0c142c]  w-full py-10 md:py-16"
+    >
+        <h1 className="text-3xl font-bold text-center text-white mb-2">
           Our Team
         </h1>
-        <p className="text-center text-muted-foreground mb-12">
-          Meet the people behind the work
+        <p className="text-center text-white/70 mb-12">
+        Learn from Industry Experts building
+        AI for Fortune 500 Companies
         </p>
-        <div className="grid  grid-cols-2 w-full  mx-auto  px-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="flex items-stretch gap-6 overflow-x-auto px-4 md:px-6 pb-4 max-w-7xl mx-auto hide-scrollbar">
           {profiles.map((profile) => (
-            <ProfileCard key={profile.id} profile={profile} />
+            <div key={profile.id} className="min-w-[140px] max-w-[160px] md:min-w-[260px] md:max-w-none flex-shrink-0 md:flex-1">
+              <ProfileCard profile={profile} />
+            </div>
           ))}
         </div>
     </section>

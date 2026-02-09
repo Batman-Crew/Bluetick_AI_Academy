@@ -7,7 +7,7 @@ import { FaCalendarAlt, FaLock } from "react-icons/fa";
 const batches = [
   { date: "28th Feb '26", soldOut: true },
   { date: "7th March '26", progress: 75, action: "Register Now" },
-  { date: "21st April '26", icon: true, action: "Learn More" },
+  { date: "21st April '26", icon: true },
 ];
 
 export default function UpcomingBatches() {
@@ -133,14 +133,6 @@ export default function UpcomingBatches() {
           })}
         </div>
 
-        {/* CTA */}
-        <motion.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="mx-auto mt-[clamp(24px,6vw,64px)] block rounded-full border border-blue-400/50 bg-blue-900/30 px-[clamp(20px,6vw,48px)] py-[clamp(10px,3vw,18px)] font-bold tracking-widest text-white text-[clamp(11px,2.5vw,18px)] shadow-[0_0_22px_rgba(59,130,246,0.35)]"
-        >
-          SECURE YOUR SPOT
-        </motion.button>
       </div>
     </section>
   );

@@ -176,7 +176,7 @@ function HomeClient() {
                         type="button"
                         className="overflow-hidden transition-transform duration-300 hover:scale-105 text-white cursor-pointer bg-[var(--Primary-color)] font-semibold rounded-lg text-[16px] min-w-[200px] px-4 py-2.5 text-center me-2 mb-2 uppercase"
                       >
-                        Explore Courses
+                        Explore Course
                       </button>
                     </Link>
                   </span>
@@ -276,7 +276,7 @@ function HomeClient() {
                         type="button"
                         className="uppercase overflow-hidden transition-transform duration-300 hover:scale-105 text-white cursor-pointer bg-[var(--Primary-color)] font-bold rounded-lg text-md py-2 w-full text-center me-2 mb-2 px-4 max-[640px]:mt-3"
                       >
-                        Explore Courses
+                        Explore Course
                       </button>
                     </Link>
                   </span>
@@ -338,7 +338,9 @@ function HomeClient() {
 
         {/* Here I need The AI section Here */}
 
-        <AISection /> 
+        <AISection />
+
+        <TeamPage />
 
         {/* Form Start */}
         <section className="my-[30px] md:my-[50px]">
@@ -349,7 +351,7 @@ function HomeClient() {
             backgroundPosition: "center",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
-          }} className="flex flex-col min-h-96 pt-2 items-center mt-[20px] sm:mt-[40px] lg:mt-1 bg-[#F9F7FF] md:order-1 order-2 pt-5 sm:pt-8">
+          }} className="flex flex-col min-h-[30rem] pt-2 items-center mt-[20px] sm:mt-[40px] lg:mt-1 bg-[#F9F7FF] md:order-1 order-2 pt-5 sm:pt-8">
                 <div className="bg-white rounded-xl p-5 shadow-lg max-[640px]:w-[90%] text-center">
                   <div className="flex gap-2 justify-center">
                     <div className="px-2 flex items-center justify-center bg-black rounded-[100%]">
@@ -392,7 +394,7 @@ function HomeClient() {
         {/* Projects Start */}
         <section id="from1" className="my-[40px] md:my-[60px] px-4 md:px-6">
           <p className="sm:text-center text-neutral-800 text-[23px] md:text-[42px] font-semibold leading-[30px] md:leading-[54.60px]">
-          The Bluetick-AI Advantage
+          The BlueTick AI<br />Advantage
           </p>
           <div className="container min-[1440px]:max-w-[1440px] mx-auto px-1 sm:px-4">
             <div className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 sm:mt-4">
@@ -427,7 +429,6 @@ function HomeClient() {
         {/* Projects End */}
 
 
-        <TeamPage />
         <div className="" id="courses">
 
         <CourseSection />
@@ -677,17 +678,6 @@ function HomeClient() {
           </p>
           <div className="container min-[1440px]:max-w-[1440px] mx-auto px-4 hidden md:block">
             <div className="grid min-[600px]:grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 mt-4">
-              {mediaLogos.map((file, idx) => (
-                <div key={idx} className="flex justify-center items-center">
-                  <Image
-                    src={`/img/${file}`}
-                    alt="no-logos"
-                    className="w-full h-auto max-w-[150px]"
-                    width={150}
-                    height={60}
-                  />
-                </div>
-              ))}
               {mediaLogos.map((file, idx) => (
                 <div key={idx} className="flex justify-center items-center">
                   <Image

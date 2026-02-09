@@ -120,22 +120,27 @@ const rows = [
 const TransformationSection = () => {
   return (
     <section className="w-full py-12 md:py-20 px-2 md:px-4 bg-gradient-to-b from-sky-50 to-background">
-      <div className="max-w-3xl mx-auto">
+      <div className="max-w-4xl mx-auto">
+        {/* Section Title */}
+        <h2 className="text-center text-2xl md:text-4xl font-bold text-neutral-800 mb-8 md:mb-12">
+          Your Transformation Journey
+        </h2>
+
         {/* Column Headers */}
         <div className="grid grid-cols-3 gap-1 md:gap-4 mb-8 md:mb-12">
           <div className="flex justify-center">
-            <span className="inline-block px-2 sm:px-4 md:px-6 py-1 md:py-2 rounded-full text-white bg-blue-500 text-[10px] sm:text-xs md:text-sm font-semibold text-blue-600 bg-background whitespace-nowrap">
+            <span className="inline-block px-3 sm:px-6 md:px-8 py-2 md:py-3 rounded-full text-white bg-[#0c142c] text-xs sm:text-sm md:text-base font-semibold whitespace-nowrap">
               You Today
             </span>
           </div>
           <div className="flex justify-center items-center gap-0.5 md:gap-2">
-            <span className="flex items-center gap-x-1  px-2 sm:px-4 md:px-6 py-1 md:py-2 rounded-full text-white bg-blue-500 text-[10px] sm:text-xs md:text-sm font-semibold text-blue-600 bg-background whitespace-nowrap">
+            <span className="flex items-center gap-x-1 px-3 sm:px-6 md:px-8 py-2 md:py-3 rounded-full text-white bg-[#0c142c] text-xs sm:text-sm md:text-base font-semibold whitespace-nowrap">
               14 Weekends
-            <ArrowRight className="h-3 w-3 md:h-4 md:w-4 text-white flex-shrink-0" />
+            <ArrowRight className="h-4 w-4 md:h-5 md:w-5 text-white flex-shrink-0" />
             </span>
           </div>
           <div className="flex justify-center">
-            <span className="inline-block px-2 sm:px-4 md:px-6 py-1 md:py-2 rounded-full text-white bg-blue-500 text-[10px] sm:text-xs md:text-sm font-semibold text-blue-600 bg-background whitespace-nowrap">
+            <span className="inline-block px-3 sm:px-6 md:px-8 py-2 md:py-3 rounded-full text-white bg-[#0c142c] text-xs sm:text-sm md:text-base font-semibold whitespace-nowrap">
               You After
             </span>
           </div>
@@ -148,11 +153,11 @@ const TransformationSection = () => {
             {rows.map((row, i) => {
               const IconComponent = row.before.Icon;
               return (
-                <div key={i} className="flex flex-col items-center text-center py-4 sm:py-6  px-1 sm:px-2 min-h-[120px] sm:min-h-[140px] md:min-h-[160px] justify-start">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14  flex items-center justify-center text-blue-600 mb-2 sm:mb-3 flex-shrink-0">
+                <div key={i} className="flex flex-col items-center text-center py-4 sm:py-6  px-1 sm:px-2 min-h-[120px] sm:min-h-[140px] md:min-h-[180px] justify-start">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16  flex items-center justify-center text-blue-600 mb-2 sm:mb-3 flex-shrink-0">
                     <IconComponent />
                   </div>
-                  <p className="text-[10px] sm:text-xs md:text-sm text-gray-600 leading-tight max-w-[80px] sm:max-w-[100px] md:max-w-[120px]">
+                  <p className="text-xs sm:text-sm md:text-base text-gray-700 font-medium leading-tight max-w-[90px] sm:max-w-[120px] md:max-w-[160px]">
                     {row.before.text}
                   </p>
                 </div>
@@ -166,24 +171,24 @@ const TransformationSection = () => {
             {rows.map((row, i) => {
               const IconComponent = row.during.Icon;
               return (
-                <div key={i} className="flex flex-col items-center text-center py-4 sm:py-6 sm:px-2 relative min-h-[120px] sm:min-h-[140px] md:min-h-[160px] justify-start">
-                  {/* Left Arrow - Always visible */}
-                  <div className="absolute left-2 lg:left-4 top-[30px] sm:top-[36px] md:top-[44px] -translate-x-full flex items-center">
-                    <div className="w-4 sm:w-4 md:w-6 h-[3px] bg-blue-400"></div>
-                    <ArrowRight className="h-2.5 w-2.5 sm:h-3 sm:w-3 text-blue-500 -ml-2" />
+                <div key={i} className="flex flex-col items-center text-center py-4 sm:py-6 sm:px-2 relative min-h-[120px] sm:min-h-[140px] md:min-h-[180px] justify-start">
+                  {/* Left Arrow */}
+                  <div className="absolute left-0 lg:left-2 top-[30px] sm:top-[36px] md:top-[48px] -translate-x-full flex items-center">
+                    <div className="w-4 sm:w-5 md:w-8 h-[3px] bg-blue-400"></div>
+                    <ArrowRight className="h-3 w-3 sm:h-4 sm:w-4 text-blue-500 -ml-2" />
                   </div>
-                  
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-xl flex items-center justify-center text-blue-600  flex-shrink-0">
+
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 rounded-xl flex items-center justify-center text-blue-600  flex-shrink-0">
                     <IconComponent  />
                   </div>
-                  <p className="text-[10px] sm:text-xs md:text-sm text-gray-700 font-medium leading-tight max-w-[80px] sm:max-w-[100px] md:max-w-[120px]">
+                  <p className="text-xs sm:text-sm md:text-base text-gray-700 font-medium leading-tight max-w-[90px] sm:max-w-[120px] md:max-w-[160px]">
                     {row.during.text}
                   </p>
-                  
-                  {/* Right Arrow - Always visible */}
-                  <div className="absolute right-2 lg:right-4 top-[30px] sm:top-[36px] md:top-[44px] translate-x-full flex items-center">
-                    <div className="w-4 sm:w-4 md:w-6 h-[3px] bg-blue-400"></div>
-                    <ArrowRight className="h-2.5 w-2.5 sm:h-4 sm:w-4 text-blue-500 -ml-2" />
+
+                  {/* Right Arrow */}
+                  <div className="absolute right-0 lg:right-2 top-[30px] sm:top-[36px] md:top-[48px] translate-x-full flex items-center">
+                    <div className="w-4 sm:w-5 md:w-8 h-[3px] bg-blue-400"></div>
+                    <ArrowRight className="h-3 w-3 sm:h-4 sm:w-4 text-blue-500 -ml-2" />
                   </div>
                 </div>
               );
@@ -196,11 +201,11 @@ const TransformationSection = () => {
             {rows.map((row, i) => {
               const IconComponent = row.after.Icon;
               return (
-                <div key={i} className="flex flex-col items-center text-center py-4 sm:py-6  px-1 sm:px-2 min-h-[120px] sm:min-h-[140px] md:min-h-[160px] justify-start">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14  flex items-center justify-center text-blue-600 mb-2 sm:mb-3 flex-shrink-0">
+                <div key={i} className="flex flex-col items-center text-center py-4 sm:py-6  px-1 sm:px-2 min-h-[120px] sm:min-h-[140px] md:min-h-[180px] justify-start">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16  flex items-center justify-center text-blue-600 mb-2 sm:mb-3 flex-shrink-0">
                     <IconComponent />
                   </div>
-                  <p className="text-[10px] sm:text-xs md:text-sm text-gray-700 font-medium leading-tight max-w-[80px] sm:max-w-[100px] md:max-w-[120px]">
+                  <p className="text-xs sm:text-sm md:text-base text-gray-700 font-medium leading-tight max-w-[90px] sm:max-w-[120px] md:max-w-[160px]">
                     {row.after.text}
                   </p>
                 </div>

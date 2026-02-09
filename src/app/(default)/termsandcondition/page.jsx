@@ -49,10 +49,10 @@ export default function TermsAndConditions() {
             </h1>
 
             <p className="mt-4 text-sm sm:text-base">
-              Welcome to <strong>Blue Tick Academy</strong> ("we," "our," or
+              Welcome to <strong>BlueTick AI Academy</strong> ("we," "our," or
               "us"). By accessing or using our website{" "}
-              <a href="https://bluetickacademy.com" className="text-blue-500 underline">
-                https://bluetickacademy.com
+              <a href="https://bluetickacademy.ai" className="text-blue-500 underline">
+                https://bluetickacademy.ai
               </a>{" "}
               ("Website") and our services, you agree to comply with and be bound
               by these Terms and Conditions ("Terms"). If you do not agree with
@@ -68,12 +68,12 @@ export default function TermsAndConditions() {
               </li>
               <li>
                 <strong>"Services"</strong> refer to all courses, training
-                programs, and related offerings provided by Blue Tick Academy.
+                programs, and related offerings provided by BlueTick AI Academy.
               </li>
               <li>
                 <strong>"Website"</strong> refers to{" "}
-                <a href="https://bluetickacademy.com" className="text-blue-500 underline">
-                  https://bluetickacademy.com
+                <a href="https://bluetickacademy.ai" className="text-blue-500 underline">
+                  https://bluetickacademy.ai
                 </a>
               </li>
             </ul>
@@ -100,8 +100,8 @@ export default function TermsAndConditions() {
               <li>Cancellations 7 days before course start receive a full refund.</li>
               <li>
                 Refund requests must be emailed to{" "}
-                <a href="mailto:info@bluetickacademy.com" className="text-blue-500 underline">
-                  info@bluetickacademy.com
+                <a href="mailto:info@bluetickacademy.ai" className="text-blue-500 underline">
+                  info@bluetickacademy.ai
                 </a>
               </li>
               <li>No refunds after course commencement.</li>
@@ -119,7 +119,7 @@ export default function TermsAndConditions() {
 
             <h2 className="text-lg sm:text-xl font-semibold mt-6">6. Intellectual Property</h2>
             <p className="text-sm sm:text-base">
-              All content and course materials belong to Blue Tick Academy and are
+              All content and course materials belong to BlueTick AI Academy and are
               copyright protected.
             </p>
 
@@ -136,7 +136,7 @@ export default function TermsAndConditions() {
             <h2 className="text-lg sm:text-xl font-semibold mt-6">9. Privacy Policy</h2>
             <p className="text-sm sm:text-base">
               Governed by our{" "}
-              <a href="https://bluetickacademy.com/privacy-policy" className="text-blue-500 underline">
+              <a href="https://bluetickacademy.ai/privacy-policy" className="text-blue-500 underline">
                 Privacy Policy
               </a>
               .
@@ -171,15 +171,15 @@ export default function TermsAndConditions() {
             <h2 className="text-lg sm:text-xl font-semibold mt-6">14. Contact Us</h2>
             <p className="text-sm sm:text-base">For queries:</p>
 
-            <p className="font-semibold text-sm sm:text-base">Blue Tick Academy</p>
+            <p className="font-semibold text-sm sm:text-base">BlueTick AI Academy</p>
             <p className="text-sm sm:text-base">
               No.545, 2nd Floor, CMH Road, Indiranagar Stage 2, Bangalore - 560038
             </p>
 
             <p className="text-sm sm:text-base">
               Email:{" "}
-              <a href="mailto:sandya@bluetickacademy.com" className="text-blue-500 underline">
-                sandya@bluetickacademy.com
+              <a href="mailto:sandya@bluetickacademy.ai" className="text-blue-500 underline">
+                sandya@bluetickacademy.ai
               </a>
             </p>
 
