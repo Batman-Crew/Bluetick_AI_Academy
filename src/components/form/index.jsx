@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import Image from 'next/image';
-const Captcha = "/img/captcha.png";
+const Captcha = "/img/captcha.webp";
 const FormBack = "/img/formback.svg";
 import Popup from '../popup';
 

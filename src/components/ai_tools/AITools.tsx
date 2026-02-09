@@ -48,7 +48,7 @@ export default function AIDashboardSection() {
   return (
     <section
       style={{
-        backgroundImage: `url('/img/AI_BG/ai_bg1.png')`,
+        backgroundImage: `url('/img/AI_BG/ai_bg1.webp')`,
         backgroundPosition: "center 10%",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",

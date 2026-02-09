@@ -41,7 +41,7 @@ export default function ContactUs({ formType, setFormType }) {
       {/* ---------- HERO SECTION ---------- */}
       <section
         style={{
-          backgroundImage: "url('/img/banner.jpg')",
+          backgroundImage: "url('/img/banner.webp')",
           backgroundPosition: "center",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",

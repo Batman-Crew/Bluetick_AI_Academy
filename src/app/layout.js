@@ -24,11 +24,15 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        {/* ⚡ Critical Resource Preloading */}
+        <link rel="preload" href="/img/banner.webp" as="image" type="image/webp" />
+        <link rel="preload" href="/img/mobilebanner.webp" as="image" type="image/webp" media="(max-width: 768px)" />
+
         {/* ⚡ Resource Hints for Performance */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://www.googletagmanager.com" />
-        <link rel="preconnect" href="https://connect.facebook.net" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://connect.facebook.net" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
 
         {/* ⚡ Viewport & Performance Meta Tags */}
@@ -36,9 +40,9 @@ export default function RootLayout({ children }) {
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
 
         {/* ======================================================
-           ⚡ Google Tag Manager (Async + Non-blocking)
+           ⚡ Google Tag Manager (Deferred for better performance)
         ====================================================== */}
-        <Script id="gtm" strategy="afterInteractive">
+        <Script id="gtm" strategy="lazyOnload">
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -49,9 +53,9 @@ export default function RootLayout({ children }) {
         </Script>
 
         {/* ======================================================
-           ⚡ Meta Pixel Base (Async + Light)
+           ⚡ Meta Pixel Base (Deferred for better performance)
         ====================================================== */}
-        <Script id="fb-pixel" strategy="afterInteractive">
+        <Script id="fb-pixel" strategy="lazyOnload">
           {`
             !function(f,b,e,v,n,t,s)
             {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -103,7 +107,6 @@ export default function RootLayout({ children }) {
         <MetaPixelTracker />
 
         <SpeedInsights />
-
 
         {children}
       </body>

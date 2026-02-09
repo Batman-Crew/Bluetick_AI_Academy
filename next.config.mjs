@@ -12,6 +12,17 @@ const nextConfig = {
     compress: true,
     poweredByHeader: false,
     reactStrictMode: true,
+    // Optimize production build
+    swcMinify: true,
+    compiler: {
+        removeConsole: process.env.NODE_ENV === 'production' ? {
+            exclude: ['error', 'warn'],
+        } : false,
+    },
+    // Enable experimental features for better performance
+    experimental: {
+        optimizePackageImports: ['react-icons', 'lucide-react', 'framer-motion'],
+    },
 };
 
 export default nextConfig;
