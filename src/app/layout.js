@@ -91,8 +91,10 @@ export default function RootLayout({ children }) {
         {/* ⚡Meta Pixel Click Tracking */}
         <MetaPixelTracker />
 
-        {children}
         <SpeedInsights />
+
+
+        {children}
       </body>
     </html>
   );

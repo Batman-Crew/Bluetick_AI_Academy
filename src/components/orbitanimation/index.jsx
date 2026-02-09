@@ -1,12 +1,31 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, memo, useMemo } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-export default function OrbitAnimation() {
+function OrbitAnimation() {
   const [mounted, setMounted] = useState(false);
   const [radius, setRadius] = useState(170);
+
+  // Memoize orbiting elements array
+  const orbitingElements = useMemo(() => [
+    { src: "/img/round/swiggy.svg", alt: "Swiggy" },
+    { src: "/img/round/amazonsvg.svg", alt: "Amazon" },
+    { src: "/img/round/filpkartsvg.svg", alt: "Flipkart" },
+    { src: "/img/round/googlesvg.svg", alt: "Google" },
+  ], []);
+
+  // Memoize calculation function
+  const calculatePosition = useMemo(() =>
+    (index, total, radius) => {
+      const angle = (index / total) * Math.PI * 2;
+      return {
+        x: Math.cos(angle) * radius,
+        y: Math.sin(angle) * radius,
+      };
+    }, []
+  );
 
   useEffect(() => {
     setMounted(true);
@@ -22,22 +41,6 @@ export default function OrbitAnimation() {
   }, []);
 
   if (!mounted) return null;
-
-  const calculatePosition = (index, total, radius) => {
-    const angle = (index / total) * Math.PI * 2;
-    return {
-      x: Math.cos(angle) * radius,
-      y: Math.sin(angle) * radius,
-    };
-  };
-
-  // 🌟 Using public image paths instead of imports
-  const orbitingElements = [
-    { src: "/img/round/swiggy.svg", alt: "Swiggy" },
-    { src: "/img/round/amazonsvg.svg", alt: "Amazon" },
-    { src: "/img/round/filpkartsvg.svg", alt: "Flipkart" },
-    { src: "/img/round/googlesvg.svg", alt: "Google" },
-  ];
 
   return (
     <div className="flex items-center justify-center w-full h-auto p-4">
@@ -97,3 +100,7 @@ export default function OrbitAnimation() {
     </div>
   );
 }
+
+OrbitAnimation.displayName = "OrbitAnimation";
+
+export default memo(OrbitAnimation);

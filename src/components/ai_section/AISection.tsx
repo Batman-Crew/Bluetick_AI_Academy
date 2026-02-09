@@ -1,8 +1,5 @@
 import { motion } from "framer-motion";
-import React, { useState } from "react";
-// import expert1 from "@/assets/expert1.jpg";
-// import expert2 from "@/assets/expert2.jpg";
-// import expert3 from "@/assets/expert3.jpg";
+import React, { memo } from "react";
 import { FaPython } from "react-icons/fa";
 import { TbSettingsCode } from "react-icons/tb";
 import { LuBrain } from "react-icons/lu";
@@ -10,10 +7,6 @@ import { FaRobot } from "react-icons/fa6";
 import { IoSearchOutline } from "react-icons/io5";
 import { PiFilesLight } from "react-icons/pi";
 import { SiOpenai } from "react-icons/si";
-
-
-
-
 
 const topics = [
   { icon: <FaPython className="text-gray-200" />, label: "Python" },
@@ -25,16 +18,7 @@ const topics = [
   { icon: <SiOpenai className="text-gray-200" />, label: "LLMOps" },
 ];
 
-const experts = [
-  { name: "Enterprise AI Architect", img: "", company: "EY" },
-  { name: "AI & ML Lead", img: "", company: "Kinaxis" },
-  { name: "AI Solutions Head", img: "", company: "SAP" },
-];
-
-
 const AISection = () => {
-
-    const [bgImage, setBgImage] = useState("/img/AI_BG/AIBg1.jpg");
 
   return (
     <section
@@ -140,4 +124,4 @@ const AISection = () => {
   );
 };
 
-export default AISection;
+export default memo(AISection);
