@@ -89,14 +89,22 @@ function HomeClient() {
       <div className="scroll-smooth">
         {/* Banner section start */}
         <section
-          style={{
-            backgroundImage: `url(${bgImage})`,
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-          }}
-          className="md:py-[40px] max-[768px]:pb-[20px] max-[768px]:pt-[130px] max-[768px]:mt-[-80px]"
+          className="md:py-[40px] max-[768px]:pb-[20px] max-[768px]:pt-[130px] max-[768px]:mt-[-80px] relative"
         >
+          {/* Optimized Background Image with Priority Loading */}
+          <Image
+            src={bgImage}
+            alt="Bluetick Academy AI Engineering Program"
+            fill
+            priority
+            quality={85}
+            sizes="100vw"
+            style={{
+              objectFit: "cover",
+              objectPosition: "center",
+              zIndex: -1,
+            }}
+          />
           <div className="container min-[1440px]:max-w-[1440px] mx-auto px-3 md:px-6">
             <div className="grid sm:grid-cols-1 md:grid-cols-1 xl:grid-cols-3 px-3">
               <div>
@@ -153,6 +161,7 @@ function HomeClient() {
                         alt={item.text}
                         width={18}
                         height={18}
+                        loading="eager"
                       />
                       <p className="text-white lg:text-nowrap text-[16px] md:text-sm mt-2">
                         {item.text}
