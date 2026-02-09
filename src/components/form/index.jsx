@@ -13,10 +13,10 @@ export default function LearningAdvisorForm({ formType, setFormType }) {
     name: "",
     email: "",
     mobile: "",
-    center: "",
     company: "",
     location: "",
     learningMode: "",
+    codingExperience: "", // New field
     captchaChecked: false,
   });
   const [errors, setErrors] = useState({});
@@ -29,14 +29,14 @@ export default function LearningAdvisorForm({ formType, setFormType }) {
       tempErrors.email = "Invalid email";
     if (!formData.mobile.match(/^\d{10}$/))
       tempErrors.mobile = "Enter a valid 10-digit mobile number";
-    if (formType === "default" && !formData.center)
-      tempErrors.center = "Select a center";
     if (formType === "hire" && !formData.company.trim())
       tempErrors.company = "Company name is required";
     if (formType === "franchisee" && !formData.location.trim())
       tempErrors.location = "Location name is required";
     if (!(formType === "hire" || formType === "franchisee") && !formData.learningMode)
       tempErrors.learningMode = "Select a learning mode";
+    if (formType === "default" && !formData.codingExperience)
+      tempErrors.codingExperience = "Please select your coding experience level";
     if (formType === "default" && !formData.captchaChecked)
       tempErrors.captchaChecked = "Please verify the captcha";
 
@@ -53,7 +53,7 @@ export default function LearningAdvisorForm({ formType, setFormType }) {
     });
   };
 
-  // -------------------- Submit --------------------
+  // -------------------- Submit to Zoho CRM --------------------
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log("Form Type:", formType);
@@ -65,10 +65,10 @@ export default function LearningAdvisorForm({ formType, setFormType }) {
     }
 
     try {
-      console.log("Sending data to Amplify Lambda...");
-      const API_URL = "https://4tm07os0jl.execute-api.ap-south-1.amazonaws.com/prod/items";
+      console.log("Sending data to Zoho CRM...");
 
-      const res = await fetch(API_URL, {
+      // Send to your API route that will handle Zoho CRM integration
+      const res = await fetch('/api/zoho-lead', {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -78,7 +78,7 @@ export default function LearningAdvisorForm({ formType, setFormType }) {
       });
 
       const result = await res.json();
-      console.log("Zoho API Response:", result);
+      console.log("Zoho CRM API Response:", result);
 
       if (result.success) {
         let message = "";
@@ -92,10 +92,10 @@ export default function LearningAdvisorForm({ formType, setFormType }) {
 
         setPopupType("success");
         setPopupMessage(message);
-        console.log("Lead synced successfully to Zoho Bigin");
+        console.log("Lead synced successfully to Zoho CRM");
       } else {
         setPopupType("error");
-        setPopupMessage("Zoho Bigin API failed. Please check console logs.");
+        setPopupMessage(result.error || "Zoho CRM API failed. Please try again.");
         console.error("Zoho Error:", result.error);
       }
     } catch (error) {
@@ -108,10 +108,10 @@ export default function LearningAdvisorForm({ formType, setFormType }) {
         name: "",
         email: "",
         mobile: "",
-        center: "",
         company: "",
         location: "",
         learningMode: "",
+        codingExperience: "",
         captchaChecked: false,
       });
       setErrors({});
@@ -131,11 +131,12 @@ export default function LearningAdvisorForm({ formType, setFormType }) {
         />
 
       <p className="text-center text-[20px] md:text-[24px] font-[500] sm:bg-[#F7F8F9] py-4 sm:border border-[#f5f7f8] mx-[10px] sm:mx-[20px]">
-        Speak with Our{" "}
-        {formType === "franchisee" || formType === "hire" ? (
-          <span className="font-bold border-b-[4px] border-[#FE7C55]">Team</span>
+        {formType === "franchisee" ? (
+          <span className="font-bold border-b-[4px] border-[#FE7C55]">Franchise Enquiry</span>
+        ) : formType === "hire" ? (
+          <span className="font-bold border-b-[4px] border-[#FE7C55]">Hiring Enquiry</span>
         ) : (
-          <span className="font-bold border-b-[4px] border-[#FE7C55]">Learning Advisor</span>
+          <span className="font-bold border-b-[4px] border-[#FE7C55]">Apply for Next Cohort</span>
         )}
       </p>
 
@@ -158,6 +159,20 @@ export default function LearningAdvisorForm({ formType, setFormType }) {
           {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
         </div>
 
+        {/* Mobile */}
+        <div className="mb-5">
+          <input
+            type="number"
+            id="mobile"
+            name="mobile"
+            value={formData.mobile}
+            onChange={handleChange}
+            placeholder="Number"
+            className="bg-white outline-none border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5"
+          />
+          {errors.mobile && <p className="text-red-500 text-sm">{errors.mobile}</p>}
+        </div>
+
         {/* Email */}
         <div className="mb-5">
           <input
@@ -171,38 +186,6 @@ export default function LearningAdvisorForm({ formType, setFormType }) {
           />
           {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
         </div>
-
-        {/* Mobile */}
-        <div className="mb-5">
-          <input
-            type="number"
-            id="mobile"
-            name="mobile"
-            value={formData.mobile}
-            onChange={handleChange}
-            placeholder="Mobile"
-            className="bg-white outline-none border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5"
-          />
-          {errors.mobile && <p className="text-red-500 text-sm">{errors.mobile}</p>}
-        </div>
-
-        {/* Center (Default Form Only) */}
-        {formType === "default" && (
-          <div className="mb-5">
-            <select
-              name="center"
-              value={formData.center}
-              onChange={handleChange}
-              className="outline-none bg-white border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5"
-            >
-              <option value="">Select Center</option>
-              <option>Bannerghatta Road</option>
-              <option>Indiranagar (Besides Metro Station)</option>
-              <option>Ramamurthy Nagar Junction on Outer Ring Road</option>
-            </select>
-            {errors.center && <p className="text-red-500 text-sm">{errors.center}</p>}
-          </div>
-        )}
 
         {/* Company (Hire Form Only) */}
         {formType === "hire" && (
@@ -237,23 +220,80 @@ export default function LearningAdvisorForm({ formType, setFormType }) {
         {/* Learning Mode (Default Only) */}
         {!(formType === "hire" || formType === "franchisee") && (
           <div className="mb-5">
-            <p className="text-[#556376] py-2 font-semibold">Learning Mode</p>
-            <div className="flex gap-5">
-              {["Online", "Offline"].map((mode) => (
-                <label key={mode} className="flex items-center h-5">
-                  <input
-                    type="radio"
-                    name="learningMode"
-                    value={mode}
-                    checked={formData.learningMode === mode}
-                    onChange={handleChange}
-                    className="w-4 h-4 text-blue-600 bg-white border-gray-300"
-                  />
-                  <p className="text-[#556376] pl-2">{mode}</p>
-                </label>
-              ))}
+            <p className="text-[#556376] py-2 font-semibold">Mode Selection</p>
+            <div className="flex flex-col gap-3">
+              <label className="flex items-center">
+                <input
+                  type="radio"
+                  name="learningMode"
+                  value="Online"
+                  checked={formData.learningMode === "Online"}
+                  onChange={handleChange}
+                  className="w-4 h-4 text-blue-600 bg-white border-gray-300"
+                />
+                <p className="text-[#556376] pl-3">Online</p>
+              </label>
+
+              <label className="flex items-center">
+                <input
+                  type="radio"
+                  name="learningMode"
+                  value="Offline (Indiranagar, besides metro station)"
+                  checked={formData.learningMode === "Offline (Indiranagar, besides metro station)"}
+                  onChange={handleChange}
+                  className="w-4 h-4 text-blue-600 bg-white border-gray-300"
+                />
+                <p className="text-[#556376] pl-3">Offline (Indiranagar, besides metro station)</p>
+              </label>
+
+              {/* Google Maps Link */}
+              {formData.learningMode === "Offline (Indiranagar, besides metro station)" && (
+                <div className="ml-7 mt-1">
+                  <a
+                    href="https://maps.app.goo.gl/your-google-maps-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:text-blue-800 text-sm underline"
+                  >
+                    📍 View on Google Maps
+                  </a>
+                </div>
+              )}
             </div>
-            {errors.learningMode && <p className="text-red-500 text-sm">{errors.learningMode}</p>}
+            {errors.learningMode && <p className="text-red-500 text-sm mt-2">{errors.learningMode}</p>}
+          </div>
+        )}
+
+        {/* Coding Experience (Default Only) */}
+        {!(formType === "hire" || formType === "franchisee") && (
+          <div className="mb-5">
+            <p className="text-[#556376] py-2 font-semibold">Coding Experience</p>
+            <div className="flex flex-col gap-3">
+              <label className="flex items-center">
+                <input
+                  type="radio"
+                  name="codingExperience"
+                  value="I have coding experience"
+                  checked={formData.codingExperience === "I have coding experience"}
+                  onChange={handleChange}
+                  className="w-4 h-4 text-blue-600 bg-white border-gray-300"
+                />
+                <p className="text-[#556376] pl-3">I have coding experience</p>
+              </label>
+
+              <label className="flex items-center">
+                <input
+                  type="radio"
+                  name="codingExperience"
+                  value="I am a beginner (Additional 4 Weekends Python bootcamp)"
+                  checked={formData.codingExperience === "I am a beginner (Additional 4 Weekends Python bootcamp)"}
+                  onChange={handleChange}
+                  className="w-4 h-4 text-blue-600 bg-white border-gray-300"
+                />
+                <p className="text-[#556376] pl-3">I am a beginner (Additional 4 Weekends Python bootcamp)</p>
+              </label>
+            </div>
+            {errors.codingExperience && <p className="text-red-500 text-sm mt-2">{errors.codingExperience}</p>}
           </div>
         )}
 
@@ -280,16 +320,16 @@ export default function LearningAdvisorForm({ formType, setFormType }) {
               height={40}
               className="w-[60px] h-[40px]"
             />
-
           </div>
         )}
+        {errors.captchaChecked && <p className="text-red-500 text-sm">{errors.captchaChecked}</p>}
 
         {/* Submit Button */}
         <button
           type="submit"
           className="overflow-hidden transition-transform duration-300 hover:scale-105 cursor-pointer text-white bg-gradient-to-b from-[#FD9055] to-[#FE4855] font-medium rounded-lg text-lg px-8 w-full py-1 md:py-2 text-center my-3 uppercase"
         >
-          {formType === "franchisee" || formType === "hire" ? "Submit" : "Register"}
+          {formType === "franchisee" || formType === "hire" ? "Submit" : "REGISTER"}
         </button>
       </form>
 
