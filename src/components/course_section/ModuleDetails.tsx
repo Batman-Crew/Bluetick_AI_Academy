@@ -45,10 +45,12 @@ const ModuleDetail = ({ module }: ModuleDetailProps) => {
         {module.lessons.map((lesson) => {
           const Icon = iconMap[lesson.icon];
           return (
-            <div className="bg-card  rounded-xl bg-card border border-border p-4 shadow-sm transition-shadow hover:shadow-md ">
-            
             <div
               key={lesson.title}
+              className="bg-card  rounded-xl bg-card border border-border p-4 shadow-sm transition-shadow hover:shadow-md "
+            >
+
+            <div
               className="flex items-start gap-4 "
             >
               <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-muted text-muted-foreground">

@@ -1,6 +1,7 @@
 // import bgMobile from "@/assets/bg-mobile.jpg";
 // import bgDesktop from "@/assets/bg-desktop.jpg";
 import { TrendingUp, Percent, Briefcase } from "lucide-react";
+import Image from "next/image";
 import React from "react";
 
 const stats = [
@@ -8,13 +9,13 @@ const stats = [
         number: "Developers",
         description: "(Java, Python, JS, QA, Analyst, etc.)",
         text: <div>Just calling OpenAI APIs Era is over <br /><span className="font-bold text-orange-600">Start building AI systems</span> </div>,
-        icon: <img src="/img/AI_BG/card1.png" />,
+        icon: <Image height={60} width={60} alt="Dashboard settings" src="/img/AI_BG/card1.png" />,
     },
     {
         number: "Beginner / Non-Technical",
         description: "",
         text: <div>With additional <span className="font-bold text-orange-600">4 weeks</span> of Python bootcamp, we bridge you to the <span className="font-bold text-orange-600">highest paying role in tech! </span></div>,
-        icon: <img src="/img/AI_BG/card2.png" />,
+        icon: <Image height={100} width={100} alt="Graph" src="/img/AI_BG/card2.png" />,
     },
 ];
 
@@ -64,7 +65,7 @@ const ApplySection = () => {
     >
       {/* Icon */}
       <div
-        className={`w-10 h- 10 md:w-14 md:h-14 flex items-center justify-center `}
+        className="flex items-center justify-center"
       >
         {stat.icon}
       </div>

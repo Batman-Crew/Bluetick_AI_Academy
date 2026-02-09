@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 
 type Tool = {
@@ -108,10 +109,12 @@ export default function AIDashboardSection() {
               }}
             >
               <div className="absolute inset-0 bg-gradient-to-tr from-white/10 md:from-white/5 via-transparent to-white/15 md:to-white/10 pointer-events-none" />
-                <img
+                <Image
                   src={tool.iconSrc}
                   alt={tool.label}
-                  className="w-12 h-12 md:w-12 md:h-12 mb-1 md:mb-2 object-contain"
+                  width={45}
+                  height={45}
+                  className=" mb-1 md:mb-2 object-contain"
                   style={{
                     filter: `drop-shadow(0 0 10px ${tool.color}aa)`,
                   }}
