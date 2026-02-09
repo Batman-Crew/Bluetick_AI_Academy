@@ -47,14 +47,14 @@ export const profiles = [
 
 const TeamPage = () => {
   return (
-    <section className="mx-auto bg-background pb-5">
+    <section className="mx-auto max-w-7xl bg-background pb-5">
         <h1 className="text-3xl font-bold text-center text-foreground mb-2">
           Our Team
         </h1>
         <p className="text-center text-muted-foreground mb-12">
           Meet the people behind the work
         </p>
-        <div className="grid lg:max-w-7xl grid-cols-2 w-full  mx-auto lg:px-20 px-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid  grid-cols-2 w-full  mx-auto  px-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {profiles.map((profile) => (
             <ProfileCard key={profile.id} profile={profile} />
           ))}

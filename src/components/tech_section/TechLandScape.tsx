@@ -1,23 +1,21 @@
-// import bgMobile from "@/assets/bg-mobile.jpg";
-// import bgDesktop from "@/assets/bg-desktop.jpg";
-import { TrendingUp, Percent, Briefcase } from "lucide-react";
+import Image from "next/image";
 import React from "react";
 
 const stats = [
   {
     number: "₹12-45L",
     text: "Salary range for 0-2+ years AI Engineers",
-    icon: <img src="/img/AI_BG/chartimg1.png" />,
+    icon: <Image height={50} width={50} alt="Chart" src="/img/AI_BG/chartimg1.png" />,
   },
   {
     number: "312 %",
     text: "Growth in AI Engineering roles (LinkedIn 2026)",
-    icon: <img src="/img/AI_BG/chartimg2.png" />,
+    icon: <Image height={50} width={50} alt="Chart"  src="/img/AI_BG/chartimg2.png" />,
   },
   {
     number: "30,000+",
     text: "Unfilled AI Engineer jobs in India",
-    icon: <img src="/img/AI_BG/chartimg3.png" />,
+    icon: <Image height={50} width={50} alt="Chart"  src="/img/AI_BG/chartimg3.png" />,
   },
 ];
 
@@ -32,18 +30,6 @@ const TechLandscapeHero = () => {
     }}
     className="relative w-full overflow-hidden">
       {/* Background images */}
-      {/* <img
-        src={bgMobile}
-        alt=""
-        className="absolute inset-0 w-full h-full object-cover md:hidden"
-        aria-hidden="true"
-      /> */}
-      {/* <img
-        src={bgDesktop}
-        alt=""
-        className="absolute inset-0 w-full h-full object-cover hidden md:block"
-        aria-hidden="true"
-      /> */}
 
       <div className="relative z-10 flex flex-col items-center px-5 py-12 md:py-20 max-w-5xl mx-auto">
         {/* Heading */}

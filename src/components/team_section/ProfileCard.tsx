@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import React from "react";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import Image from "next/image";
 
 interface ProfileData {
   id: number;
@@ -25,7 +26,9 @@ const ProfileCard = ({ profile }: ProfileCardProps) => {
     <div className="w-full rounded-xl overflow-hidden bg-card">
       {/* Avatar — clean, no overlay */}
       <div className="relative bg-muted">
-        <img
+        <Image
+          height={20}
+          width={20}
           src={profile.avatar}
           alt={profile.name}
           className="w-full aspect-[5/5] object-cover object-top"
