@@ -11,19 +11,32 @@ type Tool = {
 };
 
 const aiTools: Tool[] = [
-  { label: "ChatGPT", iconSrc: "/assets/ai_icons/chatgpt_PNG.png", color: "#10a37f" },
-  { label: "Midjourney", iconSrc: "/assets/ai_icons/midjourney.png", color: "#ffffff" },
-  { label: "Claude AI", iconSrc: "/assets/ai_icons/icons8-claude-ai-50.png", color: "#ffffff" },
-  { label: "Gemini", iconSrc: "/assets/ai_icons/gemini-ai.png", color: "#4e8cff" },
-  { label: "Github Copilot", iconSrc: "/assets/ai_icons/icons8-github-copilot-50.png", color: "#10a37f" },
-  { label: "Deepseek", iconSrc: "/assets/ai_icons/icons8-deepseek-50.png", color: "#ffffff" },
-  { label: "Perplexity AI", iconSrc: "/assets/ai_icons/icons8-perplexity-ai-50.png", color: "#ffffff" },
-  { label: "Windsurf", iconSrc: "/assets/ai_icons/icons8-windsurf-editor-50.png", color: "#ffffff" },
-  { label: "Cursor", iconSrc: "/assets/ai_icons/icons8-cursor-ai-50.png", color: "#ffffff" },
-  { label: "Character AI", iconSrc: "/assets/ai_icons/icons8-character-ai-50.png", color: "#ffffff" },
-  { label: "Copy AI", iconSrc: "/assets/ai_icons/icons8-copy-ai-50.png", color: "#9cd3ff" },
-  { label: "Paradox AI", iconSrc: "/assets/ai_icons/icons8-paradox-ai-50.png", color: "#7b61ff" },
-  { label: "Jasper", iconSrc: "/assets/ai_icons/jasper-ai.png", color: "#ff4ecd" },
+  { label: "LangChain", iconSrc: "/assets/ai_icons/AI Stack Logos/LangChain_Logo.png", color: "#2d6b4f" },
+  { label: "LangGraph", iconSrc: "/assets/ai_icons/AI Stack Logos/LangGraph.png", color: "#4ecafc" },
+  { label: "LlamaIndex", iconSrc: "/assets/ai_icons/AI Stack Logos/LlamaIndex-Ai-Logo.png", color: "#7b61ff" },
+  { label: "Hugging Face", iconSrc: "/assets/ai_icons/AI Stack Logos/Hugging Face.png", color: "#ffcc00" },
+  { label: "ChromaDB", iconSrc: "/assets/ai_icons/AI Stack Logos/ChromaDB.png", color: "#ff4ecd" },
+  { label: "Pinecone", iconSrc: "/assets/ai_icons/AI Stack Logos/Pinecone.png", color: "#10a37f" },
+  { label: "Weaviate", iconSrc: "/assets/ai_icons/AI Stack Logos/Weaviate logo.png", color: "#00d084" },
+  { label: "Crew AI", iconSrc: "/assets/ai_icons/AI Stack Logos/crew-ai logo.png", color: "#ffffff" },
+  { label: "AutoGluon", iconSrc: "/assets/ai_icons/AI Stack Logos/AutoGluon.png", color: "#ff6b00" },
+  { label: "MLFlow", iconSrc: "/assets/ai_icons/AI Stack Logos/MLFlow.png", color: "#0077b5" },
+  { label: "Ragas", iconSrc: "/assets/ai_icons/AI Stack Logos/Ragas Logo.png", color: "#4ecafc" },
+  { label: "GraphRAG", iconSrc: "/assets/ai_icons/AI Stack Logos/GraphRag.png", color: "#7b61ff" },
+  { label: "N8N", iconSrc: "/assets/ai_icons/AI Stack Logos/N8n-logo.png", color: "#ea4b71" },
+  { label: "Cursor", iconSrc: "/assets/ai_icons/AI Stack Logos/Cursor_logo.png", color: "#ffffff" },
+  { label: "Claude", iconSrc: "/assets/ai_icons/AI Stack Logos/Claude Cowork.png", color: "#d4a574" },
+  { label: "MCP", iconSrc: "/assets/ai_icons/AI Stack Logos/MCP.png", color: "#4ecafc" },
+  { label: "Anthropic MCP", iconSrc: "/assets/ai_icons/AI Stack Logos/Antropic MCP.png", color: "#d4a574" },
+  { label: "XGBoost", iconSrc: "/assets/ai_icons/AI Stack Logos/Xgboost.png", color: "#0077b5" },
+  { label: "LightGBM", iconSrc: "/assets/ai_icons/AI Stack Logos/LightGbm.png", color: "#9cd3ff" },
+  { label: "Pandas", iconSrc: "/assets/ai_icons/AI Stack Logos/Pandas.png", color: "#150458" },
+  { label: "Matplotlib", iconSrc: "/assets/ai_icons/AI Stack Logos/Matplotlib.png", color: "#11557c" },
+  { label: "YOLO", iconSrc: "/assets/ai_icons/AI Stack Logos/Yolo.png", color: "#00d4ff" },
+  { label: "DBScan", iconSrc: "/assets/ai_icons/AI Stack Logos/DBScan.png", color: "#ff6b00" },
+  { label: "Statsmodels", iconSrc: "/assets/ai_icons/AI Stack Logos/statsmodels-logo.png", color: "#4c72b0" },
+  { label: "MultiModal AI", iconSrc: "/assets/ai_icons/AI Stack Logos/MultiModal AI.png", color: "#7b61ff" },
+  { label: "Zapier", iconSrc: "/assets/ai_icons/AI Stack Logos/Zapier_logo.png", color: "#ff4a00" },
 ];
 
 export default function AIDashboardSection() {
@@ -38,9 +51,9 @@ export default function AIDashboardSection() {
       if (el.scrollLeft + el.clientWidth >= el.scrollWidth - 5) {
         el.scrollLeft = 0;
       } else {
-        el.scrollLeft += 1;
+        el.scrollLeft += 2;
       }
-    }, 30);
+    }, 15);
 
     return () => clearInterval(id);
   }, [autoScroll]);
@@ -94,8 +107,8 @@ export default function AIDashboardSection() {
               key={`${tool.label}-${idx}`}
               whileHover={{ scale: 1.05 }}
               className="
-                min-w-[80px] h-[80px]
-                md:min-w-[140px] md:h-[140px]
+                min-w-[90px] w-[90px] h-[90px]
+                md:min-w-[150px] md:w-[150px] md:h-[150px]
                 rounded-3xl
                 bg-white/20 md:bg-white/10 backdrop-blur-md md:backdrop-blur-3xl
                 border border-white/30 md:border-white/20
@@ -112,9 +125,9 @@ export default function AIDashboardSection() {
                 <Image
                   src={tool.iconSrc}
                   alt={tool.label}
-                  width={45}
-                  height={45}
-                  className=" mb-1 md:mb-2 object-contain"
+                  width={60}
+                  height={60}
+                  className="w-[40px] h-[40px] md:w-[60px] md:h-[60px] mb-1 md:mb-2 object-contain"
                   style={{
                     filter: `drop-shadow(0 0 10px ${tool.color}aa)`,
                   }}
@@ -123,7 +136,7 @@ export default function AIDashboardSection() {
                     e.currentTarget.style.display = 'none';
                   }}
                 />
-                <span className="text-[8px] md:text-[11px] font-semibold uppercase tracking-widest text-white/90 px-1 md:px-2 text-center">
+                <span className="absolute bottom-2 md:bottom-3 left-0 right-0 text-[7px] md:text-[10px] font-semibold uppercase tracking-widest text-white/90 px-1 text-center leading-tight truncate">
                   {tool.label}
                 </span>
               </motion.div>

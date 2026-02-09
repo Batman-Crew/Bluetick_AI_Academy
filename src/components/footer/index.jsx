@@ -8,7 +8,7 @@ import LearningAdvisorForm from "../form";
 import Modal from "../model";
 import Popup from "../popup";
 
-const Logo = "/img/logo.svg";
+const Logo = "/img/logo.png";
 
 function Footer({ formType, setFormType }) {
   const [showPopup, setShowPopup] = useState(false);
@@ -79,8 +79,8 @@ function Footer({ formType, setFormType }) {
         <div>
           {/* ---------- TOP GRID (LOGO + SOCIAL + CONTACTS) ---------- */}
           <div className="grid grid-cols-12">
-            <div className="py-5 px-5 border border-[#4F4F4F] md:block hidden col-span-2">
-              <Image src={Logo} alt="logo" width={120} height={40} />
+            <div className=" border border-[#4F4F4F] md:block hidden col-span-2">
+              <Image src={Logo} alt="logo" width={200} height={55} className="h-[55px] w-auto p-2" />
             </div>
 
             {/* Social Icons */}
@@ -102,7 +102,7 @@ function Footer({ formType, setFormType }) {
 
             {/* Email */}
             <div className="col-span-12 md:col-span-3 lg:col-span-3">
-              <Link href="mailto:info@bluetickacademy.com">
+              <Link href="mailto:info@bluetickacademy.ai">
                 <div className="py-2 md:py-8 px-4 md:px-2 md:border border-[#4F4F4F] flex gap-1 items-center">
                   <Icon
                     icon="ic:baseline-email"
@@ -110,7 +110,7 @@ function Footer({ formType, setFormType }) {
                     height={24}
                     className="text-white"
                   />
-                  <p className="text-white">info@bluetickacademy.com</p>
+                  <p className="text-white">info@bluetickacademy.ai</p>
                 </div>
               </Link>
             </div>
@@ -150,16 +150,6 @@ function Footer({ formType, setFormType }) {
                   Hire From Us
                 </span>
 
-                <span
-                  onClick={() => {
-                    setFormType("franchisee");
-                    setModalOpen(true);
-                  }}
-                  className="cursor-pointer flex gap-2 text-white py-1"
-                >
-                  <Icon icon="weui:arrow-outlined" width={12} className="text-[#FE4855]" />
-                  Franchisee Enquiry
-                </span>
               </div>
             </div>
 
@@ -200,7 +190,7 @@ function Footer({ formType, setFormType }) {
         {/* ---------- BOTTOM COPYRIGHT ---------- */}
         <div className="text-center text-white">
           <p className="text-[12px] md:text-[16px] py-3">
-            © 2025 BlueTick Academy. All Rights Reserved.
+            © 2026 BlueTick AI Academy. All Rights Reserved.
           </p>
 
           <div className="flex gap-5 justify-center text-sm md:text-lg font-[600]">

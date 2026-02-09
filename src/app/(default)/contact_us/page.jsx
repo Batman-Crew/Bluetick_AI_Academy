@@ -6,28 +6,12 @@ import { useEffect } from "react";
 
 const centers = [
   {
-    name: "BlueTick Academy – Bannerghatta Road",
-    address:
-      "66A, Nobel Residency Road, Hobli, Road, near Nandi Citadel, Begur, Bengaluru, Karnataka 560076.",
-    mapLink: "https://maps.app.goo.gl/GTWoCM4B3FEy2Jsb6",
-    embedSrc:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2962.8831366752024!2d77.60360767358696!3d12.860465117308113!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae6ad8cae2fa9f%3A0x18e58be97debc16!2s66%2C%20Nobel%20Residency%20Rd%2C%20near%20Nandi%20Citadel%2C%20apartment%2C%20Akshaya%20Vana%2C%20Tejaswini%20Nagar%2C%20Bengaluru%2C%20Karnataka%20560076!5e1!3m2!1sen!2sin!4v1742717395484!5m2!1sen!2sin",
-  },
-  {
-    name: "BlueTick Academy – Indiranagar",
+    name: "BlueTick AI Academy – Indiranagar",
     address:
       "2nd floor, 545, Chinmaya Mission Hospital Rd, Indiranagar, Bengaluru, Karnataka 560038.",
     mapLink: "https://maps.app.goo.gl/yANDkYno1aacDy7j9",
     embedSrc:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2961.4849772733655!2d77.64194487358917!3d12.978360814733026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae16afaed3e29b%3A0x1cebb35d47157387!2s545%2C%20Chinmaya%20Mission%20Hospital%20Rd%2C%20Indira%20Nagar%201st%20Stage%2C%20Hoysala%20Nagar%2C%20Indiranagar%2C%20Bengaluru%2C%20Karnataka%20560038!5e1!3m2!1sen!2sin!4v1742717548956!5m2!1sen!2sin",
-  },
-  {
-    name: "BlueTick Academy – Ramamurthy Nagar",
-    address:
-      "705/707, 3rd Floor, Above Reliance digital, Dodda Banaswadi Main Rd, Ramamurthy Nagar, Bengaluru, Karnataka 560043.",
-    mapLink: "https://maps.app.goo.gl/j8iGMjF2GEGsSqgq5",
-    embedSrc:
-      "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2961.0665422402703!2d77.661998!3d13.013440000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTPCsDAwJzQ4LjQiTiA3N8KwMzknNDMuMiJF!5e1!3m2!1sen!2sin!4v1742717832593!5m2!1sen!2sin",
   },
 ];
 
@@ -105,7 +89,7 @@ export default function ContactUs({ formType, setFormType }) {
         <div className="container min-[1440px]:max-w-[1440px] mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-6">Our Centers</h2>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-1 gap-6 max-w-xl mx-auto">
             {centers.map((center, index) => (
               <div
                 key={index}

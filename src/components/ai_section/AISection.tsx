@@ -13,7 +13,7 @@ const topics = [
   { icon: <TbSettingsCode className="text-gray-200" />, label: "Applied ML & MLOps" },
   { icon: <LuBrain className="text-gray-200" />, label: "Gen AI" },
   { icon: <FaRobot className="text-gray-200" />, label: "Agentic AI Workflows" },
-  { icon: <IoSearchOutline className="text-gray-200" />, label: "RAG &amp; Agentic RAG" },
+  { icon: <IoSearchOutline className="text-gray-200" />, label: "RAG & Agentic RAG" },
   { icon: <PiFilesLight className="text-gray-200" />, label: "MCPs" },
   { icon: <SiOpenai className="text-gray-200" />, label: "LLMOps" },
 ];
@@ -48,8 +48,8 @@ const AISection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12 md:mb-16"
         >
-          <h2 className="text-white text-3xl md:text-5xl font-bold leading-tight">
-            MASTER the
+          <h2 className="text-white text-5xl md:text-7xl font-bold leading-tight">
+            <span className="text-red-500">Master</span> the
             <br />
             Full <span className="text-[#4ecafc]">AI Stack</span>
           </h2>
@@ -67,10 +67,10 @@ const AISection = () => {
               className="flex flex-col items-center w-full"
             >
               {/* Node */}
-              <div className="relative w-full max-w-[280px] md:max-w-[320px]">
-                <div className="border-2 bg-[#0f1a2e] rounded-xl px-6 py-3 flex items-center justify-center gap-2 border-[#4ecafc] hover:bg-[#111d33] transition-all duration-300 cursor-default">
-                  <span className="text-lg">{topic.icon}</span>
-                  <span className="text-white text-sm md:text-base font-medium">
+              <div className="relative w-full max-w-[320px] md:max-w-[400px]">
+                <div className="border-2 bg-[#0f1a2e] rounded-xl px-6 py-4 flex items-center justify-center gap-3 border-[#4ecafc] hover:bg-[#111d33] transition-all duration-300 cursor-default">
+                  <span className="text-xl md:text-2xl">{topic.icon}</span>
+                  <span className="text-white text-base md:text-lg font-medium">
                     {topic.label}
                   </span>
                 </div>

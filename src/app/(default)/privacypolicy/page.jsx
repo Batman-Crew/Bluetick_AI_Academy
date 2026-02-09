@@ -121,7 +121,7 @@ export default function PrivacyPolicy() {
                                 <p className="text-sm md:text-base">We may update this Privacy Policy from time to time. Changes will be posted on this page.</p>
                             </section>
 
-                            <p className="text-sm md:text-base text-center">For any questions, contact us at <a href="mailto:info@bluetickacademy.com" className="text-blue-600 underline">info@bluetickacademy.com</a></p>
+                            <p className="text-sm md:text-base text-center">For any questions, contact us at <a href="mailto:info@bluetickacademy.ai" className="text-blue-600 underline">info@bluetickacademy.ai</a></p>
                         </div>
                     </div>
                 </div>

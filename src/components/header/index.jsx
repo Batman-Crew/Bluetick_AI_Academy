@@ -11,7 +11,7 @@ import Modal from "../model";
 import LearningAdvisorForm from "../form";
 
 // Static public folder image paths
-const Logo = "/img/logo.svg";
+const Logo = "/img/logo2.png";
 const WhatsappIcon = "/img/whatapp.svg";
 const PhoneIcon = "/img/phoneicon.svg";
 const HammerIcon = "/img/hammer.svg";
@@ -39,11 +39,11 @@ export default function Header({ formType, setFormType }) {
                 <div className="w-full h-[60px] md:h-[80px] flex justify-between items-center min-[1280px]:container min-[1440px]:max-w-[1440px] mx-auto px-4 md:px-6">
 
                     {/* LOGO */}
-                    <div onClick={() => setMenuOpen(false)} className="w-[95px] min-[500px]:w-[120px] min-[500px]:h-[41px]">
+                    {/* <div onClick={() => setMenuOpen(false)} className="w-[95px] min-[500px]:w-[120px] min-[500px]:h-[41px]"> */}
                         <Link href="/">
-                            <Image src={Logo} alt="Bluetick Logo" width={120} height={41} />
+                            <Image src={Logo} alt="Bluetick Logo" width={100} height={70} className="h-[45px] md:h-[70px] w-auto object-contain" />
                         </Link>
-                    </div>
+                    {/* </div> */}
 
                     <div className="flex gap-[10px] min-[1050px]:gap-[0px] items-center">
 
@@ -66,22 +66,11 @@ export default function Header({ formType, setFormType }) {
                                     setFormType("hire");
                                     setModalOpen(true);
                                 }}
-                                className="cursor-pointer py-[10px] min-[1050px]:py-0"
+                                className="cursor-pointer py-[10px] min-[1050px]:py-0 md:mr-2"
                             >
                                 <p>Hire from us</p>
                             </div>
 
-                            {/* Franchisee */}
-                            <div
-                                onClick={() => {
-                                    setMenuOpen(false);
-                                    setFormType("franchisee");
-                                    setModalOpen(true);
-                                }}
-                                className="cursor-pointer py-[10px] min-[1050px]:py-0 mr-8"
-                            >
-                                <p>Franchisee Enquiry</p>
-                            </div>
                         </div>
 
                         {/* Desktop WhatsApp Button */}
