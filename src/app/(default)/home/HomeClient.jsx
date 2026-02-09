@@ -97,19 +97,10 @@ function HomeClient() {
     []
   );
 
-  // Memoize debounced resize handler
-  const handleResize = useMemo(
-    () =>
-      debounce(() => {
-        setBgImage(getResponsiveBgImage(window.innerWidth));
-      }, 150),
-    []
-  );
 
   useEffect(() => {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  }, [handleResize]);
   }, [handleResize]);
 
   return (
@@ -135,22 +126,6 @@ function HomeClient() {
       <div className="scroll-smooth">
         {/* Banner section start */}
         <section
-          className="md:py-[40px] max-[768px]:pb-[20px] max-[768px]:pt-[130px] max-[768px]:mt-[-80px] relative"
-        >
-          {/* Optimized Background Image with Priority Loading */}
-          <Image
-            src={bgImage}
-            alt="Bluetick Academy AI Engineering Program"
-            fill
-            priority
-            quality={85}
-            sizes="100vw"
-            style={{
-              objectFit: "cover",
-              objectPosition: "center",
-              zIndex: -1,
-            }}
-          />
           className="md:py-[40px] max-[768px]:pb-[20px] max-[768px]:pt-[130px] max-[768px]:mt-[-80px] relative"
         >
           {/* Optimized Background Image with Priority Loading */}
@@ -345,7 +320,6 @@ function HomeClient() {
             loop={0}
             className="py-[20px] md:py-[40px] mb-[21px] sm:mb-[50px]"
           >
-            {companyLogos.map((file, idx) => (
             {companyLogos.map((file, idx) => (
               <Image
                 key={idx}

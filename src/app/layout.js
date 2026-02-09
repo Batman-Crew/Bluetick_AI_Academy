@@ -108,10 +108,6 @@ export default function RootLayout({ children }) {
 
         <SpeedInsights />
 
-
-        {children}
-
-
         {children}
       </body>
     </html>
