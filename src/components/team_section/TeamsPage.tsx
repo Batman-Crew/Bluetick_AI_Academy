@@ -1,5 +1,5 @@
 import ProfileCard from "./ProfileCard";
-import React from "react";
+import React, { memo } from "react";
 
 
 export const profiles = [
@@ -45,7 +45,7 @@ export const profiles = [
   },
 ];
 
-const TeamPage = () => {
+const TeamPage = memo(() => {
   return (
     <section className="mx-auto max-w-7xl bg-background pb-5">
         <h1 className="text-3xl font-bold text-center text-foreground mb-2">
@@ -61,6 +61,8 @@ const TeamPage = () => {
         </div>
     </section>
   );
-};
+});
+
+TeamPage.displayName = "TeamPage";
 
 export default TeamPage;

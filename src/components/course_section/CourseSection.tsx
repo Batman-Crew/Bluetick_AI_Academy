@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, memo } from "react";
 import { modules } from "@/data/courseData";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -6,7 +6,7 @@ import ModuleList from "./ModuleList";
 import ModuleDetail from "./ModuleDetails";
 import React from "react";
 
-const CourseSection = () => {
+const CourseSection = memo(() => {
   const [activeId, setActiveId] = useState(1);
   const scrollRef = useRef<HTMLDivElement>(null);
   const activeModule = modules.find((m) => m.id === activeId)!;
@@ -78,6 +78,8 @@ const CourseSection = () => {
       </div>
     </section>
   );
-};
+});
+
+CourseSection.displayName = "CourseSection";
 
 export default CourseSection;
