@@ -110,6 +110,9 @@ export default function RootLayout({ children }) {
 
 
         {children}
+
+
+        {children}
       </body>
     </html>
   );

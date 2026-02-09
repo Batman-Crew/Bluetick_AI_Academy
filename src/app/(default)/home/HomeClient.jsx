@@ -81,6 +81,7 @@ function HomeClient() {
   const [isModalOpen, setModalOpen] = useState(false);
 
   // Background Image with optimized resize handler
+  // Background Image with optimized resize handler
   const [bgImage, setBgImage] = useState(
     typeof window !== "undefined" && window.innerWidth < 768
       ? "/img/mobilebanner.webp"
@@ -96,9 +97,19 @@ function HomeClient() {
     []
   );
 
+  // Memoize debounced resize handler
+  const handleResize = useMemo(
+    () =>
+      debounce(() => {
+        setBgImage(getResponsiveBgImage(window.innerWidth));
+      }, 150),
+    []
+  );
+
   useEffect(() => {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
+  }, [handleResize]);
   }, [handleResize]);
 
   return (
@@ -124,6 +135,22 @@ function HomeClient() {
       <div className="scroll-smooth">
         {/* Banner section start */}
         <section
+          className="md:py-[40px] max-[768px]:pb-[20px] max-[768px]:pt-[130px] max-[768px]:mt-[-80px] relative"
+        >
+          {/* Optimized Background Image with Priority Loading */}
+          <Image
+            src={bgImage}
+            alt="Bluetick Academy AI Engineering Program"
+            fill
+            priority
+            quality={85}
+            sizes="100vw"
+            style={{
+              objectFit: "cover",
+              objectPosition: "center",
+              zIndex: -1,
+            }}
+          />
           className="md:py-[40px] max-[768px]:pb-[20px] max-[768px]:pt-[130px] max-[768px]:mt-[-80px] relative"
         >
           {/* Optimized Background Image with Priority Loading */}
@@ -318,6 +345,7 @@ function HomeClient() {
             loop={0}
             className="py-[20px] md:py-[40px] mb-[21px] sm:mb-[50px]"
           >
+            {companyLogos.map((file, idx) => (
             {companyLogos.map((file, idx) => (
               <Image
                 key={idx}
@@ -686,10 +714,31 @@ function HomeClient() {
                   />
                 </div>
               ))}
+              {mediaLogos.map((file, idx) => (
+                <div key={idx} className="flex justify-center items-center">
+                  <Image
+                    src={`/img/${file}`}
+                    alt="no-logos"
+                    className="w-full h-auto max-w-[150px]"
+                    width={150}
+                    height={60}
+                  />
+                </div>
+              ))}
             </div>
           </div>
           <div className="block md:hidden">
             <Marquee loop={0} className="mt-3">
+              {mediaLogos.map((file, idx) => (
+                <Image
+                  key={idx}
+                  className="mx-6 w-[80px] h-[40px] sm:w-[100px] sm:h-[50px] md:w-[120px] md:h-[60px] object-contain"
+                  src={`/img/${file}`}
+                  alt={file}
+                  width={120}
+                  height={60}
+                />
+              ))}
               {mediaLogos.map((file, idx) => (
                 <Image
                   key={idx}
