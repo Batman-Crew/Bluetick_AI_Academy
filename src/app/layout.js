@@ -11,9 +11,9 @@ const sourceSans = Source_Sans_3({
 });
 
 export const metadata = {
-  title: 'Digital Marketing Courses in Bangalore – Enroll at BlueTick Academy!',
+  title: 'AI Courses in Bangalore – Enroll at BlueTick AI Academy!',
   description:
-    'BlueTick Academy offers Career oriented Digital Marketing Course in Bangalore.',
+    'BlueTick Academy offers Career oriented AI Course in Bangalore.',
   icons: {
     icon: '/icon.png',
   },
