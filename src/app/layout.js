@@ -2,6 +2,7 @@ import './globals.css';
 import { Source_Sans_3 } from 'next/font/google';
 import Script from 'next/script';
 import MetaPixelTracker from '@/components/MetaPixelTracker';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const sourceSans = Source_Sans_3({
   variable: '--font-source-sans',
@@ -89,6 +90,9 @@ export default function RootLayout({ children }) {
 
         {/* ⚡Meta Pixel Click Tracking */}
         <MetaPixelTracker />
+
+        <SpeedInsights />
+
 
         {children}
       </body>
