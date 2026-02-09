@@ -5,17 +5,17 @@ const stats = [
   {
     number: "₹12-45L",
     text: "Salary range for 0-2+ years AI Engineers",
-    icon: <Image height={50} width={50} alt="Chart" src="/img/AI_BG/chartimg1.png" />,
+    icon: <Image height={50} width={50} alt="Chart" src="/img/AI_BG/chartimg1.webp" />,
   },
   {
     number: "312 %",
     text: "Growth in AI Engineering roles (LinkedIn 2026)",
-    icon: <Image height={50} width={50} alt="Chart"  src="/img/AI_BG/chartimg2.png" />,
+    icon: <Image height={50} width={50} alt="Chart"  src="/img/AI_BG/chartimg2.webp" />,
   },
   {
     number: "30,000+",
     text: "Unfilled AI Engineer jobs in India",
-    icon: <Image height={50} width={50} alt="Chart"  src="/img/AI_BG/chartimg3.png" />,
+    icon: <Image height={50} width={50} alt="Chart"  src="/img/AI_BG/chartimg3.webp" />,
   },
 ];
 
@@ -23,7 +23,7 @@ const TechLandscapeHero = () => {
   return (
     <section 
     style={{
-      backgroundImage: `url(/img/AI_BG/TechBack.png)`,
+      backgroundImage: `url(/img/AI_BG/TechBack.webp)`,
       backgroundPosition: "center",
       backgroundSize: "cover",
       backgroundRepeat: "no-repeat",

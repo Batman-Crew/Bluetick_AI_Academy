@@ -3,10 +3,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState, useMemo, useCallback } from "react";
-import Marquee from "react-fast-marquee";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import dynamic from "next/dynamic";
+
+// Lazy load Marquee to reduce initial bundle
+const Marquee = dynamic(() => import("react-fast-marquee"), {
+  ssr: false,
+  loading: () => <div className="py-[20px] md:py-[40px] mb-[21px] sm:mb-[50px]" />
+});
 
 // ---------- CONSTANTS FROM OTHER FILES ----------
 import {
@@ -14,15 +19,44 @@ import {
 } from "@/constant";
 import { allCards, projects, courses, cardData, companyLogos, mediaLogos } from "@/data/homeData";
 import { debounce, getResponsiveBgImage } from "@/utils/helpers";
-import AISection from "@/components/ai_section/AISection";
-import TechLandscapeHero from "@/components/tech_section/TechLandScape";
-import CourseSection from "@/components/course_section/CourseSection";
-import ApplySection from "@/components/apply_section/ApplySection";
-import AIHeroSection from "@/components/ai_hero_section/AIHeroSection";
-import AIDashboardSection from "@/components/ai_tools/AITools";
-import TransformationSection from "@/components/transformation_section/TransformationSection";
-import TeamPage from "@/components/team_section/TeamsPage";
-import UpcomingBatches from "@/components/upcoming_batch/UpcomingBatches";
+
+// Lazy load below-the-fold sections for better Speed Index
+const AISection = dynamic(() => import("@/components/ai_section/AISection"), {
+  loading: () => <div className="min-h-[400px]" />,
+  ssr: true
+});
+const TechLandscapeHero = dynamic(() => import("@/components/tech_section/TechLandScape"), {
+  loading: () => <div className="min-h-[400px]" />,
+  ssr: false
+});
+const CourseSection = dynamic(() => import("@/components/course_section/CourseSection"), {
+  loading: () => <div className="min-h-[400px]" />,
+  ssr: true
+});
+const ApplySection = dynamic(() => import("@/components/apply_section/ApplySection"), {
+  loading: () => <div className="min-h-[300px]" />,
+  ssr: false
+});
+const AIHeroSection = dynamic(() => import("@/components/ai_hero_section/AIHeroSection"), {
+  loading: () => <div className="min-h-[400px]" />,
+  ssr: false
+});
+const AIDashboardSection = dynamic(() => import("@/components/ai_tools/AITools"), {
+  loading: () => <div className="min-h-[400px]" />,
+  ssr: false
+});
+const TransformationSection = dynamic(() => import("@/components/transformation_section/TransformationSection"), {
+  loading: () => <div className="min-h-[400px]" />,
+  ssr: false
+});
+const TeamPage = dynamic(() => import("@/components/team_section/TeamsPage"), {
+  loading: () => <div className="min-h-[400px]" />,
+  ssr: false
+});
+const UpcomingBatches = dynamic(() => import("@/components/upcoming_batch/UpcomingBatches"), {
+  loading: () => <div className="min-h-[300px]" />,
+  ssr: false
+});
 
 // ------------------- DYNAMIC COMPONENTS -------------------
 const Header = dynamic(() => import("@/components/header"), { ssr: false });
@@ -38,6 +72,7 @@ const LearningAdvisorForm = dynamic(() => import("@/components/form"), {
 });
 const OrbitAnimation = dynamic(() => import("@/components/orbitanimation"), {
   ssr: false,
+  loading: () => <div className="w-full h-[200px]" />
 });
 const Modal = dynamic(() => import("@/components/model"), { ssr: false });
 
@@ -107,7 +142,7 @@ function HomeClient() {
           />
           <div className="container min-[1440px]:max-w-[1440px] mx-auto px-3 md:px-6">
             <div className="grid sm:grid-cols-1 md:grid-cols-1 xl:grid-cols-3 px-3">
-              <div>
+              <div className="relative z-10">
                 <h2 className="bg-gradient-to-b from-[#FD9055] to-[#FE4855] bg-clip-text text-transparent text-[30px] md:text-[50px] font-[400] md:font-semibold uppercase text-center xl:text-start">
                   ENTERPRISE
                 </h2>
@@ -161,7 +196,7 @@ function HomeClient() {
                         alt={item.text}
                         width={18}
                         height={18}
-                        loading="eager"
+                        priority
                       />
                       <p className="text-white lg:text-nowrap text-[16px] md:text-sm mt-2">
                         {item.text}
@@ -183,6 +218,7 @@ function HomeClient() {
                         alt="no-top"
                         width={152}
                         height={125}
+                        priority
                       />
                     </div>
                     <span className="rounded-xl px-2 sm:px-3 py-4 bg-gradient-to-b from-[rgba(96,211,247,0.4)] to-[rgba(139,140,249,0.4)] text-center sm:w-[196px] max-[640px]:w-[152px] max-[640px]:h-[125px]">
@@ -195,6 +231,7 @@ function HomeClient() {
                         alt="Digital marketing course near me."
                         width={80}
                         height={20}
+                        priority
                       />
                     </span>
                   </div>
@@ -207,6 +244,7 @@ function HomeClient() {
                           alt="no-ok"
                           width={40}
                           height={40}
+                          priority
                         />
                         <span className="rounded-md text-center">
                           <p className="text-white uppercase font-bold text-[20px]">
@@ -288,6 +326,7 @@ function HomeClient() {
                 alt={file}
                 width={120}
                 height={60}
+                loading="lazy"
               />
             ))}
           </Marquee>
@@ -304,7 +343,7 @@ function HomeClient() {
           <div className="container min-[1440px]:max-w-[1440px] mx-auto px-3 md:px-6">
             <div className="grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 md:gap-10">
               <div style={{
-            backgroundImage: `url(/img/formimage.png)`,
+            backgroundImage: `url(/img/formimage.webp)`,
             backgroundPosition: "center",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",

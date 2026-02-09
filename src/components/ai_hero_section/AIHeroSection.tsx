@@ -12,7 +12,7 @@ const AIHeroSection = () => {
   return (
     <section
     style={{
-      backgroundImage: "url(/img/AI_BG/hero-bg.jpg)",
+      backgroundImage: "url(/img/AI_BG/hero-bg.webp)",
       backgroundPosition: "center",
       backgroundSize: "cover",
       backgroundRepeat: "no-repeat",
