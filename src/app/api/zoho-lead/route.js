@@ -23,7 +23,6 @@ async function getAccessToken() {
   }
 
   console.log('Requesting new access token from Zoho...');
-  
 
   try {
     const tokenUrl = `https://accounts.zoho.in/oauth/v2/token`;
