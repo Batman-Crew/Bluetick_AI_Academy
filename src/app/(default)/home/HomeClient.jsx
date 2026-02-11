@@ -343,7 +343,7 @@ function HomeClient() {
         <TeamPage />
 
         {/* Form Start */}
-        <section className="my-[30px] md:my-[50px]">
+        <section className="my-[30px] md:my-[50px] scroll-mt-20" id="form">
           <div className="container min-[1440px]:max-w-[1440px] mx-auto px-3 md:px-6">
             <div className="grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 md:gap-10">
               <div style={{
@@ -352,28 +352,28 @@ function HomeClient() {
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
           }} className="flex flex-col min-h-[30rem] pt-2 items-center mt-[20px] sm:mt-[40px] lg:mt-1 bg-[#F9F7FF] md:order-1 order-2 pt-5 sm:pt-8">
-                <div className="bg-white rounded-xl p-5 shadow-lg max-[640px]:w-[90%] text-center">
-                  <div className="flex gap-2 justify-center">
-                    <div className="px-2 flex items-center justify-center bg-black rounded-[100%]">
-                      <Image
-                        className="w-[20px]"
-                        src="/img/calendar.svg"
-                        alt="no-calender"
-                        width={20}
-                        height={20}
-                      />
-                    </div>
-                    <span className="text-[20px] md:text-[24px]">
-                      In{" "}
-                      <strong className="text-[red] text-[24px] md:text-[28px]">
-                        14 Weekends
-                      </strong>
-                    </span>
-                  </div>
-                  <p className="text-[18px] md:text-[24px] font-[700]">
-                    Build | Deploy | Get Hired as an AI Engineer
-                  </p>
+               <div className="bg-white rounded-xl p-5 shadow-lg max-[640px]:w-[90%] text-center">
+              <div className="flex gap-2 justify-center">
+                <div className="px-2 flex items-center justify-center bg-black rounded-[100%]">
+                  <Image
+                    className="w-[20px]"
+                    src="/img/calendar.svg"
+                    alt="no-calender"
+                    width={20}
+                    height={20}
+                  />
                 </div>
+                <span className="text-[20px] md:text-[24px]">
+                  In{" "}
+                  <strong className="text-[red] text-[24px] md:text-[28px]">
+                    14 Weekends
+                  </strong>
+                </span>
+              </div>
+              <p className="text-[12px] sm:text-[14px] md:text-[18px] lg:text-[24px] font-[700] mt-3 whitespace-nowrap overflow-x-auto">
+                Build | Deploy | Get Hired as an AI Engineer
+              </p>
+            </div>
                 
               </div>
 

@@ -28,7 +28,7 @@ const AISection = () => {
     //     backgroundSize: "cover",
     //     backgroundRepeat: "no-repeat",
     //   }}
-      className="py-16 bg-[#0c142c] md:py-24 relative overflow-hidden">
+      className="py-16 bg-[#0c142c] md:py-10 relative overflow-hidden">
       {/* Subtle grid background */}
       <div
         className="absolute inset-0 opacity-10"
@@ -56,7 +56,7 @@ const AISection = () => {
         </motion.div>
 
         {/* Flowchart */}
-        <div className="flex flex-col items-center gap-0 max-w-md mx-auto mb-16 md:mb-20">
+        <div className="flex flex-col items-center gap-0 max-w-md mx-auto mb-10 ">
           {topics.map((topic, idx) => (
             <motion.div
               key={topic.label}
