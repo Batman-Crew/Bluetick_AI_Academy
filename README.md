@@ -289,8 +289,8 @@ This project is proprietary software owned by Bluetick Academy.
 
 For support and inquiries:
 - **Website**: [Bluetick Academy](https://bluetickacademy.com)
-- **Phone**: +91-9606 9955 25
-- **WhatsApp**: +91-9606 9955 25
+- **Phone**: +91-9606 6818 14
+- **WhatsApp**: +91-9606 6818 14
 - **Email**: Contact through the website form
 
 ## 🙏 Acknowledgments

@@ -38,7 +38,7 @@ const ProfileCard = ({ profile }: ProfileCardProps) => {
           className="absolute bottom-0 left-0 right-0 h-20 pointer-events-none"
           style={{
             background:
-              "linear-gradient(to top, hsl(220 80% 42%), transparent)",
+              "linear-gradient(to top, hsl(220 80% 30%), transparent)",
           }}
         />
       </div>
@@ -48,7 +48,7 @@ const ProfileCard = ({ profile }: ProfileCardProps) => {
         className="px-2 pb-3 pt-0 md:px-5 md:pb-5 text-center flex-1 flex flex-col items-center"
         style={{
           background:
-            "linear-gradient(to bottom, hsl(220 80% 42%), hsl(220 70% 32%))",
+            "linear-gradient(to bottom, hsl(220 80% 30%), hsl(220 70% 30%))",
         }}
       >
         {/* Name */}

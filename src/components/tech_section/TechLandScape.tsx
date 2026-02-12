@@ -81,8 +81,7 @@ const TechLandscapeHero = () => {
         {/* Bottom text */}
         <p className="mt-10 md:mt-14 text-lg md:text-xl text-foreground/80 text-center">
           Early movers are{" "}
-          <span className="font-black text-[#4ecafc]">paid premium</span> by
-          Companies
+              <span className="border-b-[4px] border-[#4ecafc] font-bold pb-1">  Paid Premium</span> by Companies
         </p>
       </div>
     </section>

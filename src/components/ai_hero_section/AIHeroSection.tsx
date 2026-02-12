@@ -1,20 +1,23 @@
-import { Wrench, Brain, CloudUpload, Lightbulb, ArrowUp } from "lucide-react";
+import { Wrench, Brain, CloudUpload, Lightbulb, ArrowUp, Files, Scroll } from "lucide-react";
 import React from "react";
 
 const features = [
   { icon: Wrench, label: "Hands-on projects" },
-  { icon: Brain, label: "Advanced Model Training" },
-  { icon: CloudUpload, label: "Deployment to Cloud" },
-  { icon: Lightbulb, label: "Real-world AI Applications" },
+  { icon: Brain, label: "Data Analysis Dashboard with Automated Insights" },
+  { icon: CloudUpload, label: "End-to-End Supervised ML Pipeline" },
+  { icon: Files, label: "Enterprise Document Q&A System with RAG" },
+  { icon: Scroll, label: "Enterprise Data Assistant (Natural Lang SQL Queries)" },
+  { icon: Lightbulb, label: "Real-World Capstone Project (ML Foundation to Advanced Agentic systems)" },
+
 ];
 
 const AIHeroSection = () => {
   return (
     <section
-    className="relative w-full overflow-hidden bg-[#0c142c] py-16 md:py-24"
+    className="relative w-full overflow-hidden bg-[#0c142c] py-10"
   >
     {/* Content */}
-    <div className="relative z-10 flex items-center justify-center px-4 py-16">
+    <div className="relative z-10 flex items-center justify-center px-4 ">
       <div className="mx-auto flex w-full max-w-6xl flex-col items-center gap-12 lg:flex-row lg:items-center lg:justify-between">
 
         {/* Left / Text content */}
@@ -46,7 +49,7 @@ const AIHeroSection = () => {
                 <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary/10">
                   <Icon className="h-5 w-5 text-[#4ecafc]" />
                 </span>
-                <span className="text-sm text-white sm:text-base">
+                <span className="text-sm md:text-nowrap text-white sm:text-base">
                   {label}
                 </span>
               </li>

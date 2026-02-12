@@ -73,8 +73,8 @@ export default function ContactUs({ formType, setFormType }) {
 
           <p className="text-center mb-6">
             <strong>Phone:</strong>{" "}
-            <a href="tel:+919606995525" className="text-blue-600">
-              9606-9955-25
+            <a href="tel:+919606681814" className="text-blue-600">
+              9606-6818-14
             </a>
           </p>
 

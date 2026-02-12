@@ -76,38 +76,38 @@ export default function Header({ formType, setFormType }) {
                         {/* Desktop WhatsApp Button */}
                         <div className="mr-5 md:block hidden">
                             <Link
-                                href="https://wa.me/9606995525"
+                                href="https://wa.me/9606681814"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="js-wa-cta"
                             >
                                 <div className="bg-[#2D2E5A] py-2 px-3 rounded-full font-[600] text-[15px] flex items-center gap-1">
                                     <Image src={WhatsappIcon} width={30} height={30} alt="WhatsApp" />
-                                    <p className="text-white">+91-9606 9955 25</p>
+                                    <p className="text-white">+91-9606 6818 14</p>
                                 </div>
                             </Link>
                         </div>
 
                         {/* Desktop Call Button */}
                         <div className="md:block hidden">
-                            <Link href="tel:+919606995525" className="js-call-cta">
+                            <Link href="tel:+919606681814" className="js-call-cta">
                                 <div className="bg-[#2D2E5A] py-2 px-3 rounded-full font-[600] text-[15px] flex items-center gap-1">
                                     <Image src={PhoneIcon} width={30} height={30} alt="Call" />
-                                    <p className="text-white">+91-9606 9955 25</p>
+                                    <p className="text-white">+91-9606 6818 14</p>
                                 </div>
                             </Link>
                         </div>
 
                         {/* Mobile WhatsApp */}
                         <div className="mr-1 md:hidden block">
-                            <Link href="https://wa.me/9606995525" target="_blank" className="js-wa-cta">
+                            <Link href="https://wa.me/9606681814" target="_blank" className="js-wa-cta">
                                 <Image src={WhatsappIcon} width={36} height={36} alt="WhatsApp" />
                             </Link>
                         </div>
 
                         {/* Mobile Call */}
                         <div className="mr-1 md:hidden block">
-                            <Link href="tel:+919606995525" className="js-call-cta">
+                            <Link href="tel:+9606681814" className="js-call-cta">
                                 <Image src={PhoneIcon} width={36} height={36} alt="Call" />
                             </Link>
                         </div>
