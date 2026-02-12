@@ -185,8 +185,8 @@ export default function TermsAndConditions() {
 
             <p className="text-sm sm:text-base">
               Phone:{" "}
-              <a href="tel:+919606995525" className="text-blue-500 underline">
-                9606-9955-25
+              <a href="tel:+919606681814" className="text-blue-500 underline">
+                9606-6818-14
               </a>
             </p>
           </div>

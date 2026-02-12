@@ -79,8 +79,10 @@ function Footer({ formType, setFormType }) {
         <div>
           {/* ---------- TOP GRID (LOGO + SOCIAL + CONTACTS) ---------- */}
           <div className="grid grid-cols-12">
-            <div className=" border border-[#4F4F4F] md:block hidden col-span-2">
-              <Image src={Logo} alt="logo" width={200} height={55} className="h-[55px] w-auto p-2" />
+            <div className=" border border-[#4F4F4F] md:block hidden w-full col-span-2">
+              <Link href="/">
+                  <Image src={Logo} alt="Bluetick Logo" width={160} height={100} className="h-[60px] md:h-[85px]  w-auto object-contain"/>
+              </Link>           
             </div>
 
             {/* Social Icons */}
@@ -117,10 +119,10 @@ function Footer({ formType, setFormType }) {
 
             {/* Phone */}
             <div className="col-span-12 md:col-span-2">
-              <Link href="tel:+919606995525" className="js-call-cta">
+              <Link href="tel:+919606681814" className="js-call-cta">
                 <div className="py-3 md:py-8 px-4 md:px-3 border-b md:border border-[#4F4F4F] flex gap-1 items-center">
                   <Icon icon="gg:phone" width={24} height={24} className="text-white" />
-                  <p className="text-white">+91-9606 9955 25</p>
+                  <p className="text-white">+91-9606 6818 14</p>
                 </div>
               </Link>
             </div>

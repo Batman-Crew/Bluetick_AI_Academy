@@ -225,7 +225,7 @@ function HomeClient() {
                     </div>
                     <span className="rounded-xl px-2 sm:px-3 py-4 bg-gradient-to-b from-[rgba(96,211,247,0.4)] to-[rgba(139,140,249,0.4)] text-center sm:w-[196px] max-[640px]:w-[152px] max-[640px]:h-[125px]">
                       <p className="text-white uppercase text-[11px] md:text-[12px] font-bold md:mt-0.5 mt-1">
-                        100% Hands on Learning Build What Companies Want!
+                        Weekends Only. Offline or Online Sessions.
                       </p>
                       <Image
                         className="mx-auto max-[768px]:mt-2.5"
@@ -250,10 +250,10 @@ function HomeClient() {
                         />
                         <span className="rounded-md text-center">
                           <p className="text-white uppercase font-bold text-[20px]">
-                            <strong className="text-[#FE4855]">100%</strong> JOB
+                            <strong className="text-[#FE4855]">100% <span>Hands</span></strong> 
                           </p>
                           <p className="uppercase text-white">
-                            ASSURED PROGRAMS
+                            on Learning Build What Companies Want!
                           </p>
                         </span>
                       </div>
@@ -295,10 +295,9 @@ function HomeClient() {
                 <strong className="bg-gradient-to-b from-[#FD9055] to-[#FE4855] bg-clip-text text-transparent">
                   100%
                 </strong>{" "}
-                JOB
               </p>
               <p className="uppercase text-white text-[18px]">
-                ASSURED PROGRAMS
+              Hands on Learning Build What Companies Want!
               </p>
             </span>
           </div>
@@ -354,7 +353,7 @@ function HomeClient() {
             backgroundPosition: "center",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
-          }} className="flex flex-col min-h-[30rem] pt-2 items-center mt-[20px] sm:mt-[40px] lg:mt-1 bg-[#F9F7FF] md:order-1 order-2 pt-5 sm:pt-8">
+          }} className="flex relative flex-col min-h-[30rem] pt-2 items-center mt-[20px] sm:mt-[40px] lg:mt-1 bg-[#F9F7FF] pt-5 sm:pt-8">
                <div className="bg-white rounded-xl p-5 shadow-lg max-[640px]:w-[90%] text-center">
               <div className="flex gap-2 justify-center">
                 <div className="px-2 flex items-center justify-center bg-black rounded-[100%]">
@@ -373,14 +372,16 @@ function HomeClient() {
                   </strong>
                 </span>
               </div>
-              <p className="text-[12px] sm:text-[14px] md:text-[18px] lg:text-[24px] font-[700] mt-3 whitespace-nowrap overflow-x-auto">
+              <p className="text-[14px] md:text-[24px] lg:text-[24px] font-[700] mt-3 whitespace-nowrap overflow-x-auto">
                 Build | Deploy | Get Hired as an AI Engineer
               </p>
             </div>
-                
+            <p className="absolute bottom-15 left-10 text-sm bg-black text-white px-3 py-1.5 rounded-full">{"Developer -> AI Engineer Track"}</p>
+            <p className="absolute bottom-35 right-10 text-sm bg-black text-white px-3 py-1.5 rounded-full">{"Live Mentors + Feedback Loops"}</p>
+
               </div>
 
-              <div className="md:order-2 order-1 my-auto">
+              <div className="my-auto">
                 <LearningAdvisorForm
                   setFormType={setFormType}
                   formType="default"
