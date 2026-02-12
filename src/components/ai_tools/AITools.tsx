@@ -11,32 +11,32 @@ type Tool = {
 };
 
 const aiTools: Tool[] = [
-  { label: "LangChain", iconSrc: "/assets/ai_icons/AI Stack Logos/LangChain_Logo.png", color: "#2d6b4f" },
-  { label: "LangGraph", iconSrc: "/assets/ai_icons/AI Stack Logos/LangGraph.png", color: "#4ecafc" },
-  { label: "LlamaIndex", iconSrc: "/assets/ai_icons/AI Stack Logos/LlamaIndex-Ai-Logo.png", color: "#7b61ff" },
-  { label: "Hugging Face", iconSrc: "/assets/ai_icons/AI Stack Logos/Hugging Face.png", color: "#ffcc00" },
-  { label: "ChromaDB", iconSrc: "/assets/ai_icons/AI Stack Logos/ChromaDB.png", color: "#ff4ecd" },
-  { label: "Pinecone", iconSrc: "/assets/ai_icons/AI Stack Logos/Pinecone.png", color: "#10a37f" },
-  { label: "Weaviate", iconSrc: "/assets/ai_icons/AI Stack Logos/Weaviate logo.png", color: "#00d084" },
-  { label: "Crew AI", iconSrc: "/assets/ai_icons/AI Stack Logos/crew-ai logo.png", color: "#ffffff" },
-  { label: "AutoGluon", iconSrc: "/assets/ai_icons/AI Stack Logos/AutoGluon.png", color: "#ff6b00" },
-  { label: "MLFlow", iconSrc: "/assets/ai_icons/AI Stack Logos/MLFlow.png", color: "#0077b5" },
-  { label: "Ragas", iconSrc: "/assets/ai_icons/AI Stack Logos/Ragas Logo.png", color: "#4ecafc" },
-  { label: "GraphRAG", iconSrc: "/assets/ai_icons/AI Stack Logos/GraphRag.png", color: "#7b61ff" },
-  { label: "N8N", iconSrc: "/assets/ai_icons/AI Stack Logos/N8n-logo.png", color: "#ea4b71" },
-  { label: "Cursor", iconSrc: "/assets/ai_icons/AI Stack Logos/Cursor_logo.png", color: "#ffffff" },
-  { label: "Claude", iconSrc: "/assets/ai_icons/AI Stack Logos/Claude Cowork.png", color: "#d4a574" },
-  { label: "MCP", iconSrc: "/assets/ai_icons/AI Stack Logos/MCP.png", color: "#4ecafc" },
-  { label: "Anthropic MCP", iconSrc: "/assets/ai_icons/AI Stack Logos/Antropic MCP.png", color: "#d4a574" },
-  { label: "XGBoost", iconSrc: "/assets/ai_icons/AI Stack Logos/Xgboost.png", color: "#0077b5" },
-  { label: "LightGBM", iconSrc: "/assets/ai_icons/AI Stack Logos/LightGbm.png", color: "#9cd3ff" },
-  { label: "Pandas", iconSrc: "/assets/ai_icons/AI Stack Logos/Pandas.png", color: "#150458" },
-  { label: "Matplotlib", iconSrc: "/assets/ai_icons/AI Stack Logos/Matplotlib.png", color: "#11557c" },
-  { label: "YOLO", iconSrc: "/assets/ai_icons/AI Stack Logos/Yolo.png", color: "#00d4ff" },
-  { label: "DBScan", iconSrc: "/assets/ai_icons/AI Stack Logos/DBScan.png", color: "#ff6b00" },
-  { label: "Statsmodels", iconSrc: "/assets/ai_icons/AI Stack Logos/statsmodels-logo.png", color: "#4c72b0" },
-  { label: "MultiModal AI", iconSrc: "/assets/ai_icons/AI Stack Logos/MultiModal AI.png", color: "#7b61ff" },
-  { label: "Zapier", iconSrc: "/assets/ai_icons/AI Stack Logos/Zapier_logo.png", color: "#ff4a00" },
+  { label: "LangChain", iconSrc: "/assets/ai_icons/AI Stack Logos/LangChain_Logo.webp", color: "#2d6b4f" },
+  { label: "LangGraph", iconSrc: "/assets/ai_icons/AI Stack Logos/LangGraph.webp", color: "#4ecafc" },
+  { label: "LlamaIndex", iconSrc: "/assets/ai_icons/AI Stack Logos/LlamaIndex-Ai-Logo.webp", color: "#7b61ff" },
+  { label: "Hugging Face", iconSrc: "/assets/ai_icons/AI Stack Logos/Hugging Face.webp", color: "#ffcc00" },
+  { label: "ChromaDB", iconSrc: "/assets/ai_icons/AI Stack Logos/ChromaDB.webp", color: "#ff4ecd" },
+  { label: "Pinecone", iconSrc: "/assets/ai_icons/AI Stack Logos/Pinecone.webp", color: "#10a37f" },
+  { label: "Weaviate", iconSrc: "/assets/ai_icons/AI Stack Logos/Weaviate logo.webp", color: "#00d084" },
+  { label: "Crew AI", iconSrc: "/assets/ai_icons/AI Stack Logos/crew-ai logo.webp", color: "#ffffff" },
+  { label: "AutoGluon", iconSrc: "/assets/ai_icons/AI Stack Logos/AutoGluon.webp", color: "#ff6b00" },
+  { label: "MLFlow", iconSrc: "/assets/ai_icons/AI Stack Logos/MLFlow.webp", color: "#0077b5" },
+  { label: "Ragas", iconSrc: "/assets/ai_icons/AI Stack Logos/Ragas Logo.webp", color: "#4ecafc" },
+  { label: "GraphRAG", iconSrc: "/assets/ai_icons/AI Stack Logos/GraphRag.webp", color: "#7b61ff" },
+  { label: "N8N", iconSrc: "/assets/ai_icons/AI Stack Logos/N8n-logo.webp", color: "#ea4b71" },
+  { label: "Cursor", iconSrc: "/assets/ai_icons/AI Stack Logos/Cursor_logo.webp", color: "#ffffff" },
+  { label: "Claude", iconSrc: "/assets/ai_icons/AI Stack Logos/Claude Cowork.webp", color: "#d4a574" },
+  { label: "MCP", iconSrc: "/assets/ai_icons/AI Stack Logos/MCP.webp", color: "#4ecafc" },
+  { label: "Anthropic MCP", iconSrc: "/assets/ai_icons/AI Stack Logos/Antropic MCP.webp", color: "#d4a574" },
+  { label: "XGBoost", iconSrc: "/assets/ai_icons/AI Stack Logos/Xgboost.webp", color: "#0077b5" },
+  { label: "LightGBM", iconSrc: "/assets/ai_icons/AI Stack Logos/LightGbm.webp", color: "#9cd3ff" },
+  { label: "Pandas", iconSrc: "/assets/ai_icons/AI Stack Logos/Pandas.webp", color: "#150458" },
+  { label: "Matplotlib", iconSrc: "/assets/ai_icons/AI Stack Logos/Matplotlib.webp", color: "#11557c" },
+  { label: "YOLO", iconSrc: "/assets/ai_icons/AI Stack Logos/Yolo.webp", color: "#00d4ff" },
+  { label: "DBScan", iconSrc: "/assets/ai_icons/AI Stack Logos/DBScan.webp", color: "#ff6b00" },
+  { label: "Statsmodels", iconSrc: "/assets/ai_icons/AI Stack Logos/statsmodels-logo.webp", color: "#4c72b0" },
+  { label: "MultiModal AI", iconSrc: "/assets/ai_icons/AI Stack Logos/MultiModal AI.webp", color: "#7b61ff" },
+  { label: "Zapier", iconSrc: "/assets/ai_icons/AI Stack Logos/Zapier_logo.webp", color: "#ff4a00" },
 ];
 
 export default function AIDashboardSection() {
@@ -53,7 +53,7 @@ export default function AIDashboardSection() {
       } else {
         el.scrollLeft += 2;
       }
-    }, 15);
+    }, 19);
 
     return () => clearInterval(id);
   }, [autoScroll]);
@@ -125,9 +125,9 @@ export default function AIDashboardSection() {
                 <Image
                   src={tool.iconSrc}
                   alt={tool.label}
-                  width={60}
-                  height={60}
-                  className="w-[40px] h-[40px] md:w-[60px] md:h-[60px] mb-1 md:mb-2 object-contain"
+                  width={200}
+                  height={200}
+                  className="w-[65px] h-[70px] md:w-[70px] md:h-[70px] object-contain"
                   style={{
                     filter: `drop-shadow(0 0 10px ${tool.color}aa)`,
                   }}
@@ -136,7 +136,7 @@ export default function AIDashboardSection() {
                     e.currentTarget.style.display = 'none';
                   }}
                 />
-                <span className="absolute bottom-2 md:bottom-3 left-0 right-0 text-[7px] md:text-[10px] font-semibold uppercase tracking-widest text-white/90 px-1 text-center leading-tight truncate">
+                <span className="mt-auto pb-1 md:pb-2 text-[7px] md:text-[10px] font-semibold uppercase tracking-widest text-white/90 px-1 text-center leading-tight truncate w-full">
                   {tool.label}
                 </span>
               </motion.div>

@@ -94,12 +94,12 @@ const ApplySection = () => {
 
                 {/* Bottom text */}
 
-                <button
-                    type="button"
-                    className="overflow-hidden transition-transform duration-300 hover:scale-105 text-white cursor-pointer bg-gradient-to-b from-[#FD9055] to-[#FE4855] font-semibold rounded-lg text-[16px] min-w-[200px] px-4 py-2.5 text-center mt-10 uppercase"
+                <a
+                    href="#apply-form"
+                    className="overflow-hidden transition-transform duration-300 hover:scale-105 text-white cursor-pointer bg-gradient-to-b from-[#FD9055] to-[#FE4855] font-semibold rounded-lg text-[16px] min-w-[200px] px-4 py-2.5 text-center mt-10 uppercase inline-block no-underline"
                 >
                     APPLY NOW
-                </button>
+                </a>
 
 
             </div>

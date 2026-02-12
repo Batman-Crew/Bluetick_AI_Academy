@@ -41,7 +41,7 @@ export default function Header({ formType, setFormType }) {
                     {/* LOGO */}
                     {/* <div onClick={() => setMenuOpen(false)} className="w-[95px] min-[500px]:w-[120px] min-[500px]:h-[41px]"> */}
                         <Link href="/">
-                            <Image src={Logo} alt="Bluetick Logo" width={100} height={70} className="h-[45px] md:h-[70px] w-auto object-contain" />
+                            <Image src={Logo} alt="Bluetick Logo" width={160} height={100} className="h-[60px] md:h-[85px] w-auto object-contain"/>
                         </Link>
                     {/* </div> */}
 
