@@ -163,7 +163,7 @@ function HomeClient() {
 
                 <div className="md:block hidden mt-8">
                   <span className="flex justify-center xl:justify-start">
-                    <Link href="#form">
+                    <Link href="#apply-form">
                       <button
                         type="button"
                         className="overflow-hidden transition-transform duration-300 hover:scale-105 text-white cursor-pointer bg-gradient-to-b from-[#FD9055] to-[#FE4855] font-semibold rounded-lg text-[16px] min-w-[200px] px-4 py-2.5 text-center me-2 mb-2 uppercase"
@@ -263,7 +263,7 @@ function HomeClient() {
 
                 <div className="block md:hidden mt-5">
                   <span className="sm:flex gap-2 justify-center block">
-                    <Link href="#form">
+                    <Link href="#apply-form">
                       <button
                         type="button"
                         className="uppercase overflow-hidden transition-transform duration-300 hover:scale-105 text-white cursor-pointer bg-gradient-to-b from-[#FD9055] to-[#FE4855] font-bold rounded-lg w-full text-md py-2 text-center me-2 mb-2 px-4"
