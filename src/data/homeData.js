@@ -145,7 +145,6 @@ export const cardData = [
 
 export const companyLogos = [
   "accenture.webp",
-  "zomato.webp",
   "unacadamy.webp",
   "tcs.webp",
   "razorpay.webp",
@@ -153,18 +152,12 @@ export const companyLogos = [
   "paytm.webp",
   "nykaa.webp",
   "netflix.webp",
-  "meesho.avif",
   "freshwork.webp",
-  "dream11.webp",
-  "curekit.webp",
   "cognizent.webp",
-  "amazon.webp",
   "adobe.webp",
-  "uber.webp",
-  "swiggy.webp",
   "salesforce.webp",
   "google.webp",
-  "filpkart.webp",
+  "ibmpng.webp",
 ];
 
 export const mediaLogos = ["logo_1.webp", "logo_2.webp", "logo_3.webp", "logo_4.webp"];

@@ -10,9 +10,10 @@ function OrbitAnimation() {
 
   // Memoize orbiting elements array
   const orbitingElements = useMemo(() => [
-    { src: "/img/round/swiggy.svg", alt: "Swiggy" },
+    { src: "/img/round/salesforce.png", alt: "Swiggy" ,size:30 },
     { src: "/img/round/amazonsvg.svg", alt: "Amazon" },
-    { src: "/img/round/filpkartsvg.svg", alt: "Flipkart" },
+    // Slightly smaller so it visually matches other logos
+    { src: "/img/round/download.png", alt: "Accenture",size:30 },
     { src: "/img/round/googlesvg.svg", alt: "Google" },
   ], []);
 
@@ -47,7 +48,7 @@ function OrbitAnimation() {
       <div className="relative w-full max-w-[600px] h-[80vw] max-h-[430px] xl:right-25">
         
         {/* Center Image */}
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 w-[85%] lg:w-[70%] max-w-[300px]">
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 w-[56%] lg:w-[70%] max-w-[300px]">
           <Image
             src="/img/round.svg"
             alt="Globe"
@@ -56,7 +57,7 @@ function OrbitAnimation() {
             className="w-full h-auto"
           />
 
-          <p className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center font-bold text-[19px] text-white w-[150px]">
+          <p className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center font-bold md:text-[19px] text-[14px] text-white w-[150px]">
             Our Learners Thrive at Top Global Companies
           </p>
         </div>
@@ -72,6 +73,7 @@ function OrbitAnimation() {
           }}
         >
           {orbitingElements.map((icon, index) => {
+            const size = icon.size || 80;
             const pos = calculatePosition(index, orbitingElements.length, radius);
 
             return (
@@ -79,18 +81,18 @@ function OrbitAnimation() {
                 key={index}
                 className="absolute flex items-center justify-center"
                 style={{
-                  top: `calc(50% + ${pos.y}px - 40px)`,
-                  left: `calc(50% + ${pos.x}px - 40px)`,
-                  width: "80px",
-                  height: "80px",
+                  top: `calc(50% + ${pos.y}px - ${size / 2}px)`,
+                  left: `calc(50% + ${pos.x}px - ${size / 2}px)`,
+                  width: size,
+                  height: size,
                 }}
               >
                 <Image
                   src={icon.src}
                   alt={icon.alt}
-                  width={80}
-                  height={80}
-                  className="w-18 h-18"
+                  width={size}
+                  height={size}
+                  className="w-full h-full rounded-md object-contain"
                 />
               </motion.div>
             );

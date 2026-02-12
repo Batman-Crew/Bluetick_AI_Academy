@@ -303,13 +303,16 @@ function HomeClient() {
             </span>
           </div>
           <div className="w-[100%] flex justify-center mb-4 mt-3">
-            <Image
+            {/* <Image
               src="/img/google.svg"
               alt="no-technologyimg"
               className="w-full h-auto"
               width={500}
               height={200}
-            />
+            /> */}
+                <div className="w-full md:w-[46%] self-center xl:self-end  xl:mt-[-35px]">
+                  <OrbitAnimation />
+                </div>
           </div>
         </div>
         {/* Banner section end */}
