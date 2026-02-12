@@ -216,7 +216,7 @@ function HomeClient() {
                   <div className="max-[640px]:w-full sm:min-w-[440px] md:p-6 md:bg-[rgba(44,58,100,0.6)] rounded-3xl md:shadow-sm flex items-center justify-between sm:gap-1">
                     <div className="max-[768px]:w-[152px] max-[768px]:h-[125px] max-[640px]:ml-2 flex justify-center items-center">
                       <Image
-                        src="/img/top.svg"
+                        src="/img/top_Image.png"
                         alt="no-top"
                         width={152}
                         height={125}
@@ -343,7 +343,7 @@ function HomeClient() {
         <TeamPage />
 
         {/* Form Start */}
-        <section className="my-[30px] md:my-[50px] scroll-mt-20" id="form">
+        <section className="my-[30px] md:my-[50px] scroll-mt-20" id="apply-form">
           <div className="container min-[1440px]:max-w-[1440px] mx-auto px-3 md:px-6">
             <div className="grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 md:gap-10">
               <div style={{
@@ -394,7 +394,7 @@ function HomeClient() {
         {/* Projects Start */}
         <section id="from1" className="my-[40px] md:my-[60px] px-4 md:px-6">
           <p className="sm:text-center text-neutral-800 text-[23px] md:text-[42px] font-semibold leading-[30px] md:leading-[54.60px]">
-          The BlueTick AI<br />Advantage
+          The BlueTick AI Advantage
           </p>
           <div className="container min-[1440px]:max-w-[1440px] mx-auto px-1 sm:px-4">
             <div className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 sm:mt-4">
@@ -519,7 +519,7 @@ function HomeClient() {
             <div className="grid sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2">
               {/* Left Content */}
               <div>
-                <p className="font-bold text-[26px] md:text-[32px]">
+                <p className="font-bold text-[22px] md:text-[28px]">
                 Your Dream AI Career, Our Mission
                   <br />
                   <span className="bg-[#FBE7C1] font-bold">
@@ -532,15 +532,15 @@ function HomeClient() {
                       <Image
                         src="/img/student.svg"
                         alt="no icons"
-                        className="w-[100px] h-[90px] md:w-[100px] md:h-[100px] object-contain"
-                        width={100}
-                        height={100}
+                        className="w-[88px] h-[79px] md:w-[88px] md:h-[88px] object-contain"
+                        width={88}
+                        height={88}
                       />
                     </div>
-                    <p className="text-neutral-900 text-[24px] font-bold mt-3">
+                    <p className="text-neutral-900 text-[21px] font-bold mt-3">
                       10,000<span className="text-[red]">+</span>
                     </p>
-                    <p className="text-neutral-700 text-[16px]">
+                    <p className="text-neutral-700 text-[14px]">
                     Professionals Upskilled
                     </p>
                   </div>
@@ -549,15 +549,15 @@ function HomeClient() {
                       <Image
                         src="/img/trainer.svg"
                         alt="no icons"
-                        className="w-[100px] h-[90px] md:w-[100px] md:h-[100px] object-contain"
-                        width={100}
-                        height={100}
+                        className="w-[88px] h-[79px] md:w-[88px] md:h-[88px] object-contain"
+                        width={88}
+                        height={88}
                       />
                     </div>
-                    <p className="text-neutral-900 text-[24px] font-bold mt-3">
+                    <p className="text-neutral-900 text-[21px] font-bold mt-3">
                       1:15
                     </p>
-                    <p className="text-neutral-700 text-[16px]">
+                    <p className="text-neutral-700 text-[14px]">
                     Mentor-to-Learner Ratio
                     </p>
                   </div>
@@ -566,15 +566,15 @@ function HomeClient() {
                       <Image
                         src="/img/record.svg"
                         alt="no icons"
-                        className="w-[100px] h-[90px] md:w-[100px] md:h-[100px] object-contain"
-                        width={100}
-                        height={100}
+                        className="w-[88px] h-[79px] md:w-[88px] md:h-[88px] object-contain"
+                        width={88}
+                        height={88}
                       />
                     </div>
-                    <p className="text-neutral-900 text-[24px] font-bold mt-3">
+                    <p className="text-neutral-900 text-[21px] font-bold mt-3">
                       97%
                     </p>
-                    <p className="text-neutral-700 text-[16px]">
+                    <p className="text-neutral-700 text-[14px]">
                     Career Transition Success
                     </p>
                   </div>
@@ -602,8 +602,8 @@ function HomeClient() {
                 </div>
 
                 <div className="absolute bottom-[-15px] max-[400px]:right-0 min-[400px]:left-25 text-black">
-                  <p className=" text-[18px] md:text-[28px] font-bold">
-                    <strong className="text-[#FD8A55] font-bold text-[24px] md:text-[28px]">
+                  <p className=" text-[15px] md:text-[24px] font-bold">
+                    <strong className="text-[#FD8A55] font-bold text-[21px] md:text-[24px]">
                       Take a Step Now
                     </strong>
                     <br />
@@ -630,10 +630,7 @@ function HomeClient() {
         {/* Map start */}
         <section className="mb-[20px] max-[768px]:mt-[-15px] md:my-[60px]">
           <div className="container min-[1440px]:max-w-[1440px] mx-auto px-4">
-            <p className="text-center mt-4 font-bold text-[16px] md:text-[18px] text-[#FE7C55]">
-              GLOBAL PRESENCE
-            </p>
-            <p className="font-semibold text-[26px] md:text-[32px] text-center text-[#242424] mb-10">
+            <p className="font-semibold mt-6  text-[26px] md:text-[32px] text-center text-[#242424] mb-10">
               Learners from 30
               <span className="border-b-[4px] border-[#FE7C55]">+ Countr</span>
               ies
