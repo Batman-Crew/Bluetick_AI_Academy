@@ -34,8 +34,7 @@ const TechLandscapeHero = () => {
       <div className="relative z-10 flex flex-col items-center px-5 py-12 md:py-20 max-w-5xl mx-auto">
         {/* Heading */}
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-heading-dark text-center leading-tight max-w-2xl">
-          The Tech Landscape has shifted.{" "}
-          <span className="block sm:inline">Have you?</span>
+          The Tech Landscape has shifted. Have you?
         </h1>
 
         {/* Stat Cards */}
@@ -82,7 +81,7 @@ const TechLandscapeHero = () => {
         {/* Bottom text */}
         <p className="mt-10 md:mt-14 text-lg md:text-xl text-foreground/80 text-center">
           Early movers are{" "}
-          <span className="font-bold text-foreground">paid premium</span> by
+          <span className="font-black text-[#4ecafc]">paid premium</span> by
           Companies
         </p>
       </div>
