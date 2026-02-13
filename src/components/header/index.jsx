@@ -100,14 +100,14 @@ export default function Header({ formType, setFormType }) {
 
                         {/* Mobile WhatsApp */}
                         <div className="mr-1 md:hidden block">
-                            <Link href="https://wa.me/9606681814" target="_blank" className="js-wa-cta">
+                            <Link href="https://wa.me/+919606681814" target="_blank" className="js-wa-cta">
                                 <Image src={WhatsappIcon} width={36} height={36} alt="WhatsApp" />
                             </Link>
                         </div>
 
                         {/* Mobile Call */}
                         <div className="mr-1 md:hidden block">
-                            <Link href="tel:+9606681814" className="js-call-cta">
+                            <Link href="tel:+919606681814" className="js-call-cta">
                                 <Image src={PhoneIcon} width={36} height={36} alt="Call" />
                             </Link>
                         </div>

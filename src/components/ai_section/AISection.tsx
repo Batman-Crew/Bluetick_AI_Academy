@@ -28,7 +28,7 @@ const AISection = () => {
     //     backgroundSize: "cover",
     //     backgroundRepeat: "no-repeat",
     //   }}
-      className="py-16 bg-[#0c142c] md:py-10 relative overflow-hidden">
+      className="py-16 pb-4 bg-[#0c142c] md:py-10 relative overflow-hidden">
       {/* Subtle grid background */}
       <div
         className="absolute inset-0 opacity-10"

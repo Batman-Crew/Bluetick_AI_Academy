@@ -34,13 +34,13 @@ const ProfileCard = ({ profile }: ProfileCardProps) => {
           className="w-full h-full object-cover object-top"
         />
         {/* Fade into gradient at very bottom of image */}
-        <div
+        {/* <div
           className="absolute bottom-0 left-0 right-0 h-20 pointer-events-none"
           style={{
             background:
               "linear-gradient(to top, hsl(220 80% 30%), transparent)",
           }}
-        />
+        /> */}
       </div>
 
       {/* Blue gradient info section */}
@@ -52,7 +52,7 @@ const ProfileCard = ({ profile }: ProfileCardProps) => {
         }}
       >
         {/* Name */}
-        <p className="text-xs lg:text-xl font-extrabold text-white tracking-wide mb-1 truncate w-full">
+        <p className="text-xs lg:text-xl mt-1 font-extrabold text-white tracking-wide mb-1 truncate w-full">
           {profile.name}
         </p>
 
