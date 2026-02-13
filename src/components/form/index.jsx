@@ -130,7 +130,7 @@ export default function LearningAdvisorForm({ formType, setFormType }) {
           className="absolute right-0 bottom-0 z-[-10] h-full w-auto pointer-events-none select-none"
         />
 
-      <p className="text-center text-[20px] md:text-[18px] font-[500] sm:bg-[#F7F8F9] py-4 sm:border border-[#f5f7f8] mx-[10px] sm:mx-[20px]">
+      <p className="text-center text-2xl font-[500] sm:bg-[#F7F8F9] py-4 sm:border border-[#f5f7f8] mx-[10px] sm:mx-[20px]">
         {formType === "franchisee" ? (
           <span className="font-bold border-b-[4px] border-[#FE7C55]">Franchise Enquiry</span>
         ) : formType === "hire" ? (

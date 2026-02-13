@@ -50,7 +50,7 @@ const AIHeroSection = () => {
                   <span className="flex h-6 w-6 -mr-1 shrink-0 items-center justify-center rounded-lg bg-primary/10">
                     <Icon className="h-5 w-5 text-[#4ecafc]" />
                   </span>
-                  <span className="text-sm md:text-nowrap text-white font-bold sm:text-base border-b">
+                  <span className="text-xl md:text-nowrap text-white font-bold  border-b">
                     {label}
                   </span>
                 </li>

@@ -119,9 +119,9 @@ const rows = [
 
 const TransformationSection = () => {
   return (
-    <section className="w-full py-12 -mb-2rem md:py-20 bg-gradient-to-b from-sky-50 to-background">
-      <div className="px-4 md:px-8 scale-[0.78] sm:scale-[0.85] md:scale-100 origin-top">
-        <div className="max-w-5xl mx-auto">
+    <section className="w-full   md:py-20 bg-gradient-to-b from-sky-50 to-background">
+      <div className="px-4 sm:px-6 md:px-8 scale-[0.78] h-[670px] md:h-auto sm:scale-[0.85] md:scale-100 origin-top">
+        <div className="max-w-5xl mx-auto mt-4 ">
           {/* Section Title */}
           <h2 className="text-center text-2xl md:text-4xl font-bold text-neutral-800 mb-8 md:mb-12">
           Your Transformation Journey
