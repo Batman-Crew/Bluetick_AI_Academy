@@ -119,10 +119,11 @@ const rows = [
 
 const TransformationSection = () => {
   return (
-    <section className="w-full py-12 md:py-20 px-4 md:px-8 bg-gradient-to-b from-sky-50 to-background">
-      <div className="max-w-5xl mx-auto">
-        {/* Section Title */}
-        <h2 className="text-center text-2xl md:text-4xl font-bold text-neutral-800 mb-8 md:mb-12">
+    <section className="w-full py-12 -mb-2rem md:py-20 bg-gradient-to-b from-sky-50 to-background">
+      <div className="px-4 md:px-8 scale-[0.78] sm:scale-[0.85] md:scale-100 origin-top">
+        <div className="max-w-5xl mx-auto">
+          {/* Section Title */}
+          <h2 className="text-center text-2xl md:text-4xl font-bold text-neutral-800 mb-8 md:mb-12">
           Your Transformation Journey
         </h2>
 
@@ -146,18 +147,18 @@ const TransformationSection = () => {
           </div>
         </div>
 
-        {/* Content Grid */}
-        <div className="grid grid-cols-[1fr_auto_1fr] gap-4 md:gap-8">
-          {/* Left Column - Before */}
-          <div className="flex flex-col gap-4 md:gap-6">
+        {/* CONTENT GRID – alignment fixed */}
+        <div className="grid grid-cols-[1fr_auto_1fr] gap-5 md:gap-4">
+          {/* BEFORE */}
+          <div className="grid grid-rows-4 gap-4 md:gap-6">
             {rows.map((row, i) => {
-              const IconComponent = row.before.Icon;
+              const Icon = row.before.Icon;
               return (
                 <div key={i} className="flex flex-col items-center text-center">
-                  <div className="w-12 h-12 md:w-16 md:h-16 flex items-center justify-center text-blue-600 mb-3 flex-shrink-0">
-                    <IconComponent />
+                  <div className="w-12 h-12 md:w-16 md:h-16 text-blue-600 mb-3 flex items-center justify-center">
+                    <Icon />
                   </div>
-                  <p className="text-xs sm:text-sm md:text-base text-gray-700 font-medium leading-tight max-w-[140px] md:max-w-[180px]">
+                  <p className="text-sm text-gray-700 font-medium max-w-[180px] line-clamp-3 min-h-[4.2em]">
                     {row.before.text}
                   </p>
                 </div>
@@ -165,30 +166,28 @@ const TransformationSection = () => {
             })}
           </div>
 
-          {/* Middle Column - During (Blue Background) */}
+          {/* DURING */}
           <div className="relative">
-            <div className="flex flex-col gap-4 md:gap-6 bg-gradient-to-b from-blue-100 to-blue-50 rounded-2xl px-4 md:px-8 py-4 md:py-6">
+            <div className="grid grid-rows-4 gap-4 md:gap-6 bg-gradient-to-b from-blue-100 to-blue-50 rounded-2xl px-4 md:px-8 py-4 md:py-6">
               {rows.map((row, i) => {
-                const IconComponent = row.during.Icon;
+                const Icon = row.during.Icon;
                 return (
-                  <div key={i} className="flex flex-col items-center text-center relative">
-                    {/* Left Arrow - Centered vertically with icon */}
-                    <div className="absolute left-0 top-6 md:top-8 -translate-x-full -translate-y-1/2 flex items-center">
-                      <div className="w-6 sm:w-8 md:w-12 h-[2px] bg-blue-400"></div>
-                      <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5 text-blue-500 -ml-[9px]" />
+                  <div key={i} className="relative flex flex-col items-center text-center">
+                    <div className="absolute left-0 top-1/2 -translate-x-full -translate-y-1/2 flex items-center">
+                      <div className="w-8 md:w-12 h-[2px] bg-blue-400" />
+                      <ArrowRight className="h-4 w-4 text-blue-500 -ml-[9px]" />
                     </div>
 
-                    <div className="w-12 h-12 md:w-16 md:h-16 flex items-center justify-center text-blue-600 mb-3 flex-shrink-0">
-                      <IconComponent />
+                    <div className="w-12 h-12 md:w-16 md:h-16 text-blue-600 mb-3 flex items-center justify-center">
+                      <Icon />
                     </div>
-                    <p className="text-xs sm:text-sm md:text-base text-gray-700 font-medium leading-tight max-w-[140px] md:max-w-[180px]">
+                    <p className="text-sm text-gray-700 font-medium max-w-[180px]">
                       {row.during.text}
                     </p>
 
-                    {/* Right Arrow - Centered vertically with icon */}
-                    <div className="absolute right-0 top-6 md:top-8 translate-x-full -translate-y-1/2 flex items-center">
-                      <div className="w-6 sm:w-8 md:w-12 h-[2px] bg-blue-400"></div>
-                      <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5 text-blue-500 -ml-[9px]" />
+                    <div className="absolute right-0 top-1/2 translate-x-full -translate-y-1/2 flex items-center">
+                      <div className="w-8 md:w-12 h-[2px] bg-blue-400" />
+                      <ArrowRight className="h-4 w-4 text-blue-500 -ml-[9px]" />
                     </div>
                   </div>
                 );
@@ -196,23 +195,24 @@ const TransformationSection = () => {
             </div>
           </div>
 
-          {/* Right Column - After */}
-          <div className="flex flex-col gap-4 md:gap-6">
+          {/* AFTER */}
+          <div className="grid grid-rows-4 gap-4 md:gap-6">
             {rows.map((row, i) => {
-              const IconComponent = row.after.Icon;
+              const Icon = row.after.Icon;
               return (
                 <div key={i} className="flex flex-col items-center text-center">
-                  <div className="w-12 h-12 md:w-16 md:h-16 flex items-center justify-center text-blue-600 mb-3 flex-shrink-0">
-                    <IconComponent />
+                  <div className="w-12 h-12 md:w-16 md:h-16 text-blue-600 mb-3 flex items-center justify-center">
+                    <Icon />
                   </div>
-                  <p className="text-xs sm:text-sm md:text-base text-gray-700 font-medium leading-tight max-w-[140px] md:max-w-[180px]">
-                    {row.after.text}
+                  <p className="text-sm text-gray-700 font-medium max-w-[180px] line-clamp-4 min-h-[4.2em]">
+                  {row.after.text}
                   </p>
                 </div>
               );
             })}
           </div>
         </div>
+      </div>
       </div>
     </section>
   );

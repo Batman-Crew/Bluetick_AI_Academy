@@ -40,20 +40,34 @@ const AIHeroSection = () => {
           </p>
   
           {/* Features */}
-          <ul className="mt-10 sm flex flex-col gap-2 items-start space-y-4">
-            {features.map(({ icon: Icon, label }) => (
-              <li
-                key={label}
-                className="flex items-center gap-3 text-left justify-start"
-              >
-                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary/10">
-                  <Icon className="h-5 w-5 text-[#4ecafc]" />
-                </span>
-                <span className="text-sm md:text-nowrap text-white sm:text-base">
-                  {label}
-                </span>
-              </li>
-            ))}
+          <ul className="mt-10 flex flex-col gap-2 space-y-4 w-full">
+            {features.map(({ icon: Icon, label }) =>
+              label === "Hands-on projects" ? (
+                <li
+                  key={label}
+                  className="flex items-center gap-3 mx-auto text-center"
+                >
+                  <span className="flex h-6 w-6 -mr-1 shrink-0 items-center justify-center rounded-lg bg-primary/10">
+                    <Icon className="h-5 w-5 text-[#4ecafc]" />
+                  </span>
+                  <span className="text-sm md:text-nowrap text-white font-bold sm:text-base border-b">
+                    {label}
+                  </span>
+                </li>
+              ) : (
+                <li
+                  key={label}
+                  className="flex items-center gap-3 text-left justify-start"
+                >
+                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary/10">
+                    <Icon className="h-5 w-5 text-[#4ecafc]" />
+                  </span>
+                  <span className="text-sm md:text-nowrap text-white sm:text-base">
+                    {label}
+                  </span>
+                </li>
+              )
+            )}
           </ul>
         </div>
   
