@@ -250,10 +250,10 @@ function HomeClient() {
                         />
                         <span className="rounded-md text-center">
                           <p className="text-white uppercase font-bold text-[20px]">
-                            <strong className="text-[#FE4855]">100% <span>Hands</span></strong> 
+                            <strong className="text-[#FE4855]">100% <span>Hands on Learning</span></strong> 
                           </p>
                           <p className="uppercase text-white">
-                            on Learning Build What Companies Want!
+                            Build What Companies Want!
                           </p>
                         </span>
                       </div>
@@ -290,28 +290,26 @@ function HomeClient() {
         <div className="container min-[1440px]:max-w-[1440px] mx-auto  px-6 pt-6 block md:hidden">
           <div className="py-1 px-3 bg-[#272727] rounded-lg shadow-xl flex">
             <Image src="/img/ok.svg" alt="no-ok" width={40} height={40} />
-            <span className="rounded-md px-3 py-3">
-              <p className="text-white uppercase text-[26px] font-bold">
-                <strong className="bg-gradient-to-b from-[#FD9055] to-[#FE4855] bg-clip-text text-transparent">
-                  100%
-                </strong>{" "}
+            <div className="rounded-md px-3 py-3">
+              <p className="text-white uppercase text-[18px] font-bold">
+              <strong className="bg-gradient-to-b text-nowrap from-[#FD9055] to-[#FE4855] bg-clip-text text-transparent">
+                  100% Hands on Learning
+                </strong>
               </p>
-              <p className="uppercase text-white text-[18px]">
-              Hands on Learning Build What Companies Want!
+              <p className="uppercase text-white text-[16px]">
+               Build What Companies Want!
               </p>
-            </span>
+            </div>
           </div>
           <div className="w-[100%] flex justify-center mb-4 mt-3">
-            {/* <Image
-              src="/img/google.svg"
+            <Image
+              src="/img/orbit.jpeg"
               alt="no-technologyimg"
               className="w-full h-auto"
               width={500}
               height={200}
-            /> */}
-                <div className="w-full md:w-[46%] self-center xl:self-end  xl:mt-[-35px]">
-                  <OrbitAnimation />
-                </div>
+            />
+                
           </div>
         </div>
         {/* Banner section end */}
@@ -325,7 +323,7 @@ function HomeClient() {
             {companyLogos.map((file, idx) => (
               <Image
                 key={idx}
-                className="mx-6 w-[80px] h-[40px] sm:w-[100px] sm:h-[50px] md:w-[120px] md:h-[60px] object-contain"
+                className="mx-6 w-[80px] h-[40px] sm:w-[100px] sm:h-[50px] md:w-[140px] md:h-[70px] object-contain"
                 src={`/img/company/${file}`}
                 alt={file}
                 width={120}
@@ -353,7 +351,7 @@ function HomeClient() {
             backgroundPosition: "center",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
-          }} className="flex relative flex-col min-h-[30rem] pt-2 items-center mt-[20px] sm:mt-[40px] lg:mt-1 bg-[#F9F7FF] pt-5 sm:pt-8">
+          }} className="flex relative hidden md:flex flex-col min-h-[30rem] pt-2 items-center mt-[20px] sm:mt-[40px] lg:mt-1 bg-[#F9F7FF] pt-5 sm:pt-8">
                <div className="bg-white rounded-xl p-5 shadow-lg max-[640px]:w-[90%] text-center">
               <div className="flex gap-2 justify-center">
                 <div className="px-2 flex items-center justify-center bg-black rounded-[100%]">
@@ -394,6 +392,39 @@ function HomeClient() {
 
         {/* UpcomingBatches */}
         <UpcomingBatches />
+
+        <div style={{
+            backgroundImage: `url(/img/formimage.webp)`,
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+          }} className="flex relative  md:hidden flex-col min-h-[30rem] pt-2 items-center mt-[20px] sm:mt-[40px] lg:mt-1 bg-[#F9F7FF] pt-5 sm:pt-8">
+               <div className="bg-white rounded-xl p-5 shadow-lg max-[640px]:w-[90%] text-center">
+              <div className="flex gap-2 justify-center">
+                <div className="px-2 flex items-center justify-center bg-black rounded-[100%]">
+                  <Image
+                    className="w-[20px]"
+                    src="/img/calendar.svg"
+                    alt="no-calender"
+                    width={20}
+                    height={20}
+                  />
+                </div>
+                <span className="text-[20px] md:text-[24px]">
+                  In{" "}
+                  <strong className="text-[red] text-[24px] md:text-[28px]">
+                    14 Weekends
+                  </strong>
+                </span>
+              </div>
+              <p className="text-[14px] md:text-[24px] lg:text-[24px] font-[700] mt-3 whitespace-nowrap overflow-x-auto">
+                Build | Deploy | Get Hired as an AI Engineer
+              </p>
+            </div>
+            <p className="absolute bottom-15 left-10 text-sm bg-black text-white px-3 py-1.5 rounded-full">{"Developer -> AI Engineer Track"}</p>
+            <p className="absolute bottom-35 right-10 text-sm bg-black text-white px-3 py-1.5 rounded-full">{"Live Mentors + Feedback Loops"}</p>
+
+              </div>
 
         {/* Projects Start */}
         <section id="from1" className="my-[40px] md:my-[60px] px-4 md:px-6">
