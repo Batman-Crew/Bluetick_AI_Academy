@@ -14,6 +14,8 @@ const Modal = ({ isOpen, onClose, children }) => {
       >
         <motion.div
           className="relative bg-white p-3 md:p-2 rounded-2xl shadow-lg w-[90%] md:w-[60%] lg:w-[40%] max-h-[95vh] overflow-y-auto"
+          role="dialog"
+          aria-modal="true"
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           exit={{ scale: 0.8, opacity: 0 }}
@@ -23,6 +25,7 @@ const Modal = ({ isOpen, onClose, children }) => {
           <button
             className="absolute top-3 right-3 text-black text-xl z-10"
             onClick={onClose}
+            aria-label="Close"
           >
             ✖
           </button>

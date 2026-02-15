@@ -42,6 +42,7 @@ const CourseSection = memo(() => {
             <button
               onClick={() => scroll("left")}
               className="absolute left-0 top-1/2 -translate-y-1/2 z-10 h-8 w-8 flex items-center justify-center rounded-full bg-card/90 shadow-md text-foreground"
+              aria-label="Scroll left"
             >
               <ChevronLeft className="h-4 w-4" />
             </button>
@@ -69,6 +70,7 @@ const CourseSection = memo(() => {
             <button
               onClick={() => scroll("right")}
               className="absolute right-0 top-1/2 -translate-y-1/2 z-10 h-8 w-8 flex items-center justify-center rounded-full bg-card/90 shadow-md text-foreground"
+              aria-label="Scroll right"
             >
               <ChevronRight className="h-4 w-4" />
             </button>

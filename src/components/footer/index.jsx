@@ -88,8 +88,10 @@ function Footer({ formType, setFormType }) {
             {/* Social Icons */}
             {["facebook", "twitter", "youtube", "linkedin", "instagram"].map(
               (social) => (
-                <div
+                <a
                   key={social}
+                  href="#"
+                  aria-label={social.charAt(0).toUpperCase() + social.slice(1)}
                   className="py-5 px-2 md:border border-[#4F4F4F] flex justify-center items-center max-[768px]:col-span-2"
                 >
                   <Icon
@@ -98,7 +100,7 @@ function Footer({ formType, setFormType }) {
                     height={24}
                     className="text-white"
                   />
-                </div>
+                </a>
               )
             )}
 
@@ -165,8 +167,10 @@ function Footer({ formType, setFormType }) {
               </p>
 
               <form onSubmit={handleSubmit}>
+                <label htmlFor="newsletter-email" className="sr-only">Email address</label>
                 <input
                   type="email"
+                  id="newsletter-email"
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
