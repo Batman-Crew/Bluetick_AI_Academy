@@ -78,7 +78,7 @@ const ApplySection = () => {
           {stat.number}
         </span>
 
-        <span className="text-sm text-slate-600">
+      <span className="text-sm text-slate-600 whitespace-nowrap">
           {stat.description}
         </span>
         </div>
