@@ -2,14 +2,14 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState, useMemo, useCallback } from "react";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import dynamic from "next/dynamic";
 
 // Lazy load Marquee to reduce initial bundle
 const Marquee = dynamic(() => import("react-fast-marquee"), {
-  ssr: true,
+  ssr: false,
   loading: () => <div className="py-[20px] md:py-[40px] mb-[21px] sm:mb-[50px]" />
 });
 
@@ -18,6 +18,7 @@ import {
   accardiancontentfaq,
 } from "@/constant";
 import { allCards, projects, courses, cardData, companyLogos, mediaLogos } from "@/data/homeData";
+import { debounce, getResponsiveBgImage } from "@/utils/helpers";
 
 // Lazy load below-the-fold sections for better Speed Index
 const AISection = dynamic(() => import("@/components/ai_section/AISection"), {
@@ -58,13 +59,13 @@ const UpcomingBatches = dynamic(() => import("@/components/upcoming_batch/Upcomi
 });
 
 // ------------------- DYNAMIC COMPONENTS -------------------
-const Header = dynamic(() => import("@/components/header"), { ssr: true });
-const Footer = dynamic(() => import("@/components/footer"), { ssr: true });
+const Header = dynamic(() => import("@/components/header"), { ssr: false });
+const Footer = dynamic(() => import("@/components/footer"), { ssr: false });
 const MapWithPoints = dynamic(() => import("@/components/map"), {
   ssr: false,
 });
 const Accordion = dynamic(() => import("@/components/accardian"), {
-  ssr: true,
+  ssr: false,
 });
 const LearningAdvisorForm = dynamic(() => import("@/components/form"), {
   ssr: false,
@@ -79,10 +80,36 @@ function HomeClient() {
   const [formType, setFormType] = useState("default");
   const [isModalOpen, setModalOpen] = useState(false);
 
+  // Background Image with optimized resize handler
+  // Background Image with optimized resize handler
+  const [bgImage, setBgImage] = useState(
+    typeof window !== "undefined" && window.innerWidth < 768
+      ? "/img/mobilebanner.webp"
+      : "/img/banner.webp"
+  );
+
+  // Memoize debounced resize handler
+  const handleResize = useMemo(
+    () =>
+      debounce(() => {
+        setBgImage(getResponsiveBgImage(window.innerWidth));
+      }, 150),
+    []
+  );
+
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [handleResize]);
 
   return (
     <>
 
+      {/* Google Tag Manager (noscript) */}
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCMHBSGS"
+        height="0" width="0" style={{display:"none",visibility:"hidden"}}></iframe></noscript>
+      {/* End Google Tag Manager (noscript) */}
       {/* Hidden SEO headings */}
       <div className="hidden">
         <h1>
@@ -107,25 +134,19 @@ function HomeClient() {
           className="md:py-[40px] max-[768px]:pb-[20px] max-[768px]:pt-[130px] max-[768px]:mt-[-80px] relative"
         >
           {/* Optimized Background Image with Priority Loading */}
-          <picture>
-            <source media="(max-width: 768px)" srcSet="/img/mobilebanner.webp" type="image/webp" />
-            <source srcSet="/img/banner.webp" type="image/webp" />
-            <img
-              src="/img/banner.webp"
-              alt="Bluetick Academy AI Engineering Program"
-              fetchPriority="high"
-              decoding="async"
-              style={{
-                position: "absolute",
-                inset: 0,
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-                objectPosition: "center",
-                zIndex: -1,
-              }}
-            />
-          </picture>
+          <Image
+            src={bgImage}
+            alt="Bluetick Academy AI Engineering Program"
+            fill
+            priority
+            quality={85}
+            sizes="100vw"
+            style={{
+              objectFit: "cover",
+              objectPosition: "center",
+              zIndex: -1,
+            }}
+          />
           <div className="container min-[1440px]:max-w-[1440px] mx-auto px-3 md:px-6">
             <div className="grid sm:grid-cols-1 md:grid-cols-1 xl:grid-cols-3 px-3">
               <div className="relative z-10">
@@ -182,6 +203,7 @@ function HomeClient() {
                         alt={item.text}
                         width={18}
                         height={18}
+                        priority
                       />
                       <p className="text-white lg:text-nowrap text-[16px] md:text-sm mt-2">
                         {item.text}
@@ -200,9 +222,10 @@ function HomeClient() {
                     <div className="max-[768px]:w-[152px] max-[768px]:h-[125px] max-[640px]:ml-2 flex justify-center items-center">
                       <Image
                         src="/img/top_Image.png"
-                        alt="Top rated AI engineering program"
+                        alt="no-top"
                         width={152}
                         height={125}
+                        priority
                       />
                     </div>
                     <span className="rounded-xl px-2 sm:px-3 py-4 bg-gradient-to-b from-[rgba(96,211,247,0.4)] to-[rgba(139,140,249,0.4)] text-center sm:w-[196px] max-[640px]:w-[152px] max-[640px]:h-[125px]">
@@ -212,9 +235,10 @@ function HomeClient() {
                       <Image
                         className="mx-auto max-[768px]:mt-2.5"
                         src="/img/star.svg"
-                        alt="5-star rating"
+                        alt="Digital marketing course near me."
                         width={80}
                         height={20}
+                        priority
                       />
                     </span>
                   </div>
@@ -224,9 +248,10 @@ function HomeClient() {
                         <Image
                           className="mx-auto mb-2"
                           src="/img/ok.svg"
-                          alt="100% hands-on learning"
+                          alt="no-ok"
                           width={40}
                           height={40}
+                          priority
                         />
                         <span className="rounded-md text-center">
                           <p className="text-white uppercase font-bold text-[20px]">
@@ -269,7 +294,7 @@ function HomeClient() {
         {/* Small-screen rating & Google image */}
         <div className="container min-[1440px]:max-w-[1440px] mx-auto  px-6 pt-6 block md:hidden">
           <div className="py-1 px-3 bg-[#272727] rounded-lg shadow-xl flex">
-            <Image src="/img/ok.svg" alt="100% hands-on learning" width={40} height={40} />
+            <Image src="/img/ok.svg" alt="no-ok" width={40} height={40} />
             <div className="rounded-md px-3 py-3">
               <p className="text-white uppercase text-[18px] font-bold">
               <strong className="bg-gradient-to-b text-nowrap from-[#FD9055] to-[#FE4855] bg-clip-text text-transparent">
@@ -284,7 +309,7 @@ function HomeClient() {
           <div className="w-[100%] flex justify-center mb-4 mt-3">
             <Image
               src="/img/orbit.jpeg"
-              alt="AI technology orbit illustration"
+              alt="no-technologyimg"
               className="w-full h-auto"
               width={500}
               height={200}
@@ -338,7 +363,7 @@ function HomeClient() {
                   <Image
                     className="w-[20px]"
                     src="/img/calendar.svg"
-                    alt="Calendar icon"
+                    alt="no-calender"
                     width={20}
                     height={20}
                   />
@@ -385,7 +410,7 @@ function HomeClient() {
                   <Image
                     className="w-[20px]"
                     src="/img/calendar.svg"
-                    alt="Calendar icon"
+                    alt="no-calender"
                     width={20}
                     height={20}
                   />
@@ -422,7 +447,7 @@ function HomeClient() {
                     <div className="flex justify-center max-[540px]:w-[40px] sm:h-10">
                       <Image
                         src={item.img}
-                        alt=""
+                        alt="no icons"
                         width={60}
                         height={60}
                       />
@@ -482,7 +507,7 @@ function HomeClient() {
                         <Image
                           className="w-[15px] md:w-[20px]"
                           src="/img/calendar.svg"
-                          alt="Calendar icon"
+                          alt="no-calender"
                           width={20}
                           height={20}
                         />
@@ -546,7 +571,7 @@ function HomeClient() {
                     <div className="flex justify-start">
                       <Image
                         src="/img/student.svg"
-                        alt=""
+                        alt="no icons"
                         className="w-[88px] h-[79px] md:w-[88px] md:h-[88px] object-contain"
                         width={88}
                         height={88}
@@ -563,7 +588,7 @@ function HomeClient() {
                     <div className="flex justify-start">
                       <Image
                         src="/img/trainer.svg"
-                        alt=""
+                        alt="no icons"
                         className="w-[88px] h-[79px] md:w-[88px] md:h-[88px] object-contain"
                         width={88}
                         height={88}
@@ -580,7 +605,7 @@ function HomeClient() {
                     <div className="flex justify-start">
                       <Image
                         src="/img/record.svg"
-                        alt=""
+                        alt="no icons"
                         className="w-[88px] h-[79px] md:w-[88px] md:h-[88px] object-contain"
                         width={88}
                         height={88}
@@ -694,7 +719,7 @@ function HomeClient() {
                 <div key={idx} className="flex justify-center items-center">
                   <Image
                     src={`/img/${file}`}
-                    alt="Media award"
+                    alt="no-logos"
                     className="w-full h-auto max-w-[150px]"
                     width={150}
                     height={60}

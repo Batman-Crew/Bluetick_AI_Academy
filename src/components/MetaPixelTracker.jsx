@@ -91,7 +91,7 @@ export default function MetaPixelTracker() {
     };
 
     // ✅ Poll page after form submit
-    const pollDOM = (timeout = 12000, step = 500) => {
+    const pollDOM = (timeout = 12000, step = 150) => {
       const start = Date.now();
       const interval = setInterval(() => {
         if (hasSuccessText()) {
@@ -104,10 +104,12 @@ export default function MetaPixelTracker() {
     };
 
     // ✅ When form submits → start polling
-    const form = document.getElementById('form');
-    if (form) {
-      form.addEventListener('submit', () => pollDOM(), { passive: true });
-    }
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('form');
+      if (form) {
+        form.addEventListener('submit', () => pollDOM(), { passive: true });
+      }
+    });
 
     // ✅ Watch DOM for popup message
     const observer = new MutationObserver(() => {

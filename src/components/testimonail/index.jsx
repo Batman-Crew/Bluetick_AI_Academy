@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const testimonials = [
   {
-    img: "/img/testimonial.webp",
+    img: "/img/testimonial.svg",
     title: "100% Job Guaranteed Program",
     stats: [
       { label: "Avg CTC", value: "4.5 LPA" },
@@ -12,7 +12,7 @@ const testimonials = [
     alt: "Digital Marketing Course",
   },
   {
-    img: "/img/testimonial_1.webp",
+    img: "/img/testimonial_1.svg",
     title: (
       <>
         15<span className="text-red-500">+</span> Global Certifications
@@ -23,7 +23,7 @@ const testimonials = [
     alt: "Digital marketing training institute in Bangalore",
   },
   {
-    img: "/img/testimonial_2.webp",
+    img: "/img/testimonial_2.svg",
     title: (
       <>
         Access to Premium 50<span className="text-red-500">+</span> AI Tools
@@ -34,7 +34,7 @@ const testimonials = [
     alt: "Best digital marketing training institute in Bangalore",
   },
   {
-    img: "/img/testimonial_3.webp",
+    img: "/img/testimonial_3.svg",
     title: "Expert Trainers from Industries",
     description: (
       <>
@@ -59,7 +59,7 @@ export default function Testimonials() {
             alt={item.alt}
             width={300}
             height={200}
-            loading="lazy"
+            priority
           />
 
           <div className="p-5 flex flex-col h-full">

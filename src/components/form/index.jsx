@@ -150,7 +150,6 @@ export default function LearningAdvisorForm({ formType, setFormType }) {
       >
         {/* Name */}
         <div className="mb-5">
-          <label htmlFor="name" className="sr-only">Name</label>
           <input
             type="text"
             id="name"
@@ -165,7 +164,6 @@ export default function LearningAdvisorForm({ formType, setFormType }) {
 
         {/* Mobile */}
         <div className="mb-5">
-          <label htmlFor="mobile" className="sr-only">Mobile number</label>
           <input
             type="number"
             id="mobile"
@@ -180,7 +178,6 @@ export default function LearningAdvisorForm({ formType, setFormType }) {
 
         {/* Email */}
         <div className="mb-5">
-          <label htmlFor="email" className="sr-only">Email</label>
           <input
             type="email"
             id="email"
