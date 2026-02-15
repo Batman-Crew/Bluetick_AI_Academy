@@ -1,5 +1,5 @@
 import ProfileCard from "./ProfileCard";
-import React, { memo, useEffect, useRef, useState } from "react";
+import React, { memo, useEffect, useRef } from "react";
 
 export const profiles = [
   {
@@ -36,77 +36,81 @@ export const profiles = [
     avatar: "/img/AI_BG/person1.webp",
     bio: " An AI Engineer at Robert Walters & Ex-IBM & PwC, delivering AI and ML solutions for industries. Deep expertise in Deployable AI solutions and Data & Analytics Technology practice.",
   },
+  {
+    id: 5,
+    name: "Tushar Tiwary",
+    role: "AI Ops Engineer",
+    experience: " 3+ Years Experience",
+    avatar: "/img/AI_BG/tushar.jpeg",
+    bio: " AI Engineer at IBM who specializes in building intelligent, real-world applications using Generative AI and Large Language Models. He has successfully deployed advanced multi-agent systems and autonomous workflows for global companies, demonstrating how cutting-edge technology can solve complex enterprise challenges. From winning the Smart India Hackathon to developing apps used by millions, Tushar’s journey serves as a practical road map to master AI, machine learning, and scalable software development.",
+  },
+  // {
+  //   id: 6,
+  //   name: "Shaury Srivatsav",
+  //   role: "Applied Scientist",
+  //   experience: "3+ Years Experience",
+  //   avatar: "/img/AI_BG/shaurya.jpeg",
+  //   bio: "An Applied AI/ML Scientist at Amazon & Ex-Microsoft, specializing in the development of large-scale VLMs and Generative AI. His expertise includes training complex neural networks, distributed training on multi-GPU systems, and implementing constrained decoding for reliable model inference. With a background in multimodal research, he focuses on building robust machine learning pipelines for synthetic data generation and automated content analysis.",
+  // },
 ];
 
 const TeamPage = memo(() => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const animationFrameRef = useRef<number>();
-  const [isMobile, setIsMobile] = useState(false);
+  const isPaused = useRef(false);
 
   useEffect(() => {
-    // Check if screen is mobile (768px is typical md breakpoint)
-    const checkIfMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    checkIfMobile();
-    window.addEventListener('resize', checkIfMobile);
-
-    return () => {
-      window.removeEventListener('resize', checkIfMobile);
-    };
-  }, []);
-
-  useEffect(() => {
-    // Only run auto-scroll on mobile
-    if (!isMobile) return;
-
     const scrollContainer = scrollContainerRef.current;
     if (!scrollContainer) return;
 
     let scrollPosition = 0;
-    const scrollSpeed = 0.5; // Adjust this value to control speed (pixels per frame)
+    const scrollSpeed = 0.5;
 
     const scroll = () => {
-      scrollPosition += scrollSpeed;
-      
-      // Reset scroll position when we've scrolled past half the content
-      // (since we're duplicating the profiles)
-      if (scrollPosition >= scrollContainer.scrollWidth / 2) {
-        scrollPosition = 0;
+      if (!isPaused.current) {
+        scrollPosition += scrollSpeed;
+
+        // Seamlessly reset when we've scrolled past the first set of profiles
+        if (scrollPosition >= scrollContainer.scrollWidth / 2) {
+          scrollPosition = 0;
+          scrollContainer.scrollLeft = 0;
+        }
+
+        scrollContainer.scrollLeft = scrollPosition;
       }
-      
-      scrollContainer.scrollLeft = scrollPosition;
       animationFrameRef.current = requestAnimationFrame(scroll);
     };
 
     animationFrameRef.current = requestAnimationFrame(scroll);
 
-    // Pause on touch/hover
-    const handleTouchStart = () => {
-      if (animationFrameRef.current) {
-        cancelAnimationFrame(animationFrameRef.current);
-      }
+    // Pause on hover (desktop) and touch (mobile)
+    const handlePause = () => {
+      isPaused.current = true;
     };
 
-    const handleTouchEnd = () => {
-      animationFrameRef.current = requestAnimationFrame(scroll);
+    const handleResume = () => {
+      isPaused.current = false;
+      scrollPosition = scrollContainer.scrollLeft;
     };
 
-    scrollContainer.addEventListener('touchstart', handleTouchStart);
-    scrollContainer.addEventListener('touchend', handleTouchEnd);
+    scrollContainer.addEventListener('mouseenter', handlePause);
+    scrollContainer.addEventListener('mouseleave', handleResume);
+    scrollContainer.addEventListener('touchstart', handlePause);
+    scrollContainer.addEventListener('touchend', handleResume);
 
     return () => {
       if (animationFrameRef.current) {
         cancelAnimationFrame(animationFrameRef.current);
       }
-      scrollContainer.removeEventListener('touchstart', handleTouchStart);
-      scrollContainer.removeEventListener('touchend', handleTouchEnd);
+      scrollContainer.removeEventListener('mouseenter', handlePause);
+      scrollContainer.removeEventListener('mouseleave', handleResume);
+      scrollContainer.removeEventListener('touchstart', handlePause);
+      scrollContainer.removeEventListener('touchend', handleResume);
     };
-  }, [isMobile]);
+  }, []);
 
-  // Duplicate profiles for infinite scroll effect (only on mobile)
-  const displayProfiles = isMobile ? [...profiles, ...profiles] : profiles;
+  // Duplicate profiles for seamless infinite scroll
+  const displayProfiles = [...profiles, ...profiles];
 
   return (
     <section className="relative bg-[#0c142c] w-full">
@@ -121,7 +125,7 @@ const TeamPage = memo(() => {
         {displayProfiles.map((profile, index) => (
           <div
             key={`${profile.id}-${index}`}
-            className="w-[calc(50%-8px)] min-w-[160px] md:w-auto md:min-w-[260px] md:max-w-none flex-shrink-0 md:flex-1"
+            className="w-[calc(50%-8px)] min-w-[160px] md:w-[280px] flex-shrink-0"
           >
             <ProfileCard profile={profile} />
           </div>
