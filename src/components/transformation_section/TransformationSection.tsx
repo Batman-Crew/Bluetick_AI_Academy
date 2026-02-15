@@ -241,7 +241,7 @@ const TransformationSection = () => {
         <div className="hidden md:block">
           <Image
             src="/img/Your_Transformation_Journey_Desktop.png"
-            alt="Transformation Journey"
+            alt="clearTransformation Journey"
             width={1200}
             height={700}
             className="w-full h-auto rounded-2xl"
