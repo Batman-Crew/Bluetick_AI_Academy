@@ -55,14 +55,16 @@ const Accordion = ({items}) => {
           <button
             onClick={() => toggleAccordion(index)}
             className="w-full flex justify-between items-center pr-1 py-3 text-left text-gray-800 font-semibold"
+            aria-expanded={openIndex === index}
+            aria-controls={`accordion-panel-${index}`}
           >
             <span>{item.title}</span>
-            <span className="text-2xl font-semibold">
+            <span className="text-2xl font-semibold" aria-hidden="true">
               {openIndex === index ? "×" : "+"}
             </span>
           </button>
           {openIndex === index && (
-            <div className="p-3 text-gray-600 border-t border-[grey]">{item.content}</div>
+            <div id={`accordion-panel-${index}`} role="region" className="p-3 text-gray-600 border-t border-[grey]">{item.content}</div>
           )}
         </div>
       ))}

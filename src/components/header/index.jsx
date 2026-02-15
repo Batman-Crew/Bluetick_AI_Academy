@@ -48,9 +48,10 @@ export default function Header({ formType, setFormType }) {
                     <div className="flex gap-[10px] min-[1050px]:gap-[0px] items-center">
 
                         {/* MENU LIST */}
-                        <div
+                        <nav
                             className={`${menuOpen ? "max-[1049px]:translate-x-0" : "max-[1049px]:translate-x-full"
                                 } min-[1050px]:flex fixed top-[80px] left-0 z-[5] max-[500px]:p-[15px] max-[1049px]:p-[35px] min-[1050px]:static bg-white min-[1050px]:bg-transparent h-full max-[1049px]:w-full flex flex-col min-[1050px]:flex-row gap-[15px] min-[1050px]:gap-[40px] min-[1050px]:items-center font-[400] text-[18px] text-black min-[1050px]:text-white capitalize max-[1024px]:overflow-y-scroll duration-300`}
+                            aria-label="Main navigation"
                         >
 
                             <Link href="#courses">
@@ -71,7 +72,7 @@ export default function Header({ formType, setFormType }) {
                                 <p>Hire from us</p>
                             </div>
 
-                        </div>
+                        </nav>
 
                         {/* Desktop WhatsApp Button */}
                         <div className="mr-5 md:block hidden">
@@ -113,7 +114,12 @@ export default function Header({ formType, setFormType }) {
                         </div>
 
                         {/* Mobile Menu Icon */}
-                        <div onClick={() => setMenuOpen(!menuOpen)} className="block min-[1050px]:hidden">
+                        <button
+                            onClick={() => setMenuOpen(!menuOpen)}
+                            className="block min-[1050px]:hidden bg-transparent border-none cursor-pointer"
+                            aria-label={menuOpen ? "Close menu" : "Open menu"}
+                            aria-expanded={menuOpen}
+                        >
                             {menuOpen ? (
                                 <XMarkIcon className="text-white w-[30px] h-[30px]" />
                             ) : (
@@ -121,7 +127,7 @@ export default function Header({ formType, setFormType }) {
                                     <Image src={HammerIcon} width={16} height={16} alt="Menu" />
                                 </div>
                             )}
-                        </div>
+                        </button>
                     </div>
                 </div>
             </div>

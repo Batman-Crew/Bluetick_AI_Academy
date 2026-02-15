@@ -20,7 +20,7 @@ export default function Popup({ message, type, onClose }) {
   }, [onClose]);
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40" role="alert" aria-live="assertive">
       <div
         className={`rounded-xl shadow-lg p-6 w-[90%] max-w-md text-center relative
         ${type === 'success' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}
