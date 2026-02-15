@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState, useMemo, useCallback } from "react";
-import { toast, ToastContainer } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import dynamic from "next/dynamic";
 
@@ -105,20 +105,25 @@ function HomeClient() {
 
   return (
     <>
+
+      {/* Google Tag Manager (noscript) */}
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCMHBSGS"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      {/* End Google Tag Manager (noscript) */}
       {/* Hidden SEO headings */}
       <div className="hidden">
         <h1>
-          Digital Marketing Courses in Bangalore – All You Need to Know before
+          AI Engineering Program in Bangalore – All You Need to Know before
           you Join!
         </h1>
-        <h2>Why Enroll in a Digital Marketing Course?</h2>
-        <h3>Leading Digital Marketing Training Institute in Bangalore</h3>
+        <h2>Why Enroll in a AI Engineering Program?</h2>
+        <h3>Leading AI Engineering Training Institute in Bangalore</h3>
         <h4>
-          How to Find the Best Digital Marketing Training Institute in
+          How to Find the Best AI Engineering Training Institute in
           Bangalore?
         </h4>
-        <h5>Best Digital Marketing Course in Bangalore – What Sets It Apart?</h5>
-        <h6>Still Searching for the “Best Digital Marketing Course Near Me”?</h6>
+        <h5>Best AI Engineering Course in Bangalore – What Sets It Apart?</h5>
+        <h6>Still Searching for the “Best AI Engineering Course Near Me”?</h6>
       </div>
 
       <Header setFormType={setFormType} formType={formType} />

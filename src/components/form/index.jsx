@@ -20,6 +20,7 @@ export default function LearningAdvisorForm({ formType, setFormType }) {
     captchaChecked: false,
   });
   const [errors, setErrors] = useState({});
+  const [submitting, setSubmitting] = useState(false);
 
   // -------------------- Validation --------------------
   const validate = () => {
@@ -64,6 +65,7 @@ export default function LearningAdvisorForm({ formType, setFormType }) {
       return;
     }
 
+    setSubmitting(true);
     try {
       console.log("Sending data to Zoho CRM...");
 
@@ -103,6 +105,7 @@ export default function LearningAdvisorForm({ formType, setFormType }) {
       setPopupType("error");
       setPopupMessage("Something went wrong! Please try again.");
     } finally {
+      setSubmitting(false);
       setShowPopup(true);
       setFormData({
         name: "",
@@ -331,9 +334,10 @@ export default function LearningAdvisorForm({ formType, setFormType }) {
         {/* Submit Button */}
         <button
           type="submit"
-          className="overflow-hidden transition-transform duration-300 hover:scale-105 cursor-pointer text-white bg-gradient-to-b from-[#FD9055] to-[#FE4855] font-medium rounded-lg text-lg px-8 w-full py-1 md:py-2 text-center my-3 uppercase"
+          disabled={submitting}
+          className={`overflow-hidden transition-transform duration-300 cursor-pointer text-white bg-gradient-to-b from-[#FD9055] to-[#FE4855] font-medium rounded-lg text-lg px-8 w-full py-1 md:py-2 text-center my-3 uppercase ${submitting ? "opacity-60 cursor-not-allowed" : "hover:scale-105"}`}
         >
-          {formType === "franchisee" || formType === "hire" ? "Submit" : "REGISTER"}
+          {submitting ? "Submitting..." : formType === "franchisee" || formType === "hire" ? "Submit" : "REGISTER"}
         </button>
       </form>
 
