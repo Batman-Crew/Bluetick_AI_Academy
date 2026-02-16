@@ -44,14 +44,14 @@ export const profiles = [
     avatar: "/img/AI_BG/tushar.jpeg",
     bio: " AI Engineer at IBM who specializes in building intelligent, real-world applications using Generative AI and Large Language Models. He has successfully deployed advanced multi-agent systems and autonomous workflows for global companies, demonstrating how cutting-edge technology can solve complex enterprise challenges. From winning the Smart India Hackathon to developing apps used by millions, Tushar’s journey serves as a practical road map to master AI, machine learning, and scalable software development.",
   },
-  // {
-  //   id: 6,
-  //   name: "Shaury Srivatsav",
-  //   role: "Applied Scientist",
-  //   experience: "3+ Years Experience",
-  //   avatar: "/img/AI_BG/shaurya.jpeg",
-  //   bio: "An Applied AI/ML Scientist at Amazon & Ex-Microsoft, specializing in the development of large-scale VLMs and Generative AI. His expertise includes training complex neural networks, distributed training on multi-GPU systems, and implementing constrained decoding for reliable model inference. With a background in multimodal research, he focuses on building robust machine learning pipelines for synthetic data generation and automated content analysis.",
-  // },
+  {
+    id: 6,
+    name: "Shaury Srivatsav",
+    role: "Applied Scientist",
+    experience: "3+ Years Experience",
+    avatar: "/img/AI_BG/shaurya.jpeg",
+    bio: "An Applied AI/ML Scientist at Amazon & Ex-Microsoft, specializing in the development of large-scale VLMs and Generative AI. His expertise includes training complex neural networks, distributed training on multi-GPU systems, and implementing constrained decoding for reliable model inference. With a background in multimodal research, he focuses on building robust machine learning pipelines for synthetic data generation and automated content analysis.",
+  },
 ];
 
 const TeamPage = memo(() => {
