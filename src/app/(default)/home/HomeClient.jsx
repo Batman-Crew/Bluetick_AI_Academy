@@ -150,6 +150,12 @@ function HomeClient() {
           <div className="container min-[1440px]:max-w-[1440px] mx-auto px-3 md:px-6">
             <div className="grid sm:grid-cols-1 md:grid-cols-1 xl:grid-cols-3 px-3">
               <div className="relative z-10">
+              <h1 className="text-[#ffffff] text-[18px] mb-4 text-center xl:text-start">
+                  Most Comprehensive Gen AI Course in{" "}
+                  <strong className="font-[700] md:text-[24px] underline">
+                    2026
+                  </strong>{" "}
+                </h1>
                 <h2 className="bg-gradient-to-b from-[#FD9055] to-[#FE4855] bg-clip-text text-transparent text-[30px] md:text-[50px] font-[400] md:font-semibold uppercase text-center xl:text-start">
                   ENTERPRISE
                 </h2>
@@ -159,12 +165,7 @@ function HomeClient() {
                 <p className="text-[#FE4855] text-[30px] md:text-[50px] font-[400] md:font-semibold uppercase text-center xl:text-start">
                   PROGRAM
                 </p>
-                <p className="text-[#ffffff] text-[18px] mb-4 text-center xl:text-start">
-                  <strong className="font-[700] md:text-[24px] underline">
-                    2026
-                  </strong>{" "}
-                  will be all about Production AI skills{" "}
-                </p>
+             
 
                 <div className="md:block hidden mt-8">
                   <span className="flex justify-center xl:justify-start">
