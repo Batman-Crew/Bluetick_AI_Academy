@@ -475,12 +475,12 @@ export const accardiancontentfaq = [
   {
     title: "What is the current demand for AI Engineers in India compared to traditional software roles?",
     content:
-      "The landscape of Indian IT is undergoing a tectonic shift. While traditional full-stack and backend roles are seeing a flattening in salary growth, Enterprise AI Engineering is witnessing a 40–60% year-on-year demand surge. Companies in Bangalore and globally are no longer looking for \"prompt engineers\"; they are hiring architects who can build private, secure, and scalable AI systems. This program is designed to move you from \"writing code\" to \"architecting intelligence\".",
+      "The landscape of Indian IT is undergoing a tectonic shift. While traditional full-stack and backend roles are seeing a flattening in salary growth, Enterprise AI Engineering is witnessing a 40–60% year-on-year demand surge. Companies in Bangalore and globally are no longer looking for \"prompt engineers\"; they are hiring AI developers who can build enterprise grade, secure, and scalable AI systems. This program is designed to move you from \"writing code\" to \"architecting intelligence\".",
   },
   {
     title: "What is the average salary hike I can expect after completing an Enterprise AI certification?",
     content:
-      "In the current Bangalore market (2025–2026), developers transitioning into AI Engineering roles with 2–5 years of experience are commanding packages ranging from ₹18 LPA to ₹35 LPA, depending on their ability to handle production-grade RAG and Agentic workflows. Our curriculum focuses specifically on these high-value skills to ensure you aren't just \"certified,\" but \"hirable\".",
+      "In the current job market (2025–2026), developers transitioning into AI Engineering roles with 2–5 years of experience are commanding packages ranging from ₹18 LPA to ₹35 LPA, depending on their ability to handle production-grade RAG and Agentic workflows. Our curriculum focuses specifically on these high-value skills to ensure you aren't just \"certified,\" but \"Future-Proofed\" and \“Production-Ready\”.",
   },
   {
     title: "Will AI replace my job as a software developer?",
@@ -510,7 +510,7 @@ export const accardiancontentfaq = [
   {
     title: "Who are the instructors for the Enterprise AI Engineering Program?",
     content:
-      "To maintain the highest level of Expertise (E), we do not hire \"professional trainers.\" Your mentors are practicing Lead Data Scientists and AI Architects from Fortune 500 companies like EY, SAP, Kinaxis, and IBM. They bring real-world \"war stories\" from the field into the classroom.",
+      "Our mentors are not professional trainers—they are Practicing Lead AI Architects and Developers who have built and deployed mission-critical systems for the world’s largest enterprises. They move beyond theory to teach the Enterprise AI Lifecycle, sharing real-world \"War Stories\" from scaling models to millions of users. You aren't just learning to code; you are learning to architect resilient, production-grade AI.",
   },
   {
     title: "Why should I choose a physical classroom in Indiranagar over an online-only course?",
@@ -525,12 +525,12 @@ export const accardiancontentfaq = [
   {
     title: "I am a beginner with no coding background. Can I join?",
     content:
-      "Yes. While the core program is for developers, we offer a 4-week \"Foundation\" track specifically for non-technical audiences. This covers Python basics, data handling with Pandas/NumPy, and the math required for ML, ensuring you are at par with developers before the main AI Engineering milestones begin.",
+      "Absolutely. Our 4-week Foundations Module bridges the gap for non-technical learners. You’ll move from zero to building with Python, especially data handling, Object Oriented programming, REST APIs and basic web applications. By the time you reach the main AI Engineering track, focusing primarily on latest GenAI and Agents (skipping ML), you’ll have the technical confidence to build alongside experienced developers when the core milestones begin.",
   },
   {
-    title: "I have 3 years of experience in Java/JS. Do I need to learn Python first?",
+    title: "I am a Web/Mobile developer (Java, JS, etc.). Do I need to learn Python? ",
     content:
-      "The program includes Python for AI/ML specifically designed for experienced developers. Since you already understand programming logic, we focus on the libraries (PyTorch, LangChain, FastAPI) that are essential for AI development.",
+      "Yes, but your transition will be seamless. Our program includes an accelerated Python track specifically built for experienced engineers. Instead of starting from scratch, we leverage your existing programming logic to quickly bridge you into AI-specific Python, focusing on data handling, vectorization, and building robust APIs. By the time you reach the main AI Engineering track, you’ll have the technical confidence to build alongside experienced developers when the core milestones begin.",
   },
   {
     title: "How is the 112-hour program structured over 14 weekends?",
