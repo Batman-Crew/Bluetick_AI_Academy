@@ -5,33 +5,33 @@ export default function SEO() {
   return (
     <Head>
       {/* Primary Meta Tags */}
-      <title>Digital Marketing Courses in Bangalore – Enroll at BlueTick Academy!</title>
+      <title>Best Gen AI Course in Bangalore - Become an AI Engineer!</title>
       <meta
         name="description"
-        content="BlueTick Academy offers Career oriented Digital Marketing Course in Bangalore.Enroll in basics to advanced Digital Marketing Training in Bangalore. BlueTick Academy is rated as the Top Digital Marketing Training Institute in Bangalore based on faculty experience and placement record."
+        content="An Enterprise AI Engineering Program covering Gen AI, Rag, Agentic Workflows, LLMOps / MLOps and MCPs. The ultimate Gen AI course for 2026. Enroll at Bluetick AI Academy!"
       />
-      <meta name="keywords" content="Digital Marketing Course, SEO Training, PPC Training, Social Media Marketing, Bangalore Marketing Course" />
+      <meta name="keywords" content="Best Gen AI Course, AI Engineering, AI Engineer, AI Engineer Course, AI Engineer Training, AI Engineer Course in Bangalore" />
       <meta name="author" content="BlueTick Academy" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="robots" content="index, follow" />
       
       {/* Open Graph / Facebook */}
-      <meta property="og:title" content="Digital Marketing Courses in Bangalore – Enroll at BlueTick Academy!" />
-      <meta property="og:description" content="Join the best digital marketing training in Bangalore at BlueTick Academy. Learn SEO, PPC, Social Media, and more from industry experts." />
-      <meta property="og:image" content="/images/digital-marketing-course.jpg" />
-      <meta property="og:url" content="https://www.bluetickacademy.com/digital-marketing-course" />
+      <meta property="og:title" content="Best Gen AI Course in Bangalore - Become an AI Engineer!" />
+      <meta property="og:description" content="An Enterprise AI Engineering Program covering Gen AI, Rag, Agentic Workflows, LLMOps / MLOps and MCPs. The ultimate Gen AI course for 2026. Enroll at Bluetick AI Academy!" />
+      <meta property="og:image" content="/img/AI_BG/hero-bg.webp" />
+      <meta property="og:url" content="https://www.bluetickacademy.ai/" />
       <meta property="og:type" content="website" />
-      <meta property="og:image:alt" content="Digital Marketing Courses in Bangalore" />
-      
+      <meta property="og:image:alt" content="Best Gen AI Course in Bangalore" />
+
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="Digital Marketing Courses in Bangalore – Enroll at BlueTick Academy!" />
-      <meta name="twitter:description" content="Advance your career with the best digital marketing course in Bangalore. Learn from experienced professionals at BlueTick Academy." />
-      <meta name="twitter:image" content="/images/digital-marketing-course.jpg" />
-      <meta name="twitter:image:alt" content="Digital Marketing Course" />
-      
+      <meta name="twitter:title" content="Best Gen AI Course in Bangalore - Become an AI Engineer!" />
+      <meta name="twitter:description" content="An Enterprise AI Engineering Program covering Gen AI, Rag, Agentic Workflows, LLMOps / MLOps and MCPs. The ultimate Gen AI course for 2026. Enroll at Bluetick AI Academy!" />
+      <meta name="twitter:image" content="/img/AI_BG/hero-bg.webp" />
+      <meta name="twitter:image:alt" content="Best Gen AI Course in Bangalore" />
+
       {/* Canonical URL */}
-      <link rel="canonical" href="https://www.bluetickacademy.com/digital-marketing-course" />
+      <link rel="canonical" href="https://www.bluetickacademy.ai/" />
       <link rel="icon" href="/icon.png" sizes="any" />
       
       {/* Structured Data (JSON-LD) */}
@@ -41,21 +41,21 @@ export default function SEO() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Course",
-            "name": "Digital Marketing Course in Bangalore",
-            "description": "BlueTick Academy offers a career-oriented Digital Marketing Course in Bangalore covering SEO, PPC, social media marketing, and more.",
+            "name": "Best Gen AI Course in Bangalore",
+            "description": "An Enterprise AI Engineering Program covering Gen AI, Rag, Agentic Workflows, LLMOps / MLOps and MCPs. The ultimate Gen AI course for 2026. Enroll at Bluetick AI Academy!",
             "provider": {
               "@type": "EducationalOrganization",
               "name": "BlueTick Academy",
-              "url": "https://www.bluetickacademy.com",
+              "url": "https://www.bluetickacademy.ai",
             },
             "image": [
               {
-                "url": "/images/digital-marketing-course.jpg",
-                "alt": "Digital Marketing Courses in Bangalore",
+                "url": "/img/AI_BG/hero-bg.webp",
+                "alt": "Best Gen AI Course in Bangalore",
               },
               {
-                "url": "/images/digital-marketing-training.jpg",
-                "alt": "Digital Marketing Training Institute in Bangalore",
+                "url": "/img/AI_BG/TechBgDesktop.webp",
+                "alt": "Best Gen AI Course in Bangalore",
               },
             ],
           }),
