@@ -28,7 +28,7 @@ const CourseSection = memo(() => {
         <h1 className="mb-5 text-center text-3xl font-bold text-primary-foreground md:text-4xl">
         Explore Curriculum
         </h1>
-        <p className="text-base mb-10 text-center text-white">112 Hrs Roadmap : Enterprise AI Stack</p>
+        <p className="text-base mb-10 text-center text-white">14 Weekend Roadmap : Enterprise AI Stack</p>
 
         {/* Desktop: side by side */}
         <div className="hidden md:grid md:grid-cols-[340px_1fr] md:gap-8">

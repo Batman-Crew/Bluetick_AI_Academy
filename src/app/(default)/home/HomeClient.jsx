@@ -369,10 +369,10 @@ function HomeClient() {
                     height={20}
                   />
                 </div>
-                <span className="text-[20px] md:text-[24px]">
-                  In{" "}
+                <span className="text-[20px] md:text-[24px] text-[red]">
+                  
                   <strong className="text-[red] text-[24px] md:text-[28px]">
-                    14 Weekends
+                    In 14 Weekends
                   </strong>
                 </span>
               </div>
@@ -416,7 +416,7 @@ function HomeClient() {
                     height={20}
                   />
                 </div>
-                <span className="text-[20px] md:text-[24px]">
+                <span className="text-[20px] md:text-[24px] text-[red]">
                   In{" "}
                   <strong className="text-[red] text-[24px] md:text-[28px]">
                     14 Weekends
