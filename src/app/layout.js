@@ -12,9 +12,9 @@ const sourceSans = Source_Sans_3({
 });
 
 export const metadata = {
-  title: 'AI Courses in Bangalore – Enroll at BlueTick AI Academy!',
+  title: 'Best Gen AI Course in Bangalore - Become an AI Engineer!',
   description:
-    'BlueTick Academy offers Career oriented AI Course in Bangalore.',
+    ' An Enterprise AI Engineering Program covering Gen AI, Rag, Agentic Workflows, LLMOps / MLOps and MCPs. The ultimate Gen AI course for 2026. Enroll at Bluetick AI Academy!',
   icons: {
     icon: '/icon.png',
   },
