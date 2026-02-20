@@ -157,13 +157,13 @@ function HomeClient() {
                   </strong>{" "}
                 </h1>
                 <h2 className="bg-gradient-to-b from-[#FD9055] to-[#FE4855] bg-clip-text text-transparent text-[30px] md:text-[50px] font-[400] md:font-semibold uppercase text-center xl:text-start">
-                  ENTERPRISE
+                  ADVANCED
                 </h2>
                 <p className="text-[33px] md:text-[50px] leading-[40px] md:leading-[70px] font-[700] md:font-bold text-[#98C7F9] text-center xl:text-start">
-                  AI ENGINEERING
+                  AGENTIC AI 
                 </p>
                 <p className="text-[#FE4855] text-[30px] md:text-[50px] font-[400] md:font-semibold uppercase text-center xl:text-start">
-                  PROGRAM
+                  COURSE
                 </p>
              
 
