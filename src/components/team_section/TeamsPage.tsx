@@ -65,7 +65,7 @@ export const profiles = [
     name: "Ravindra Sonawane",
     role: "AI Scientist",
     experience: "10+ Years Experience",
-    avatar: "/img/AI_BG/Ravi photo1.png",
+    avatar: "/img/AI_BG/Ravi_photo.png",
     bio: "Staff AI Scientist at leading Conversation Intelligence and Automation company where I lead multiple projects focused on Agentic AI, RAG and NLP. I have more than 10 years of experience across conversational AI, marketing, healthcare and aerospace domains. I hold a master’s degree from IIT, Kanpur. I am incredibly passionate about building AI driven products, understanding science & learning art behind AI and mathematics.",
   },
    {
