@@ -5,7 +5,7 @@ export const profiles = [
   {
     id: 1,
     name: "Ramesh Krishnan",
-    role: "Engineering Manager - AI/ML Manager",
+    role: "Engineering Manager - AI/ML",
     experience: "20+ Years Experience",
     avatar: "/img/AI_BG/person3.webp",
     bio: " Applied AI Leader with 20+ years of experience, including 8+ years building enterprise AI/ML applications  across startups and product companies such as ElasticRun, Noodle.ai, EdgeVerve, and Infosys. Builds practical AI systems powering real-world products at scale.",
@@ -52,6 +52,30 @@ export const profiles = [
     avatar: "/img/AI_BG/shaurya.jpeg",
     bio: "An Applied AI/ML Scientist at Amazon & Ex-Microsoft, specializing in the development of large-scale VLMs and Generative AI. His expertise includes training complex neural networks, distributed training on multi-GPU systems, and implementing constrained decoding for reliable model inference. With a background in multimodal research, he focuses on building robust machine learning pipelines for synthetic data generation and automated content analysis.",
   },
+  {
+    id: 7,
+    name: "Venkatesh Gopalakrishnan",
+    role: "Senior software engineer",
+    experience: "7+ Years Experience",
+    avatar: "/img/AI_BG/Venkatesh_Gopalakrishnan.jpeg",
+    bio: "Senior software engineer with over 7 years of experience building distributed, high-scale systems across retail and financial domains. Strong focus on designing reliable, event-driven platforms that support real-time workflows.",
+  },
+  {
+    id: 8,
+    name: "Ravindra Sonawane",
+    role: "AI Scientist",
+    experience: "10+ Years Experience",
+    avatar: "/img/AI_BG/Ravi photo1.png",
+    bio: "Staff AI Scientist at leading Conversation Intelligence and Automation company where I lead multiple projects focused on Agentic AI, RAG and NLP. I have more than 10 years of experience across conversational AI, marketing, healthcare and aerospace domains. I hold a master’s degree from IIT, Kanpur. I am incredibly passionate about building AI driven products, understanding science & learning art behind AI and mathematics.",
+  },
+   {
+    id: 9,
+    name: "Anirudh Ravishankar",
+    role: "Senior AI Scientist",
+    experience: "7+ Years Experience",
+    avatar: "/img/AI_BG/Anirudh Photo.jpeg",
+    bio: "A Senior AI Scientist,  with over 7 years of industry experience in various AI product companies.  Worked on Enterprise AI products across multiple domains like Supply Chain, Retail, Process Mining and Energy sector. Have Masters in Computer Science from University of Houston, Texas.",
+  }, 
 ];
 
 const TeamPage = memo(() => {

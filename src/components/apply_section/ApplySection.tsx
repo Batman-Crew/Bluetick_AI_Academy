@@ -6,8 +6,8 @@ import React from "react";
 
 const stats = [
     {
-        number: "Web, Mobile, QA, DevOps etc..",
-        description: "(Java, Python, JS, QA, Analyst, etc.)",
+        number: "Developers",
+        description: "(Web, Mobile, QA, DevOps etc..)",
         text: <div>Just calling OpenAI APIs Era is over <br /><span className="font-bold text-orange-600">Start building AI systems</span> </div>,
         icon: <Image height={60} width={60} alt="Dashboard settings" src="/img/AI_BG/card1.webp" />,
     },
