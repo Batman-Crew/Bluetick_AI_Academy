@@ -369,15 +369,16 @@ function HomeClient() {
                     height={20}
                   />
                 </div>
-                <span className="text-[20px] md:text-[24px] text-[red]">
-                  
+                <span className="text-[20px] md:text-[24px] text-[black]">
+                  In{" "}
                   <strong className="text-[red] text-[24px] md:text-[28px]">
-                    In 14 Weekends
+                    14 Weekends
                   </strong>
                 </span>
               </div>
               <p className="text-[14px] md:text-[24px] lg:text-[24px] font-[700] mt-3 whitespace-nowrap overflow-x-auto">
-                Build | Deploy | Get Hired as an AI Engineer
+                Build <span className="text-[#FE4855]">|</span> Deploy{" "}
+                <span className="text-[#FE4855]">|</span> Get Hired as an AI Engineer
               </p>
             </div>
             <p className="absolute bottom-15 left-10 text-sm bg-black text-white px-3 py-1.5 rounded-full">{"Developer -> AI Engineer Track"}</p>
@@ -424,8 +425,9 @@ function HomeClient() {
                 </span>
               </div>
               <p className="text-[14px] md:text-[24px] lg:text-[24px] font-[700] mt-3 whitespace-nowrap overflow-x-auto">
-                Build | Deploy | Get Hired as an AI Engineer
-              </p>
+  Build <span className="text-[#FE4855]">|</span> Deploy{" "}
+  <span className="text-[#FE4855]">|</span> Get Hired as an AI Engineer
+</p>
             </div>
             <p className="absolute bottom-15 left-10 text-sm bg-black text-white px-3 py-1.5 rounded-full">{"Developer -> AI Engineer Track"}</p>
             <p className="absolute bottom-35 right-10 text-sm bg-black text-white px-3 py-1.5 rounded-full">{"Live Mentors + Feedback Loops"}</p>
