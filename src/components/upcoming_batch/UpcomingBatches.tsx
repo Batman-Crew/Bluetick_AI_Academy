@@ -6,8 +6,8 @@ import { FaCalendarAlt, FaLock } from "react-icons/fa";
 
 const batches = [
   { date: "28th Feb '26", soldOut: true },
-  { date: "7th March '26", progress: 75, action: "Register Now" },
-  { date: "21st April '26", icon: true ,action: "Next Cohort"},
+  { date: "14th March '26", progress: 75, action: "Register Now" },
+  { date: "25th April '26", icon: true ,action: "Next Cohort"},
 ];
 
 export default function UpcomingBatches() {
