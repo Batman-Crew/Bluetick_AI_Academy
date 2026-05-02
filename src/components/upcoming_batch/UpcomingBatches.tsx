@@ -5,9 +5,9 @@ import { motion } from "framer-motion";
 import { FaCalendarAlt, FaLock } from "react-icons/fa";
 
 const batches = [
-  { date: "14th March '26", soldOut: true },
-  { date: "26th April '26", progress: 75, action: "Register Now" },
-  { date: "31st May '26", icon: true ,action: "Next Cohort"},
+  { date: "26th April '26", soldOut: true },
+  { date: "31st May '26", progress: 75, action: "Register Now" },
+  { date: "11th July'26", icon: true ,action: "Next Cohort"},
 ];
 
 export default function UpcomingBatches() {
