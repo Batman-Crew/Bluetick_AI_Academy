@@ -137,9 +137,12 @@ const TeamPage = memo(() => {
   const displayProfiles = [...profiles, ...profiles];
 
   return (
-    <section className="relative bg-[#0c142c] w-full">
-      <p className="text-center text-2xl font-bold text-white mb-12">
+    <section className="relative bg-[#0c142c] w-full py-14 md:py-20">
+      <h2 className="text-center text-2xl md:text-3xl font-bold text-white mb-3 px-4">
         Learn from Industry Experts building AI for Fortune 500 Companies
+      </h2>
+      <p className="text-center text-[13px] md:text-sm uppercase tracking-[0.2em] text-[#4ecafc]/80 mb-10 md:mb-12">
+        Mentors who&apos;ve built it, shipped it, and scaled it
       </p>
       <div
         ref={scrollContainerRef}

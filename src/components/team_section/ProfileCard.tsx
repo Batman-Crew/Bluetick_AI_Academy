@@ -11,8 +11,8 @@ interface ProfileData {
   experience: string;
   avatar: string;
   bio: string;
-  skills: string[];
-  companies: string[];
+  skills?: string[];
+  companies?: string[];
 }
 
 interface ProfileCardProps {
@@ -23,92 +23,126 @@ const ProfileCard = ({ profile }: ProfileCardProps) => {
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <div className="w-full h-full rounded-xl overflow-hidden bg-card flex flex-col relative">
-      {/* Avatar — clean, no overlay */}
-      <div className="relative bg-muted h-[150px] md:h-[250px]">
-        <Image
-          height={20}
-          width={20}
-          src={profile.avatar}
-          alt={profile.name}
-          className="w-full h-full object-cover object-top"
-        />
-        {/* Fade into gradient at very bottom of image */}
-        {/* <div
-          className="absolute bottom-0 left-0 right-0 h-20 pointer-events-none"
-          style={{
-            background:
-              "linear-gradient(to top, hsl(220 80% 30%), transparent)",
-          }}
-        /> */}
-      </div>
-
-      {/* Blue gradient info section */}
-      <div
-        className="px-2 pb-3 pt-0 md:px-5 md:pb-5 text-center flex-1 flex flex-col items-center"
+    <div className="group relative w-full h-full rounded-2xl overflow-hidden flex flex-col bg-[#0a1124] border border-[#4ecafc]/20 shadow-[0_0_25px_rgba(78,202,252,0.1)] transition-all duration-300 hover:border-[#4ecafc]/50 hover:shadow-[0_0_35px_rgba(78,202,252,0.25)]">
+      {/* Top accent bar */}
+      <span
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 top-0 h-[3px]"
         style={{
           background:
-            "linear-gradient(to bottom, hsl(220 80% 30%), hsl(220 70% 30%))",
+            "linear-gradient(90deg, #4ecafc 0%, #7b61ff 50%, #FE4855 100%)",
         }}
-      >
-        {/* Name */}
-        <p className="text-xs lg:text-xl mt-1 font-extrabold text-white tracking-wide mb-1 truncate w-full">
-          {profile.name}
-        </p>
+      />
 
-        {/* Role */}
-        <h3 className="text-[10px] lg:text-base line-clamp-2 h-[24px] md:h-[40px] font-medium text-white/80 leading-tight">
-          {profile.role}
+      {/* Avatar */}
+      <div className="relative bg-[#0c142c] h-[180px] md:h-[260px] overflow-hidden">
+        <Image
+          fill
+          src={profile.avatar}
+          alt={profile.name}
+          sizes="(max-width: 768px) 50vw, 280px"
+          className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+        />
+        {/* Soft fade at bottom into card body */}
+        <div
+          aria-hidden
+          className="absolute inset-x-0 bottom-0 h-16 pointer-events-none"
+          style={{
+            background:
+              "linear-gradient(to bottom, transparent, #0a1124)",
+          }}
+        />
+
+        {/* Experience badge removed from top - will be shown below name */}
+      </div>
+
+      {/* Info body */}
+      <div className="relative px-3 pb-4 pt-2 md:px-5 md:pb-5 md:pt-3 text-left flex-1 flex flex-col">
+        {/* Name */}
+        <h3 className="text-white text-[14px] md:text-[20px] font-extrabold leading-tight tracking-tight mb-1 truncate">
+          {profile.name}
         </h3>
 
-        {/* Experience badge */}
-        <span className="mt-2 md:mt-3 text-[10px] lg:text-sm inline-block rounded-full border border-white/50 px-3 py-1 md:px-5 md:py-1.5 font-medium text-white">
+        {/* Experience badge - moved below name */}
+        <span className="inline-flex items-center self-start rounded-full border border-[#4ecafc]/40 bg-[#0a1124]/80 backdrop-blur-md px-2.5 py-1 text-[9px] md:text-[11px] font-bold uppercase tracking-wider text-[#4ecafc] mb-2">
           {profile.experience}
         </span>
 
+        {/* Role */}
+        <p className="text-[11px] md:text-[14px] font-semibold text-[#4ecafc] leading-snug mb-3 line-clamp-2 min-h-[28px] md:min-h-[36px]">
+          {profile.role}
+        </p>
+
+        {/* Divider */}
+        <div
+          aria-hidden
+          className="h-px w-full mb-3"
+          style={{
+            background:
+              "linear-gradient(90deg, rgba(78,202,252,0.5), transparent)",
+          }}
+        />
+
         {/* View Profile button */}
-        <div className="mt-auto pt-2 md:pt-4">
+        <div className="mt-auto">
           <button
             onClick={() => setExpanded(!expanded)}
-            className="inline-flex cursor-pointer text-[10px] md:text-xs items-center justify-center gap-1 rounded-full px-4 py-1.5 md:px-7 md:py-2 md:text-sm font-semibold transition-colors"
-            style={{
-              background: "hsl(220 70% 55%)",
-              color: "white",
-            }}
+            className="w-full inline-flex cursor-pointer items-center justify-center gap-1.5 rounded-lg px-3 py-2 md:px-4 md:py-2.5 text-[11px] md:text-sm font-bold transition-all duration-300 bg-gradient-to-r from-[#4ecafc] to-[#7b61ff] text-[#0a1124] hover:shadow-[0_0_20px_rgba(78,202,252,0.5)] hover:-translate-y-0.5"
           >
             View Profile
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              className="w-3 h-3 md:w-4 md:h-4"
+            >
+              <path
+                fillRule="evenodd"
+                d="M3 10a.75.75 0 0 1 .75-.75h10.638L10.23 5.29a.75.75 0 1 1 1.04-1.08l5.5 5.25a.75.75 0 0 1 0 1.08l-5.5 5.25a.75.75 0 1 1-1.04-1.08l4.158-3.96H3.75A.75.75 0 0 1 3 10Z"
+                clipRule="evenodd"
+              />
+            </svg>
           </button>
         </div>
-
       </div>
 
-      {/* Expandable bio — overlays the card */}
+      {/* Expandable bio overlay */}
       <AnimatePresence>
         {expanded && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="absolute inset-0 z-10 rounded-xl flex flex-col"
-            style={{
-              background: "linear-gradient(to bottom, hsl(220 80% 42%), hsl(220 70% 32%))",
-            }}
+            transition={{ duration: 0.25, ease: "easeInOut" }}
+            className="absolute inset-0 z-10 rounded-2xl flex flex-col bg-[#0a1124] border border-[#4ecafc]/30"
           >
-            <div className="flex flex-col h-full overflow-hidden">
+            {/* Re-render top accent bar so overlay matches base card */}
+            <span
+              aria-hidden
+              className="pointer-events-none absolute inset-x-0 top-0 h-[3px]"
+              style={{
+                background:
+                  "linear-gradient(90deg, #4ecafc 0%, #7b61ff 50%, #FE4855 100%)",
+              }}
+            />
+            <div className="flex flex-col h-full overflow-hidden pt-3">
               <ScrollArea className="flex-1 min-h-0">
                 <div className="p-4">
-                  <p className="text-sm lg:text-lg font-extrabold text-white mb-1">{profile.name}</p>
-                  <p className="text-xs text-white/80 mb-3">{profile.role}</p>
-                  <p className="text-xs md:text-sm leading-relaxed text-white/90">
+                  <p className="text-sm md:text-lg font-extrabold text-white mb-1 leading-tight">
+                    {profile.name}
+                  </p>
+                  <p className="text-xs md:text-sm text-[#4ecafc] font-semibold mb-3">
+                    {profile.role}
+                  </p>
+                  <p className="text-[11px] md:text-sm leading-relaxed text-white/80">
                     {profile.bio}
                   </p>
                 </div>
               </ScrollArea>
-              <div className="p-3 flex justify-center shrink-0">
+              <div className="p-3 flex justify-center shrink-0 border-t border-white/10">
                 <button
                   onClick={() => setExpanded(false)}
-                  className="inline-flex cursor-pointer text-[10px] md:text-xs items-center justify-center gap-1 rounded-full px-4 py-1.5 md:px-7 md:py-2 md:text-sm font-semibold transition-colors bg-white/20 border border-white/40 text-white hover:bg-white/30"
+                  className="inline-flex cursor-pointer items-center justify-center gap-1 rounded-lg px-5 py-1.5 md:px-6 md:py-2 text-[11px] md:text-sm font-bold transition-colors bg-white/10 border border-white/20 text-white hover:bg-white/20"
                 >
                   Close
                 </button>

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import React, { memo } from "react";
-import { FaPython } from "react-icons/fa";
+import { FaPython, FaCode } from "react-icons/fa";
 import { TbSettingsCode } from "react-icons/tb";
 import { LuBrain } from "react-icons/lu";
 import { FaRobot } from "react-icons/fa6";
@@ -10,12 +10,13 @@ import { SiOpenai } from "react-icons/si";
 
 const topics = [
   { icon: <FaPython className="text-gray-200" />, label: "Python" },
-  { icon: <TbSettingsCode className="text-gray-200" />, label: "Applied ML & MLOps" },
+  { icon: <FaCode className="text-gray-200" />, label: "AI Coding" },
   { icon: <LuBrain className="text-gray-200" />, label: "Gen AI" },
   { icon: <FaRobot className="text-gray-200" />, label: "Agentic AI Workflows" },
   { icon: <IoSearchOutline className="text-gray-200" />, label: "RAG & Agentic RAG" },
   { icon: <PiFilesLight className="text-gray-200" />, label: "MCPs" },
   { icon: <SiOpenai className="text-gray-200" />, label: "LLMOps" },
+  { icon: <TbSettingsCode className="text-gray-200" />, label: "Applied ML & MLOps" },
 ];
 
 const AISection = () => {

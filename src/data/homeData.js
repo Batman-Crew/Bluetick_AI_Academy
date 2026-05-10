@@ -117,7 +117,7 @@ export const projects = [
 export const courses = [
   {
     id: 1,
-    title: "Professional Certification Program in Digital Marketing & Analytics",
+    title: "Professional Certificn Program in Digital Marketing & Analytics",
     duration: "3 Months   |   Weekdays & Weekends",
     img: "/img/course.svg",
     list_1: "7 Courses in 1 program",

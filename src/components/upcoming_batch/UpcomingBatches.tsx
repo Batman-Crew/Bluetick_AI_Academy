@@ -133,6 +133,18 @@ export default function UpcomingBatches() {
           })}
         </div>
 
+        {/* CTA Button */}
+        <div className="mt-12 flex justify-center">
+          <a href="#apply-form">
+            <button
+              type="button"
+              className="overflow-hidden transition-transform duration-300 hover:scale-105 text-white cursor-pointer bg-gradient-to-b from-[#FD9055] to-[#FE4855] font-semibold rounded-lg text-[16px] px-8 py-3 text-center uppercase min-w-[280px]"
+            >
+              START YOUR AI CAREER
+            </button>
+          </a>
+        </div>
+
       </div>
     </section>
   );

@@ -1,0 +1,1358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta name="description" content="Most Comprehensive Gen AI Course for Non-Engineers in 2026. Basics to Advanced. 10 Modules, 16 Sessions, 2 Months. Zero coding required. Weekend-only programme by Bluetick AI Academy."/>
+<meta name="robots" content="index,follow"/>
+<meta property="og:title" content="Gen AI Course for Non-Engineers — Bluetick AI Academy"/>
+<meta property="og:description" content="Most Comprehensive Gen AI Course in 2026. Zero coding. 10 Modules, 2 Months, Weekends Only."/>
+<meta property="og:url" content="https://bluetickacademy.ai/Gen-AI-Course"/>
+<meta property="og:type" content="website"/>
+<link rel="canonical" href="https://bluetickacademy.ai/Gen-AI-Course"/>
+<title>Gen AI Course for Non-Engineers | Most Comprehensive 2026 | Bluetick AI Academy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Manrope:wght@700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Manrope:wght@700;800&display=swap"></noscript>
+<style>
+/* ═══════════════════════════════════════════════════════
+   Bluetick AI Academy · Gen AI for Non-Engineers
+   Production v1.0 · https://bluetickacademy.ai/Gen-AI-Course
+   ═══════════════════════════════════════════════════════ */
+:root{
+  --tp:#F37021;--tp2:#FF8C42;--tps:#FFE9D6;
+  --ts:#FFD60A;--hac:#F37021;
+  --hf:#0A1F44;--ht:#0E2349;
+  --hl1:#FFF1F0;--hl2:#FFFBEB;
+  --hi:#1E1B2E;--hi2:#52525B;
+  --hpill-bg:rgba(255,255,255,.75);--hpill-bd:rgba(230,57,70,.20);--hpill-ink:#9F1239;
+  --hbadge-bg:rgba(255,255,255,.85);--hbadge-bd:rgba(230,57,70,.18);
+  --navy:#0A1F44;
+  --bg:#F7F9FC;--bg2:#EEF2F8;--bgw:#FFF9F2;
+  --ink:#0F172A;--ink2:#334155;--ink3:#64748B;
+  --ln:#E2E8F0;--ln2:#CBD5E1;
+  --glow:0 12px 40px rgba(243,112,33,.30);
+  --sm:0 1px 3px rgba(15,23,42,.06);
+  --md:0 4px 12px rgba(15,23,42,.08);
+  --lg:0 12px 32px rgba(15,23,42,.10);
+  --r1:10px;--r2:16px;--r3:24px;--r4:32px;
+  --g1:#86EFAC;--g2:#6EE7B7;--g3:#4ADE80;--g4:#22C55E;--g5:#16A34A;
+  --g6:#15803D;--g7:#166534;--g8:#14532D;--g9:#0A3F1E;
+}
+
+/* Animations */
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
+@keyframes slideRight{from{opacity:0;transform:translateX(-14px);}to{opacity:1;transform:translateX(0);}}
+@keyframes softFloat{0%,100%{transform:translateY(0);}50%{transform:translateY(-5px);}}
+@keyframes scaleIn{from{opacity:0;transform:scale(.94);}to{opacity:1;transform:scale(1);}}
+@keyframes skReveal{from{opacity:0;transform:translateY(12px);}to{opacity:1;transform:translateY(0);}}
+@keyframes bx{0%,100%{transform:translateX(0);}50%{transform:translateX(4px);}}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(6,167,125,.4);}50%{box-shadow:0 0 0 6px rgba(6,167,125,0);}}
+@keyframes mqs{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+body{font-family:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,sans-serif;
+  background:#fff;color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased;}
+
+/* ── MARQUEE ── */
+.mq{background:linear-gradient(90deg,var(--hl1),var(--hl2));color:var(--hi);
+  overflow:hidden;padding:9px 0;font-weight:700;font-size:13px;
+  border-bottom:1px solid rgba(230,57,70,.15);}
+.mq-t{display:flex;gap:32px;white-space:nowrap;animation:mqs 30s linear infinite;}
+.mq-t span{display:inline-flex;align-items:center;gap:8px;}
+
+/* ── NAV ── */
+.nav{position:sticky;top:0;z-index:200;
+  background:var(--hf);
+  padding:0 16px;height:58px;
+  display:flex;align-items:center;justify-content:space-between;gap:10px;
+  box-shadow:0 2px 8px rgba(10,31,68,.25);
+  transition:background .3s,box-shadow .3s,height .3s;}
+.nav-logo{display:flex;align-items:center;flex-shrink:0;
+  transition:opacity .3s,max-width .3s;overflow:hidden;max-width:180px;}
+.nav-logo img{height:60px;width:auto;display:block;border-radius:4px;object-fit:contain;}
+.nav-acts{display:flex;align-items:center;gap:7px;}
+.nav-ic{display:inline-flex;align-items:center;justify-content:center;gap:6px;
+  width:38px;height:38px;border-radius:50%;
+  background:rgba(255,255,255,.12);border:1.5px solid rgba(255,255,255,.2);
+  color:#fff;text-decoration:none;font-weight:700;font-size:12px;
+  cursor:pointer;font-family:inherit;
+  transition:all .25s;}
+.nav-ic:hover{background:rgba(255,255,255,.22);}
+.nav-ic.wa{background:#25D366;color:#fff;border-color:#25D366;}
+.nav-ic.ph{background:#2DA8E0;color:#fff;border-color:#2DA8E0;}
+.nav-ic .lbl{display:none;}
+.nav-cta{background:var(--tp);color:#fff;padding:9px 16px;border-radius:999px;
+  font-size:13px;font-weight:700;text-decoration:none;
+  box-shadow:0 4px 12px rgba(243,112,33,.35);white-space:nowrap;
+  transition:all .25s;}
+.nav-cta:hover{background:#E5651A;transform:translateY(-1px);}
+.ic{width:17px;height:17px;display:block;}
+
+/* Scrolled nav state */
+.nav.scrolled{background:var(--hf);backdrop-filter:none;box-shadow:0 2px 16px rgba(0,0,0,.28);height:52px;}
+.nav.scrolled .nav-logo{opacity:0;max-width:0;}
+.nav.scrolled .nav-cta{opacity:0;max-width:0;padding:0;overflow:hidden;}
+.nav.scrolled .nav-ic{transform:none;}
+.nav.scrolled .nav-ic.ph{background:#0EA5E9;border-color:#0EA5E9;width:42px;height:42px;}
+.nav.scrolled .nav-ic.wa{background:#22C55E;border-color:#22C55E;width:42px;height:42px;}
+
+@media(min-width:768px){
+  .nav{padding:0 40px;height:64px;}
+  .nav-logo img{height:85px;}
+  .nav-ic{width:40px;height:40px;}
+  .nav-ic .lbl{display:inline;font-size:13px;}
+  .nav-ic.ph,.nav-ic.wa{width:auto;height:40px;padding:0 16px;border-radius:999px;}
+  .nav-cta{padding:10px 24px;font-size:14px;}
+  .nav.scrolled .nav-ic.ph,.nav.scrolled .nav-ic.wa{width:auto;height:44px;padding:0 18px;border-radius:999px;margin-left:6px;}
+}
+
+/* ── HERO ── */
+.hero{background:linear-gradient(135deg,var(--hl1) 0%,var(--hl2) 100%);
+  color:var(--hi);padding:48px 20px 56px;position:relative;overflow:hidden;}
+.hero::before{content:"";position:absolute;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cpath d='M30 5 L35 10 L30 15 L25 10Z' fill='%23F37021' opacity='.10'/%3E%3Cpath d='M10 35 L15 40 L10 45 L5 40Z' fill='%23E63946' opacity='.08'/%3E%3Cpath d='M50 35 L55 40 L50 45 L45 40Z' fill='%23F37021' opacity='.08'/%3E%3C/svg%3E");
+  background-repeat:repeat;pointer-events:none;}
+.hero::after{content:"";position:absolute;top:-100px;right:-100px;width:280px;height:280px;
+  background:radial-gradient(circle,rgba(255,255,255,.5) 0%,transparent 70%);
+  border-radius:50%;pointer-events:none;}
+.hero>*{position:relative;z-index:1;}
+.h-seo{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.10em;text-transform:uppercase;
+  color:var(--hac);background:var(--hpill-bg);border:1px solid var(--hpill-bd);
+  padding:7px 14px;border-radius:999px;margin-bottom:18px;backdrop-filter:blur(6px);
+  animation:slideRight .5s ease-out .1s both;}
+.h-pre{font-size:13px;font-weight:600;letter-spacing:.06em;color:var(--hi2);
+  margin-bottom:8px;text-transform:uppercase;animation:slideRight .4s ease-out .15s both;}
+.hero h1{font-family:'Manrope',inherit;font-size:32px;font-weight:800;
+  line-height:1.12;letter-spacing:-.025em;color:var(--hi);margin-bottom:16px;
+  animation:fadeUp .6s ease-out .2s both;}
+.hero h1 .ac{color:var(--hac);}
+.h-tag{font-size:17px;color:var(--hi2);margin-bottom:8px;font-weight:500;
+  animation:fadeUp .5s ease-out .4s both;}
+.h-arr{font-size:14px;color:var(--hi2);margin-bottom:20px;
+  animation:fadeUp .4s ease-out .5s both;}
+.h-arr strong{color:var(--tp);font-weight:700;}
+.h-pills{display:flex;flex-wrap:nowrap;gap:8px;margin-bottom:22px;overflow:hidden;
+  animation:fadeUp .4s ease-out .55s both;}
+.h-pill{display:inline-flex;align-items:center;gap:6px;
+  background:var(--hpill-bg);border:1px solid var(--hpill-bd);
+  padding:6px 12px;border-radius:999px;font-size:12px;font-weight:600;
+  color:var(--hpill-ink);backdrop-filter:blur(6px);}
+.h-ctas{display:flex;flex-direction:column;gap:10px;margin-bottom:22px;
+  animation:fadeUp .4s ease-out .65s both;}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:14px 24px;border-radius:999px;font-weight:700;font-size:15px;
+  text-decoration:none;cursor:pointer;border:none;font-family:inherit;transition:all .2s;}
+.btn-p{background:var(--tp);color:#fff;box-shadow:var(--glow);
+  animation:softFloat 4s ease-in-out 2.5s infinite;}
+.btn-p:hover{background:#E5651A;transform:translateY(-1px);}
+.btn-g{background:#fff;color:var(--hi);border:1.5px solid rgba(0,0,0,.10);box-shadow:var(--sm);}
+.btn-g:hover{background:var(--hpill-bg);transform:translateY(-1px);}
+.h-badge{display:inline-flex;align-items:center;gap:8px;
+  background:var(--hbadge-bg);border:1px solid var(--hbadge-bd);
+  padding:8px 14px;border-radius:999px;font-size:12px;font-weight:600;
+  color:var(--hi2);backdrop-filter:blur(6px);box-shadow:var(--sm);
+  animation:fadeUp .4s ease-out .75s both;}
+.h-badge .dot{width:6px;height:6px;border-radius:50%;background:#06A77D;
+  animation:pulse 2s infinite;}
+
+@media(min-width:768px){
+  .hero{padding:100px 80px 110px;}
+  .hero h1{font-size:56px;}
+  .h-tag{font-size:21px;}
+  .h-ctas{flex-direction:row;}
+  .h-pills{flex-wrap:wrap;}
+}
+
+/* ── STATS ── */
+.st{background:#fff;border-bottom:1px solid var(--ln);padding:22px 20px;}
+.st-title{text-align:center;font-size:12px;font-weight:700;letter-spacing:.10em;
+  color:var(--ink3);text-transform:uppercase;margin-bottom:14px;}
+.st-bar{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.st-item{text-align:center;}
+.st-num{font-family:'Manrope',inherit;font-size:22px;font-weight:800;color:var(--tp);line-height:1;
+  animation:fadeUp .5s ease-out both;}
+.st-item:nth-child(1) .st-num{animation-delay:.3s;}
+.st-item:nth-child(2) .st-num{animation-delay:.45s;}
+.st-item:nth-child(3) .st-num{animation-delay:.6s;}
+.st-item:nth-child(4) .st-num{animation-delay:.75s;}
+.st-lbl{font-size:11px;font-weight:600;color:var(--ink3);margin-top:5px;
+  text-transform:uppercase;letter-spacing:.05em;}
+@media(min-width:768px){
+  .st{padding:28px 80px;}
+  .st-bar{grid-template-columns:repeat(4,1fr);}
+  .st-num{font-size:36px;}
+}
+
+/* ── SECTIONS ── */
+.sec{padding:44px 20px;}
+.s-lt{background:var(--bg);}
+.s-wm{background:var(--bgw);}
+.s-cr{background:linear-gradient(180deg,#FFFCF5 0%,#fff 100%);}
+.s-dk{background:linear-gradient(135deg,var(--hf) 0%,var(--ht) 100%);color:#fff;}
+@media(min-width:768px){.sec{padding:72px 80px;}}
+
+/* ── COMMON ── */
+h1,h2,h3,h4{font-family:'Manrope',inherit;line-height:1.15;letter-spacing:-.02em;}
+h2{font-size:26px;font-weight:800;margin-bottom:12px;}
+h3{font-size:20px;font-weight:700;}
+p,li{font-size:15px;color:var(--ink2);line-height:1.6;}
+.lead{font-size:15px;color:var(--ink2);}
+.ey{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--tp);background:var(--tps);padding:6px 12px;border-radius:999px;
+  margin-bottom:16px;animation:slideRight .4s ease-out .1s both;}
+.ey.mt{color:var(--navy);background:var(--bg2);}
+.sh{margin-bottom:28px;}
+.sh h2{margin-bottom:10px;}
+.hr{color:#E63946;}
+.hp{color:var(--tp);}
+@media(min-width:768px){
+  h2{font-size:40px;}
+  h3{font-size:24px;}
+  p,.lead{font-size:17px;}
+  .sh{margin-bottom:44px;text-align:center;}
+  .sh .lead{font-size:18px;max-width:760px;margin:0 auto;}
+}
+
+/* ── NO-CODE CALLOUT ── */
+.nc{background:linear-gradient(135deg,#FFF7CC 0%,#FFE5A0 100%);padding:40px 20px;}
+.nc-tag{display:inline-flex;align-items:center;gap:6px;background:var(--navy);color:#fff;
+  padding:6px 12px;border-radius:999px;font-size:11px;font-weight:700;
+  letter-spacing:.08em;text-transform:uppercase;margin-bottom:14px;}
+.nc h2{font-size:24px;color:var(--navy);margin-bottom:12px;line-height:1.25;}
+.nc h2 .stk{color:#E63946;text-decoration:line-through;text-decoration-thickness:3px;}
+.nc-txt{font-size:15px;color:var(--ink);line-height:1.55;font-weight:500;}
+.nc-txt strong{color:#E63946;}
+@media(min-width:768px){.nc{padding:72px 80px;} .nc h2{font-size:38px;} .nc-txt{font-size:17px;max-width:760px;}}
+
+/* ── STACK ── */
+.sk-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:11px;}
+.sk-card{position:relative;background:#fff;border:1px solid var(--ln);border-radius:var(--r3);
+  padding:20px 16px;display:flex;flex-direction:column;gap:12px;overflow:hidden;
+  transition:transform .25s,box-shadow .25s;
+  animation:skReveal .5s ease-out backwards;}
+.sk-card:hover{transform:translateY(-3px);box-shadow:var(--md);border-color:transparent;}
+.sk-card::before{content:"";position:absolute;inset:0;border-radius:var(--r3);padding:1.5px;
+  background:linear-gradient(120deg,var(--tp) 0%,var(--tp2) 25%,var(--ts) 50%,#06A77D 75%,var(--tp) 100%);
+  -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+  -webkit-mask-composite:xor;mask-composite:exclude;background-size:300% 100%;
+  animation:gf 8s linear infinite;opacity:0;transition:opacity .25s;pointer-events:none;}
+.sk-card:hover::before{opacity:1;}
+@keyframes gf{0%{background-position:0% 50%;}100%{background-position:300% 50%;}}
+.sk-num{font-family:'Manrope';font-size:13px;font-weight:800;letter-spacing:.1em;color:var(--tp);
+  display:flex;align-items:center;gap:8px;}
+.sk-num::before{content:"";display:inline-block;width:20px;height:2px;
+  background:var(--tp);border-radius:2px;}
+.sk-title{font-family:'Manrope';font-size:15px;font-weight:800;color:var(--navy);line-height:1.25;}
+.sk-card:nth-child(1){animation-delay:.05s;} .sk-card:nth-child(2){animation-delay:.10s;}
+.sk-card:nth-child(3){animation-delay:.15s;} .sk-card:nth-child(4){animation-delay:.20s;}
+.sk-card:nth-child(5){animation-delay:.25s;} .sk-card:nth-child(6){animation-delay:.30s;}
+.sk-card:nth-child(7){animation-delay:.35s;} .sk-card:nth-child(8){animation-delay:.40s;}
+@media(min-width:768px){.sk-grid{grid-template-columns:repeat(4,1fr);gap:18px;}}
+
+/* ── IS THIS FOR YOU ── */
+.fy{background:linear-gradient(180deg,var(--hl1) 0%,#fff 100%);
+  padding:44px 20px;position:relative;overflow:hidden;}
+.fy::after{content:"";position:absolute;top:-60px;left:-40px;width:200px;height:200px;
+  background:radial-gradient(circle,var(--tps) 0%,transparent 70%);
+  border-radius:50%;opacity:.4;pointer-events:none;}
+.fy>*{position:relative;z-index:1;}
+.fy-ey{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--tp);background:var(--tps);
+  padding:6px 12px;border-radius:999px;margin-bottom:14px;}
+.fy-h{font-family:'Manrope';font-size:22px;font-weight:800;color:var(--hi);
+  margin-bottom:6px;line-height:1.25;}
+.fy-sub{font-size:14px;color:var(--hi2);margin-bottom:22px;}
+.fy-cards{display:flex;flex-direction:column;gap:11px;margin-bottom:22px;}
+.fy-card{background:#fff;border:1px solid var(--ln);border-radius:14px;
+  padding:16px 18px;display:flex;align-items:flex-start;gap:14px;
+  box-shadow:var(--sm);transition:transform .2s,box-shadow .2s,border-color .2s;
+  animation:fadeUp .4s ease-out backwards;}
+.fy-card:hover{transform:translateY(-2px);box-shadow:var(--md);border-color:var(--tp);}
+.fy-card:nth-child(odd){background:linear-gradient(135deg,#fff 0%,var(--hl2) 80%);}
+.fy-card:nth-child(1){animation-delay:.15s;} .fy-card:nth-child(2){animation-delay:.25s;}
+.fy-card:nth-child(3){animation-delay:.35s;} .fy-card:nth-child(4){animation-delay:.45s;}
+.fy-card:nth-child(5){animation-delay:.55s;}
+.fy-num{flex-shrink:0;width:32px;height:32px;border-radius:10px;
+  background:linear-gradient(135deg,var(--tp) 0%,var(--tp2) 100%);
+  color:#fff;display:flex;align-items:center;justify-content:center;
+  font-weight:800;font-size:14px;margin-top:1px;font-family:'Manrope';box-shadow:var(--sm);}
+.fy-txt{font-size:14px;color:var(--ink2);line-height:1.55;}
+.fy-close{background:#fff;border:1px solid var(--ln);border-radius:12px;
+  padding:18px;font-size:14px;color:var(--ink);line-height:1.55;
+  border-left:4px solid var(--hac);box-shadow:var(--sm);font-style:italic;}
+@media(min-width:768px){
+  .fy{padding:80px 80px;} .fy-h{font-size:34px;}
+  .fy-cards{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+}
+
+/* ── FORM ── */
+.fm-sec{background:linear-gradient(135deg,var(--hf) 0%,var(--ht) 100%);
+  color:#fff;padding:44px 20px;position:relative;overflow:hidden;}
+.fm-sec::after{content:"";position:absolute;bottom:-80px;right:-80px;width:220px;height:220px;
+  background:radial-gradient(circle,rgba(255,255,255,.06) 0%,transparent 70%);border-radius:50%;}
+.fm-wrap{position:relative;z-index:1;}
+.fm-pre{font-size:11px;font-weight:800;letter-spacing:.12em;color:var(--ts);
+  text-transform:uppercase;margin-bottom:12px;text-align:center;}
+.fm-h{font-family:'Manrope';font-size:24px;font-weight:800;color:#fff;margin-bottom:10px;text-align:center;}
+.fm-h .ac{color:var(--tp2);}
+.fm-sub{color:#CBD5E1;font-size:14px;margin-bottom:24px;text-align:center;}
+.fm-card{background:#fff;color:var(--ink);border-radius:var(--r3);
+  padding:24px 20px;box-shadow:var(--lg);max-width:560px;margin:0 auto;}
+.fm-t{font-family:'Manrope';font-size:20px;font-weight:800;color:var(--navy);
+  margin-bottom:5px;text-align:center;}
+.fm-st{text-align:center;font-size:13px;color:var(--ink3);margin-bottom:18px;}
+.fm-st strong{color:#059669;}
+.fd{margin-bottom:12px;}
+.fd label{display:block;font-size:11px;font-weight:700;color:var(--ink2);
+  margin-bottom:5px;text-transform:uppercase;letter-spacing:.05em;}
+.fd input,.fd select{width:100%;padding:11px 13px;border:1.5px solid var(--ln);
+  border-radius:var(--r2);font-family:inherit;font-size:14px;color:var(--ink);
+  background:#fff;transition:border-color .2s;-webkit-appearance:none;appearance:none;}
+.fd input:focus,.fd select:focus{outline:none;border-color:var(--tp);
+  box-shadow:0 0 0 3px var(--tps);}
+.ph-row{display:grid;grid-template-columns:76px 1fr;gap:8px;}
+.ph-pre{display:flex;align-items:center;justify-content:center;
+  background:var(--bg);border:1.5px solid var(--ln);border-radius:var(--r2);
+  font-weight:700;font-size:14px;color:var(--ink);}
+.fd-row{display:grid;grid-template-columns:1fr;gap:10px;}
+@media(min-width:480px){.fd-row{grid-template-columns:1fr 1fr;}}
+.ca{display:flex;flex-direction:row;align-items:center;gap:10px;padding:10px;
+  background:var(--bg);border:1.5px dashed var(--ln2);border-radius:var(--r2);margin-bottom:12px;}
+.ca-q{background:#fff;border:1.5px solid var(--ln);padding:6px 10px;border-radius:8px;
+  font-family:'Courier New',monospace;font-weight:700;color:var(--navy);
+  font-size:14px;white-space:nowrap;flex-shrink:0;}
+.ca-i{flex:1;min-width:0;max-width:120px;}
+.ca-i input{padding:8px 12px !important;font-size:13px;width:100%;max-width:120px;}
+.fm-btn{width:100%;padding:15px 24px;background:var(--tp);color:#fff;border:none;
+  border-radius:var(--r2);font-family:inherit;font-weight:800;font-size:15px;
+  cursor:pointer;box-shadow:var(--glow);transition:all .2s;}
+.fm-btn:hover{background:#E5651A;transform:translateY(-1px);}
+.fm-trust{display:flex;justify-content:center;gap:14px;margin-top:12px;
+  font-size:11px;color:var(--ink3);flex-wrap:wrap;}
+.fm-trust span{display:inline-flex;align-items:center;gap:5px;}
+.fm-trust span::before{content:"✓";color:#059669;font-weight:800;}
+@media(min-width:768px){.fm-sec{padding:72px 80px;} .fm-card{padding:36px 32px;}}
+
+/* ── CURRICULUM ── */
+.ct-wrap{position:relative;margin-bottom:18px;}
+.ct{display:flex;gap:8px;overflow-x:auto;padding:4px 24px 12px 0;
+  scrollbar-width:none;-ms-overflow-style:none;
+  -webkit-overflow-scrolling:touch;scroll-snap-type:x proximity;}
+.ct::-webkit-scrollbar{display:none;}
+.ct-tab{flex-shrink:0;background:#fff;border:1.5px solid var(--ln);
+  padding:10px 13px;border-radius:var(--r2);font-size:12px;font-weight:700;
+  color:var(--ink3);cursor:pointer;text-align:center;
+  min-width:152px;scroll-snap-align:start;position:relative;overflow:hidden;
+  transition:all .2s;font-family:inherit;}
+.ct-tab .tn{font-size:10px;font-weight:600;opacity:.8;display:block;margin-bottom:2px;}
+.ct-tab::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;
+  border-radius:var(--r2) var(--r2) 0 0;}
+.ct-tab[data-panel="1"]::before{background:#86EFAC;}
+.ct-tab[data-panel="1"].on{background:#86EFAC;color:#0F172A;border-color:#86EFAC;box-shadow:0 4px 14px #86EFAC44;}
+.ct-tab[data-panel="2"]::before{background:#6EE7B7;}
+.ct-tab[data-panel="2"].on{background:#6EE7B7;color:#0F172A;border-color:#6EE7B7;box-shadow:0 4px 14px #6EE7B744;}
+.ct-tab[data-panel="3"]::before{background:#4ADE80;}
+.ct-tab[data-panel="3"].on{background:#4ADE80;color:#0F172A;border-color:#4ADE80;box-shadow:0 4px 14px #4ADE8044;}
+.ct-tab[data-panel="4"]::before{background:#22C55E;}
+.ct-tab[data-panel="4"].on{background:#22C55E;color:#fff;border-color:#22C55E;box-shadow:0 4px 14px #22C55E44;}
+.ct-tab[data-panel="5"]::before{background:#16A34A;}
+.ct-tab[data-panel="5"].on{background:#16A34A;color:#fff;border-color:#16A34A;box-shadow:0 4px 14px #16A34A44;}
+.ct-tab[data-panel="6"]::before{background:#15803D;}
+.ct-tab[data-panel="6"].on{background:#15803D;color:#fff;border-color:#15803D;box-shadow:0 4px 14px #15803D44;}
+.ct-tab[data-panel="7"]::before{background:#166534;}
+.ct-tab[data-panel="7"].on{background:#166534;color:#fff;border-color:#166534;box-shadow:0 4px 14px #16653444;}
+.ct-tab[data-panel="8"]::before{background:#14532D;}
+.ct-tab[data-panel="8"].on{background:#14532D;color:#fff;border-color:#14532D;box-shadow:0 4px 14px #14532D44;}
+.ct-tab[data-panel="9"]::before{background:#0A3F1E;}
+.ct-tab[data-panel="9"].on{background:#0A3F1E;color:#fff;border-color:#0A3F1E;box-shadow:0 4px 14px #0A3F1E44;}
+.ct-tab[data-panel="10"]::before{background:#F37021;height:4px;}
+.ct-tab[data-panel="10"].on{background:#F37021;color:#fff;border-color:#F37021;box-shadow:0 4px 14px rgba(243,112,33,.35);}
+.ct-fade{position:absolute;right:0;top:0;bottom:14px;width:44px;
+  background:linear-gradient(90deg,rgba(247,249,252,0),var(--bg) 80%);
+  pointer-events:none;display:flex;align-items:center;justify-content:flex-end;
+  padding-right:4px;transition:opacity .3s;}
+.ct-hint{width:26px;height:26px;border-radius:50%;background:#fff;
+  border:1.5px solid var(--ln);display:flex;align-items:center;justify-content:center;
+  font-size:13px;color:var(--tp);font-weight:800;box-shadow:var(--sm);
+  animation:bx 1.5s ease-in-out infinite;}
+.ct-wrap.sd .ct-fade{opacity:0;}
+@media(min-width:768px){.ct-fade{display:none;}}
+
+.cc{background:#fff;border:1px solid var(--ln);border-radius:var(--r4);
+  padding:22px 18px;box-shadow:var(--sm);}
+.cc-n{font-size:20px;font-weight:800;color:var(--navy);margin-bottom:7px;line-height:1.25;}
+.cc-tag{font-size:13px;font-style:italic;margin-bottom:16px;
+  padding-left:11px;border-left:3px solid var(--tp);color:var(--tp);}
+.cc-topics{display:flex;flex-direction:column;gap:9px;margin-bottom:18px;}
+.ct-row{display:grid;grid-template-columns:auto 1fr auto;gap:9px;align-items:center;
+  padding:11px 13px;background:var(--bg);border-radius:var(--r2);font-size:13px;color:var(--ink2);}
+.ct-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
+.ct-txt{flex:1;}
+.ct-badge{font-size:9px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;
+  padding:3px 7px;border-radius:4px;background:var(--tps);color:var(--tp);white-space:nowrap;}
+.ct-badge.th{background:var(--bg2);color:var(--ink3);}
+.ct-badge.tl{background:#D1FAE5;color:#059669;}
+.ct-badge.pr{background:#EFF6FF;color:#2563EB;}
+.cc-proj{background:linear-gradient(135deg,#FFF7CC 0%,#FFEFA0 100%);
+  border-radius:var(--r2);padding:14px;border-left:4px solid #FFD60A;margin-bottom:0;}
+.cc-pl{font-size:10px;font-weight:800;letter-spacing:.1em;color:var(--navy);
+  text-transform:uppercase;margin-bottom:5px;}
+.cc-pt{font-size:13px;color:var(--ink);line-height:1.5;}
+.cc-tools{margin-top:12px;padding-top:12px;border-top:1px dashed var(--ln);
+  font-size:12px;color:var(--ink3);}
+.cc-tools strong{color:var(--navy);}
+.curr-panel{display:block;}
+
+/* ── FOMO STATS ── */
+.fm3{display:flex;flex-direction:column;gap:12px;margin-bottom:22px;}
+.fc{background:#fff;border:2px solid var(--ln);border-radius:var(--r3);
+  padding:20px;text-align:center;position:relative;overflow:hidden;
+  transition:transform .2s;flex:1;}
+.fc:hover{transform:translateY(-2px);border-color:var(--tp);}
+.fc::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;
+  background:linear-gradient(90deg,var(--tp),var(--ts));}
+.fc-n{font-family:'Manrope';font-size:32px;font-weight:800;
+  background:linear-gradient(135deg,var(--tp),var(--tp2));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  line-height:1;margin-bottom:8px;}
+.fc-t{font-size:13px;color:var(--ink2);line-height:1.5;}
+@media(min-width:768px){.fm3{flex-direction:row;gap:20px;}}
+
+/* ── BRIDGE TABLE ── */
+.br-t{width:100%;border-radius:var(--r2);overflow:hidden;
+  border:1px solid var(--ln);box-shadow:var(--sm);}
+.br-h{display:grid;grid-template-columns:1fr 1fr;}
+.br-h div{padding:13px 16px;font-weight:800;font-size:13px;text-align:center;}
+.br-h .bl{background:#F1F5F9;color:var(--ink2);}
+.br-h .br-r{background:var(--tp);color:#fff;}
+.br-row{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--ln);}
+.br-row:nth-child(odd){background:#FAFBFC;}
+.br-c{padding:13px 16px;font-size:13px;line-height:1.5;}
+.br-c.l{color:var(--ink3);border-right:1px solid var(--ln);}
+.br-c.r{color:var(--navy);font-weight:500;}
+
+/* ── TOOLS ── */
+.tg{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;}
+.tp{background:#fff;border:1.5px solid var(--ln);border-radius:var(--r2);
+  padding:13px 11px;text-align:center;font-weight:700;font-size:13px;color:var(--navy);
+  transition:all .2s;}
+.tp:hover{border-color:var(--tp);background:var(--tps);transform:translateY(-1px);}
+.tools-meta{text-align:center;margin-top:18px;font-size:13px;color:var(--ink3);}
+@media(min-width:768px){.tg{grid-template-columns:repeat(4,1fr);gap:14px;} .tp{padding:17px 14px;font-size:14px;}}
+
+/* ── CAREERS ── */
+.cg{display:flex;flex-direction:column;gap:13px;}
+.cv{background:linear-gradient(135deg,#fff 0%,#FAFBFC 100%);
+  border-radius:var(--r4);padding:22px 20px;border:1px solid var(--ln);
+  position:relative;overflow:hidden;transition:all .2s;
+  animation:scaleIn .45s ease-out backwards;}
+.cv:hover{transform:translateY(-2px);box-shadow:var(--md);}
+.cv::before{content:"";position:absolute;top:0;left:0;width:4px;height:100%;background:var(--tp);}
+.cv-tag{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--tp);background:var(--tps);
+  padding:4px 9px;border-radius:4px;margin-bottom:10px;}
+.cv-t{font-size:19px;font-weight:800;color:var(--navy);margin-bottom:8px;line-height:1.25;}
+.cv-d{font-size:14px;color:var(--ink2);line-height:1.55;margin-bottom:12px;}
+.cv-s{display:flex;align-items:center;gap:8px;padding:11px 14px;
+  background:#D1FAE5;border-radius:var(--r2);border-left:3px solid #059669;}
+.cv-sn{font-size:17px;font-weight:800;color:#059669;font-family:'Manrope';}
+.cv-sl{font-size:11px;font-weight:600;color:var(--ink3);text-transform:uppercase;letter-spacing:.05em;}
+@media(min-width:768px){.cg{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}}
+
+/* ── PROOF ── */
+.pr{background:linear-gradient(135deg,var(--hf) 0%,var(--ht) 100%);color:#fff;}
+.pr-t{text-align:center;padding:28px 20px 0;}
+.pr-ey{font-size:11px;font-weight:800;letter-spacing:.12em;color:#FFD60A;text-transform:uppercase;margin-bottom:8px;}
+.pr-t h3{font-family:'Manrope';color:#fff;font-size:21px;font-weight:800;}
+.pr-g{display:grid;grid-template-columns:1fr 1fr;gap:16px;padding:22px 16px 28px;}
+.pr-i{text-align:center;padding:12px 5px;}
+.pr-n{font-family:'Manrope';font-size:30px;font-weight:800;color:#FFD60A;line-height:1;margin-bottom:5px;}
+.pr-l{font-size:12px;color:#94B3D6;font-weight:500;}
+.pr-cta{text-align:center;padding:0 20px 36px;}
+@media(min-width:768px){
+  .pr-g{grid-template-columns:repeat(4,1fr);padding:28px 80px 48px;gap:28px;}
+  .pr-t{padding:56px 80px 0;}
+  .pr-t h3{font-size:30px;}
+  .pr-n{font-size:44px;}
+  .pr-cta{padding:0 80px 60px;}
+}
+
+/* ── FAQ ── */
+.fq-cat{font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--tp);margin:26px 0 12px;}
+.fq-cat:first-child{margin-top:0;}
+.fq-i{background:#fff;border:1px solid var(--ln);border-radius:var(--r2);
+  margin-bottom:9px;overflow:hidden;transition:all .2s;}
+.fq-i.op{border-color:var(--tp);box-shadow:var(--sm);}
+.fq-q{padding:14px 16px;display:flex;align-items:center;justify-content:space-between;
+  gap:10px;cursor:pointer;font-weight:700;font-size:14px;color:var(--navy);line-height:1.45;
+  list-style:none;}
+.fq-ic{width:22px;height:22px;flex-shrink:0;border-radius:50%;
+  background:var(--tps);color:var(--tp);display:inline-flex;align-items:center;
+  justify-content:center;font-size:14px;font-weight:700;transition:transform .2s;}
+.fq-i.op .fq-ic{background:var(--tp);color:#fff;transform:rotate(45deg);}
+.fq-a{padding:0 16px;max-height:0;overflow:hidden;transition:max-height .3s,padding .3s;}
+.fq-i.op .fq-a{padding:0 16px 16px;max-height:600px;}
+.fq-a p{font-size:13px;color:var(--ink2);line-height:1.6;}
+
+/* ── FINAL CTA ── */
+.fcta{background:linear-gradient(135deg,var(--hf) 0%,var(--ht) 100%);
+  color:#fff;text-align:center;padding:56px 20px;position:relative;overflow:hidden;}
+.fcta h2{font-family:'Manrope';color:#fff;margin-bottom:14px;font-size:26px;}
+.fcta h2 .ac{color:var(--ts);}
+.fcta p{color:#CBD5E1;margin-bottom:26px;font-size:15px;}
+@media(min-width:768px){.fcta h2{font-size:38px;} .fcta p{font-size:17px;}}
+
+/* ── FOOTER ── */
+.ft{background:#0A1F44;color:#94B3D6;padding:56px 20px 32px;}
+.ft-grid{display:grid;grid-template-columns:1fr;gap:40px;margin-bottom:40px;}
+.ft-brand img{height:36px;border-radius:4px;margin-bottom:16px;}
+.ft-brand p{font-size:14px;line-height:1.6;color:#94B3D6;max-width:320px;}
+.ft-col h4{font-family:'Manrope';font-size:14px;font-weight:800;color:#fff;
+  margin-bottom:16px;letter-spacing:.03em;}
+.ft-links{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.ft-links a{color:#94B3D6;text-decoration:none;font-size:14px;transition:color .2s;}
+.ft-links a:hover{color:#fff;}
+.ft-social{display:flex;gap:10px;margin-top:16px;}
+.ft-soc{width:38px;height:38px;border-radius:50%;
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);
+  display:inline-flex;align-items:center;justify-content:center;
+  color:#94B3D6;text-decoration:none;font-size:16px;transition:all .2s;}
+.ft-soc:hover{background:rgba(255,255,255,.16);color:#fff;}
+.ft-contact{font-size:14px;color:#94B3D6;line-height:1.8;}
+.ft-contact a{color:#94B3D6;text-decoration:none;}
+.ft-contact a:hover{color:#fff;}
+.ft-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:24px;
+  display:flex;flex-direction:column;gap:12px;align-items:center;text-align:center;}
+.ft-bottom p{font-size:12px;color:#64748B;}
+.ft-legal{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;}
+.ft-legal a{font-size:12px;color:#64748B;text-decoration:none;transition:color .2s;}
+.ft-legal a:hover{color:#94B3D6;}
+.ft-badge{display:inline-flex;align-items:center;gap:8px;
+  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);
+  padding:8px 14px;border-radius:8px;font-size:12px;color:#94B3D6;}
+@media(min-width:768px){
+  .ft{padding:72px 80px 40px;}
+  .ft-grid{grid-template-columns:1.8fr 1fr 1fr 1.2fr;gap:48px;}
+  .ft-bottom{flex-direction:row;justify-content:space-between;text-align:left;}
+}
+
+/* ── FLOAT CTA (mobile) ── */
+.fl{position:fixed;bottom:0;left:0;right:0;z-index:100;
+  background:linear-gradient(180deg,rgba(255,255,255,0) 0%,#fff 30%);
+  padding:11px 14px;display:flex;gap:8px;}
+.fl .btn{flex:1;padding:13px;font-size:14px;}
+@media(min-width:768px){.fl{display:none;}}
+
+/* ── SC CTA ── */
+.sc{margin-top:24px;text-align:center;}
+
+/* Reduced motion */
+@media(prefers-reduced-motion:reduce){
+  .h-seo,.h-pre,.hero h1,.h-tag,.h-arr,.h-pills,.h-ctas,.h-badge,
+  .st-num,.ey,.cv,.fy-card,.sk-card,.btn-p{animation:none;}
+  html{scroll-behavior:auto;}
+}
+
+/* ── NEW FOOTER ── */
+.ft{background:#1A1F2E;padding:56px 40px 0;color:#fff;}
+.ft-contact-row{display:none;flex-direction:column;gap:10px;margin-bottom:28px;}
+.ft-contact-row a{color:#94B3D6;text-decoration:none;font-size:14px;display:flex;align-items:center;gap:8px;transition:color .2s;}
+.ft-contact-row a:hover{color:#fff;}
+.ft-top{display:flex;gap:80px;margin-bottom:40px;align-items:flex-start;}
+.ft-ql{flex:0 0 auto;}
+.ft-ql h4{font-family:'Manrope',inherit;font-size:15px;font-weight:800;color:#fff;margin-bottom:18px;letter-spacing:.03em;}
+.ft-ql ul{list-style:none;}
+.ft-ql li{margin-bottom:12px;}
+.ft-ql a{color:#94B3D6;text-decoration:none;font-size:14px;display:flex;align-items:center;gap:6px;transition:color .2s;cursor:pointer;}
+.ft-ql a:hover{color:#fff;}
+.ft-ql a::before{content:"›";color:#F37021;font-size:18px;font-weight:700;line-height:1;}
+.ft-nl{flex:1;max-width:520px;}
+.ft-nl h4{font-family:'Manrope',inherit;font-size:15px;font-weight:800;color:#fff;margin-bottom:10px;}
+.ft-nl p{font-size:13px;color:#94B3D6;margin-bottom:16px;line-height:1.6;}
+.ft-nl-form{display:flex;flex-direction:column;gap:10px;}
+.ft-nl-input{width:100%;padding:13px 16px;background:#252D42;border:1.5px solid #3A4460;border-radius:8px;color:#fff;font-family:inherit;font-size:14px;outline:none;transition:border-color .2s;}
+.ft-nl-input::placeholder{color:#64748B;}
+.ft-nl-input:focus{border-color:#F37021;}
+.ft-nl-btn{padding:13px 24px;background:linear-gradient(90deg,#F37021,#E6461A);color:#fff;border:none;border-radius:8px;font-family:inherit;font-weight:800;font-size:13px;cursor:pointer;letter-spacing:.08em;transition:opacity .2s;}
+.ft-nl-btn:hover{opacity:.9;}
+.ft-bottom{border-top:1px solid rgba(255,255,255,.08);padding:20px 0;display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center;}
+.ft-bottom p{font-size:12px;color:#64748B;}
+.ft-legal{display:flex;gap:20px;flex-wrap:wrap;justify-content:center;}
+.ft-legal a{font-size:12px;color:#64748B;text-decoration:none;transition:color .2s;}
+.ft-legal a:hover{color:#94B3D6;}
+@media(max-width:767px){
+  .ft{padding:36px 20px 0;}
+  .ft-top{flex-direction:column;gap:28px;}
+  .ft-contact-row{display:flex;}
+  .ft-nl{max-width:100%;}
+  .ft-bottom{gap:16px;}
+  .ft-legal{gap:16px;}
+}
+@media(min-width:768px){
+  .ft-bottom{flex-direction:row;justify-content:space-between;text-align:left;}
+}
+/* ── HIRE MODAL ── */
+.hire-overlay{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:2000;display:none;align-items:center;justify-content:center;padding:20px;}
+.hire-box{background:#fff;border-radius:18px;padding:32px 28px;width:100%;max-width:380px;position:relative;box-shadow:0 24px 64px rgba(0,0,0,.25);}
+.hire-box h3{font-family:'Manrope',inherit;font-size:21px;font-weight:800;color:#0F172A;text-align:center;margin-bottom:20px;text-decoration:underline;text-decoration-color:#F37021;text-underline-offset:5px;}
+.hire-close-btn{position:absolute;top:14px;right:18px;background:none;border:none;font-size:22px;cursor:pointer;color:#64748B;line-height:1;padding:4px 8px;}
+.hire-close-btn:hover{color:#0F172A;}
+.hire-fields{display:flex;flex-direction:column;gap:12px;}
+.hire-field{width:100%;padding:12px 14px;border:1.5px solid #E2E8F0;border-radius:10px;font-family:inherit;font-size:14px;color:#0F172A;outline:none;transition:border-color .2s;-webkit-appearance:none;}
+.hire-field:focus{border-color:#F37021;box-shadow:0 0 0 3px rgba(243,112,33,.12);}
+.hire-field::placeholder{color:#94A3B8;}
+.hire-submit-btn{width:100%;padding:14px;background:linear-gradient(90deg,#F37021,#E6461A);color:#fff;border:none;border-radius:10px;font-family:inherit;font-weight:800;font-size:15px;cursor:pointer;margin-top:4px;letter-spacing:.04em;transition:opacity .2s;}
+.hire-submit-btn:hover{opacity:.9;}
+
+</style>
+</head>
+<body>
+
+<!-- MARQUEE -->
+<div class="mq" aria-hidden="true">
+  <div class="mq-t">
+    <span>🚀 Limited Seats Available · Most Comprehensive Gen AI Course in 2026 · Weekends Only · No Coding Required</span>
+    <span>🚀 Limited Seats Available · Most Comprehensive Gen AI Course in 2026 · Weekends Only · No Coding Required</span>
+  </div>
+</div>
+
+<!-- STICKY NAV -->
+<nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-logo">
+    <a href="https://bluetickacademy.ai" aria-label="Bluetick AI Academy Home">
+      <img src="/img/logo2.png" alt="Bluetick AI Academy" width="160" height="85" loading="eager"/>
+    </a>
+  </div>
+  <div class="nav-acts">
+    <a href="tel:+919606681814" class="nav-ic ph" aria-label="Call us">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span class="lbl">Call Us</span>
+    </a>
+    <a href="https://wa.me/919606681814?text=Hi%2C+I'm+interested+in+the+Gen+AI+Course+for+Non-Engineers" class="nav-ic wa" aria-label="WhatsApp us" target="_blank" rel="noopener">
+      <svg class="ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+      <span class="lbl">WhatsApp</span>
+    </a>
+    <a href="#apply" class="nav-cta">Apply Now</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="h-seo">⚡ Most Comprehensive Gen AI Course in 2026</div>
+  <div class="h-pre">Basics to Advanced</div>
+  <h1>Gen AI Course for<br><span class="ac">Non-Engineers</span></h1>
+  <p class="h-tag">The AI Programme Built for Business Minds — Not Coders.</p>
+  <p class="h-arr">From Any Background <strong>→</strong> <span style="color:var(--hac);font-weight:700;">AI Specialist</span></p>
+  <div class="h-pills">
+    <span class="h-pill">📅 16 Sessions</span>
+    <span class="h-pill">💻 Online or Offline</span>
+  </div>
+  <div class="h-ctas">
+    <a href="#curriculum" class="btn btn-g">View Curriculum</a>
+    <a href="#apply" class="btn btn-p">Apply Now</a>
+  </div>
+  <div class="h-badge">
+    <span class="dot" aria-hidden="true"></span>
+    Next batch starts in 12 days · Limited seats
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="st">
+  <div class="st-title">Trusted Across India &amp; Beyond</div>
+  <div class="st-bar">
+    <div class="st-item"><div class="st-num">9+ Years</div><div class="st-lbl">In Training</div></div>
+    <div class="st-item"><div class="st-num">10,000+</div><div class="st-lbl">Careers Transformed</div></div>
+    <div class="st-item"><div class="st-num">97%</div><div class="st-lbl">Transition Success</div></div>
+    <div class="st-item"><div class="st-num">1:15</div><div class="st-lbl">Mentor Ratio</div></div>
+  </div>
+</div>
+
+<!-- NO-CODE CALLOUT -->
+<section class="nc">
+  <div class="nc-tag">⚡ Read this first</div>
+  <h2>Think You Need to <span class="stk">Learn to Code</span> for an AI Career?</h2>
+  <h2 style="margin-top:8px;">You Don't.</h2>
+  <p class="nc-txt" style="margin-top:16px;">You can become the most sought-after AI professional in your domain — <strong>without writing a single line of code.</strong></p>
+  <p class="nc-txt" style="margin-top:10px;">The future of work doesn't need more engineers. It needs people who know how to use AI to solve real business problems. That's exactly what we teach.</p>
+</section>
+
+<!-- MASTER THE AI STACK -->
+<section class="sec">
+  <div class="sh">
+    <div class="ey">What You'll Learn</div>
+    <h2>Master the Full <span class="hp">AI Stack.</span></h2>
+    <p class="lead">Eight core skill areas that turn you from an AI user into an AI professional. Detailed curriculum below.</p>
+  </div>
+  <div class="sk-grid"><div class="sk-card" style="animation-delay:0.0s"><div class="sk-num">01</div><div class="sk-title">Prompt Engineering</div></div><div class="sk-card" style="animation-delay:0.05s"><div class="sk-num">02</div><div class="sk-title">AI Research & Content</div></div><div class="sk-card" style="animation-delay:0.1s"><div class="sk-num">03</div><div class="sk-title">Workflow Automation</div></div><div class="sk-card" style="animation-delay:0.15000000000000002s"><div class="sk-num">04</div><div class="sk-title">AI Agents, RAG & MCP</div></div><div class="sk-card" style="animation-delay:0.2s"><div class="sk-num">05</div><div class="sk-title">AI-Native Analytics</div></div><div class="sk-card" style="animation-delay:0.25s"><div class="sk-num">06</div><div class="sk-title">Domain AI Playbooks</div></div><div class="sk-card" style="animation-delay:0.30000000000000004s"><div class="sk-num">07</div><div class="sk-title">No-Code AI Prototyping</div></div><div class="sk-card" style="animation-delay:0.35000000000000003s"><div class="sk-num">08</div><div class="sk-title">AI Strategy & Adoption</div></div></div>
+</section>
+
+<!-- IS THIS FOR YOU -->
+<section class="fy">
+  <div class="fy-ey">Is This For You?</div>
+  <h2 class="fy-h">You Don't Have to Be From Engineering to Be Relevant in AI.</h2>
+  <p class="fy-sub">If any of these feel familiar — this programme was made for you.</p>
+  <div class="fy-cards">
+    <div class="fy-card"><span class="fy-num">1</span><span class="fy-txt">You use ChatGPT occasionally but know you're only using 10% of what AI can do. You want the full picture without learning to code.</span></div>
+    <div class="fy-card"><span class="fy-num">2</span><span class="fy-txt">Your organisation is pushing AI and people with no technical background are quietly becoming irrelevant. You want to be on the right side of that shift.</span></div>
+    <div class="fy-card"><span class="fy-num">3</span><span class="fy-txt">You're a fresher (BA, BCom, BBA, MBA) and want to enter the job market with an AI edge most graduates don't have.</span></div>
+    <div class="fy-card"><span class="fy-num">4</span><span class="fy-txt">You believe AI will automate parts of your current role — and you want to be the person who manages those AI systems, not the one they replace.</span></div>
+    <div class="fy-card"><span class="fy-num">5</span><span class="fy-txt">You've watched engineering friends pivot into AI roles and wondered if that door is open for you too. It is — and your domain knowledge is an advantage, not a liability.</span></div>
+  </div>
+  <div class="fy-close">Your background is not a gap. Your domain knowledge — in finance, marketing, HR, or operations — combined with AI fluency is a combination most companies cannot find.</div>
+</section>
+
+<!-- APPLY FORM -->
+<section class="fm-sec" id="apply">
+  <div class="fm-wrap">
+    <div class="fm-pre">⚡ Limited Seats · 30 Per Cohort</div>
+    <h2 class="fm-h">Apply for the <span class="ac">Next Cohort.</span></h2>
+    <p class="fm-sub">Takes less than 60 seconds. We get back to you within a day.</p>
+    <div class="fm-card">
+      <div class="fm-t">Reserve Your Seat</div>
+      <div class="fm-st">Less than 60 seconds · <strong>EMI options available</strong></div>
+      <form onsubmit="handleForm(event)">
+        <div class="fd"><label for="f-name">Full Name</label><input type="text" id="f-name" name="name" placeholder="Your full name" required autocomplete="name"/></div>
+        <div class="fd"><label for="f-phone">Phone Number</label>
+          <div class="ph-row">
+            <div class="ph-pre">+91</div>
+            <input type="tel" id="f-phone" name="phone" placeholder="10-digit mobile" pattern="[0-9]{10}" required autocomplete="tel"/>
+          </div>
+        </div>
+        <div class="fd"><label for="f-email">Email Address</label><input type="email" id="f-email" name="email" placeholder="you@example.com" required autocomplete="email"/></div>
+        <div class="fd-row">
+          <div class="fd"><label for="f-bg">Background</label>
+            <select id="f-bg" name="background" required>
+              <option value="">Select</option>
+              <option>Fresher (Just graduated)</option>
+              <option>HR / People</option>
+              <option>Finance / Accounts</option>
+              <option>Marketing / Sales</option>
+              <option>Operations / PM</option>
+              <option>Business / Data Analytics</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="fd"><label for="f-mode">Preferred Mode</label>
+            <select id="f-mode" name="mode" required>
+              <option value="">Select</option>
+              <option>Online (Live)</option>
+              <option>Offline · Bangalore</option>
+              <option>Either works</option>
+            </select>
+          </div>
+        </div>
+        <div class="fd"><label for="f-batch">Preferred Batch</label>
+          <select id="f-batch" name="batch" required>
+            <option value="">Select your batch</option>
+            <option>Saturday &amp; Sunday — Morning (10 AM)</option>
+            <option>Saturday &amp; Sunday — Afternoon (3 PM)</option>
+            <option>Need help deciding</option>
+          </select>
+        </div>
+        <div class="ca">
+          <div class="ca-q" id="cq" aria-label="Captcha question">8 + 5 = ?</div>
+          <div class="ca-i"><input type="number" id="f-cap" name="captcha" placeholder="Answer" required aria-label="Captcha answer" min="0" max="20"/></div>
+        </div>
+        <button type="submit" class="fm-btn">Apply Now → Reserve My Seat</button>
+      </form>
+      <div class="fm-trust">
+        <span>30 seats / cohort</span><span>EMI available</span><span>No spam, ever</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CURRICULUM + MARKET REALITY -->
+<section class="sec s-lt" id="curriculum">
+  <div class="sh">
+    <div class="ey">Curriculum</div>
+    <h2>10 Modules · 16 Sessions<span class="curr-m-br"> · 2 Months</span></h2>
+    <p class="lead">Every session ends with something you built — not theory, not a quiz.</p>
+  </div>
+  <style>.curr-m-br{display:inline;} @media(max-width:430px){.curr-m-br{display:block;}}</style>
+
+  <div class="ct-wrap" id="ctWrap">
+    <div class="ct" id="ctabs"><button class="ct-tab on" data-panel="1" onclick="selTab(this)"><span class="tn">M1</span>AI for Business</button><button class="ct-tab" data-panel="2" onclick="selTab(this)"><span class="tn">M2</span>AI Research & Content</button><button class="ct-tab" data-panel="3" onclick="selTab(this)"><span class="tn">M3</span>Workflow Automation</button><button class="ct-tab" data-panel="4" onclick="selTab(this)"><span class="tn">M4</span>GenAI Deep Dive</button><button class="ct-tab" data-panel="5" onclick="selTab(this)"><span class="tn">M5</span>AI-Native Analytics & </button><button class="ct-tab" data-panel="6" onclick="selTab(this)"><span class="tn">M6</span>AI for Your Business F</button><button class="ct-tab" data-panel="7" onclick="selTab(this)"><span class="tn">M7</span>AI Product Thinking & </button><button class="ct-tab" data-panel="8" onclick="selTab(this)"><span class="tn">M8</span>AI-Powered Ops</button><button class="ct-tab" data-panel="9" onclick="selTab(this)"><span class="tn">M9</span>AI Strategy & Gov.</button><button class="ct-tab" data-panel="10" onclick="selTab(this)"><span class="tn">M10</span>Career Support</button></div>
+    <div class="ct-fade" id="ctFade"><div class="ct-hint" aria-hidden="true">→</div></div>
+  </div>
+  <div class="cc">
+    <div class="curr-panel" id="panel-1" >
+      <h3 class="cc-n">AI for Business — Foundations & Prompting</h3>
+      <div class="cc-tag">Where everyone starts. Where most courses stop.</div>
+      <div class="cc-topics"><div class="ct-row">
+          <span class="ct-dot" style="background:#22C55E"></span>
+          <span class="ct-txt">What AI actually is — ML, GenAI, Predictive AI, Agents — explained simply</span>
+          <span class="ct-badge th">THEORY</span>
+        </div><div class="ct-row">
+          <span class="ct-dot" style="background:#22C55E"></span>
+          <span class="ct-txt">How AI is used right now in Finance, HR, Marketing, Ops, Strategy</span>
+          <span class="ct-badge ">PRACTICAL</span>
+        </div><div class="ct-row">
+          <span class="ct-dot" style="background:#22C55E"></span>
+          <span class="ct-txt">Where your organisation stands today — the AI maturity model</span>
+          <span class="ct-badge th">THEORY</span>
+        </div><div class="ct-row">
+          <span class="ct-dot" style="background:#22C55E"></span>
+          <span class="ct-txt">How to write great prompts: role, context, format, constraints</span>
+          <span class="ct-badge tl">TOOL</span>
+        </div><div class="ct-row">
+          <span class="ct-dot" style="background:#22C55E"></span>
+          <span class="ct-txt">Chain prompting, few-shot prompting — get better outputs faster</span>
+          <span class="ct-badge ">PRACTICAL</span>
+        </div><div class="ct-row">
+          <span class="ct-dot" style="background:#22C55E"></span>
+          <span class="ct-txt">How to spot an AI hallucination before it costs you anything</span>
+          <span class="ct-badge ">PRACTICAL</span>
+        </div></div>
+      <div class="cc-proj">
+        <div class="cc-pl">🎯 Project You'll Build</div>
+        <div class="cc-pt">AI Maturity Assessment + 15-prompt domain library + evaluation checklist for 3 real prompts</div>
+      </div>
+      <div class="cc-tools"><strong>Tools:</strong> ChatGPT · Claude · Perplexity AI</div>
+    </div>
+    <div class="curr-panel" id="panel-2" style='display:none'>
+      <h3 class="cc-n">AI for Research, Content & Communication</h3>
+      <div class="cc-tag">Stop doing manually what AI can do in seconds.</div>
+      <div class="cc-topics"><div class="ct-row">
+          <span class="ct-dot" style="background:#22C55E"></span>
+          <span class="ct-txt">NotebookLM — Q&A with any PDF or turn it into a podcast</span>
+          <span class="ct-badge tl">TOOL</span>
+        </div><div class="ct-row">
+          <span class="ct-dot" style="background:#22C55E"></span>
+          <span class="ct-txt">Perplexity AI — real market research with citations, no guesswork</span>
+          <span class="ct-badge tl">TOOL</span>
+        </div><div class="ct-row">
+          <span class="ct-dot" style="background:#22C55E"></span>
+          <span class="ct-txt">Rewrite emails, summarise meetings, generate action items</span>
+          <span class="ct-badge ">PRACTICAL</span>
+        </div><div class="ct-row">
+          <span class="ct-dot" style="background:#22C55E"></span>
+          <span class="ct-txt">AI-generated slide decks and executive briefings (Gamma.app)</span>
+          <span class="ct-badge tl">TOOL</span>
+        </div><div class="ct-row">
+          <span class="ct-dot" style="background:#22C55E"></span>
+          <span class="ct-txt">Build your own "AI in My Workday" routine</span>
+          <span class="ct-badge pr">PROJECT</span>
+        </div><div class="ct-row">
+          <span class="ct-dot" style="background:#22C55E"></span>
+          <span class="ct-txt">AI for LinkedIn, internal updates, stakeholder communication</span>
+          <span class="ct-badge ">PRACTICAL</span>
+        </div></div>
+      <div class="cc-proj">
+        <div class="cc-pl">🎯 Project You'll Build</div>
+        <div class="cc-pt">1-page AI Research Brief · Rewrite a real email · Draft your "AI in My Workday" routine</div>
+      </div>
+      <div class="cc-tools"><strong>Tools:</strong> NotebookLM · Perplexity AI · Claude · Gamma.app · Canva AI</div>
+    </div>
+    <div class="curr-panel" id="panel-3" style='display:none'>
+      <h3 class="cc-n">Workflow Automation — Make AI Do the Repetitive Work</h3>
+      <div class="cc-tag">The module that pays for itself in Week 1.</div>
+      <div class="cc-topics"><div class="ct-row">
+          <span class="ct-dot" style="background:#22C55E"></span>
+          <span class="ct-txt">n8n vs Zapier vs Make — which to use and when</span>
+          <span class="ct-badge th">THEORY</span>
+        </div><div class="ct-row">
+          <span class="ct-dot" style="background:#22C55E"></span>
+          <span class="ct-txt">Live build: Google Form → AI step → Gmail auto-reply</span>
+          <span class="ct-badge ">PRACTICAL</span>
+        </div><div class="ct-row">
+          <span class="ct-dot" style="background:#22C55E"></span>
+          <span class="ct-txt">Spot any repetitive task and turn it into automation</span>
+          <span class="ct-badge ">PRACTICAL</span>
+        </div><div class="ct-row">
+          <span class="ct-dot" style="background:#22C55E"></span>
+          <span class="ct-txt">ROI calculation: time saved per week → ₹/month value</span>
+          <span class="ct-badge tl">TOOL</span>
+        </div><div class="ct-row">
+          <span class="ct-dot" style="background:#22C55E"></span>
+          <span class="ct-txt">When automation isn't enough — when to use AI agents</span>
+          <span class="ct-badge th">THEORY</span>
+        </div><div class="ct-row">
+          <span class="ct-dot" style="background:#22C55E"></span>
+          <span class="ct-txt">Each participant builds their own domain automation in class</span>
+          <span class="ct-badge pr">PROJECT</span>
+        </div></div>
+      <div class="cc-proj">
+        <div class="cc-pl">🎯 Project You'll Build</div>
+        <div class="cc-pt">Live end-to-end automation workflow + ROI calculation + class presentation</div>
+      </div>
+      <div class="cc-tools"><strong>Tools:</strong> n8n · Zapier · Make · ChatGPT · Claude</div>
+    </div>
+    <div class="curr-panel" id="panel-4" style='display:none'>
+      <h3 class="cc-n">GenAI Deep Dive — Agents, RAG & MCP</h3>
+      <div class="cc-tag">Where AI stops being a chatbot and starts being a team member.</div>
+      <div class="cc-topics"><div class="ct-row">
+          <span class="ct-dot" style="background:#22C55E"></span>
+          <span class="ct-txt">What AI Agents are — how they plan, decide, take action</span>
+          <span class="ct-badge th">THEORY</span>
+        </div><div class="ct-row">
+          <span class="ct-dot" style="background:#22C55E"></span>
+          <span class="ct-txt">Real examples: weekly report agent, lead qualifier, research agent</span>
+          <span class="ct-badge ">PRACTICAL</span>
+        </div><div class="ct-row">
+          <span class="ct-dot" style="background:#22C55E"></span>
+          <span class="ct-txt">RAG explained simply — accurate answers vs making things up</span>
+          <span class="ct-badge th">THEORY</span>
+        </div><div class="ct-row">
+          <span class="ct-dot" style="background:#22C55E"></span>
+          <span class="ct-txt">How to check if a RAG output is reliable</span>
+          <span class="ct-badge ">PRACTICAL</span>
+        </div><div class="ct-row">
+          <span class="ct-dot" style="background:#22C55E"></span>
+          <span class="ct-txt">Claude MCP demo — connect AI to your files, calendar, web</span>
+          <span class="ct-badge tl">TOOL</span>
+        </div><div class="ct-row">
+          <span class="ct-dot" style="background:#22C55E"></span>
+          <span class="ct-txt">Design your own AI-powered process</span>
+          <span class="ct-badge pr">PROJECT</span>
+        </div></div>
+      <div class="cc-proj">
+        <div class="cc-pl">🎯 Project You'll Build</div>
+        <div class="cc-pt">Agentic workflow diagram + Claude MCP live demo + RAG output evaluation</div>
+      </div>
+      <div class="cc-tools"><strong>Tools:</strong> Claude MCP · Claude · ChatGPT</div>
+    </div>
+    <div class="curr-panel" id="panel-5" style='display:none'>
+      <h3 class="cc-n">AI-Native Analytics & Insight Generation</h3>
+      <div class="cc-tag">Your data, in plain English.</div>
+      <div class="cc-topics"><div class="ct-row">
+          <span class="ct-dot" style="background:#16A34A"></span>
+          <span class="ct-txt">Conversational analytics — ask data questions in English</span>
+          <span class="ct-badge tl">TOOL</span>
+        </div><div class="ct-row">
+          <span class="ct-dot" style="background:#16A34A"></span>
+          <span class="ct-txt">Julius AI — the no-code AI data analyst</span>
+          <span class="ct-badge tl">TOOL</span>
+        </div><div class="ct-row">
+          <span class="ct-dot" style="background:#16A34A"></span>
+          <span class="ct-txt">Power BI Copilot and Looker Studio — your tools, AI-powered</span>
+          <span class="ct-badge tl">TOOL</span>
+        </div><div class="ct-row">
+          <span class="ct-dot" style="background:#16A34A"></span>
+          <span class="ct-txt">AI-generated executive summaries from raw data</span>
+          <span class="ct-badge ">PRACTICAL</span>
+        </div><div class="ct-row">
+          <span class="ct-dot" style="background:#16A34A"></span>
+          <span class="ct-txt">Turn a messy spreadsheet into a boardroom-ready insight brief</span>
+          <span class="ct-badge pr">PROJECT</span>
+        </div><div class="ct-row">
+          <span class="ct-dot" style="background:#16A34A"></span>
+          <span class="ct-txt">Combine data from multiple sources into one story</span>
+          <span class="ct-badge ">PRACTICAL</span>
+        </div></div>
+      <div class="cc-proj">
+        <div class="cc-pl">🎯 Project You'll Build</div>
+        <div class="cc-pt">5 natural-language questions on a real dataset · AI-generated 1-page Insight Brief</div>
+      </div>
+      <div class="cc-tools"><strong>Tools:</strong> Julius AI · Power BI Copilot · Looker Studio · ChatGPT · Claude</div>
+    </div>
+    <div class="curr-panel" id="panel-6" style='display:none'>
+      <h3 class="cc-n">AI for Your Business Function — Domain Playbooks</h3>
+      <div class="cc-tag">Practical AI in Finance, HR, Marketing, Sales & Ops.</div>
+      <div class="cc-topics"><div class="ct-row">
+          <span class="ct-dot" style="background:#15803D"></span>
+          <span class="ct-txt">Finance Playbook: expense audits, invoice extraction, forecast narratives</span>
+          <span class="ct-badge pr">PROJECT</span>
+        </div><div class="ct-row">
+          <span class="ct-dot" style="background:#15803D"></span>
+          <span class="ct-txt">HR Playbook: JD writing, resume screening, interview Qs, policy chatbot</span>
+          <span class="ct-badge pr">PROJECT</span>
+        </div><div class="ct-row">
+          <span class="ct-dot" style="background:#15803D"></span>
+          <span class="ct-txt">Marketing Playbook: ad copy, cold outreach, segmentation, AI visuals</span>
+          <span class="ct-badge pr">PROJECT</span>
+        </div><div class="ct-row">
+          <span class="ct-dot" style="background:#15803D"></span>
+          <span class="ct-txt">Sales Playbook: lead qualification, objection handling, pre-call notes</span>
+          <span class="ct-badge pr">PROJECT</span>
+        </div><div class="ct-row">
+          <span class="ct-dot" style="background:#15803D"></span>
+          <span class="ct-txt">Operations Playbook: SOP writing, demand planning, supplier emails</span>
+          <span class="ct-badge pr">PROJECT</span>
+        </div><div class="ct-row">
+          <span class="ct-dot" style="background:#15803D"></span>
+          <span class="ct-txt">Data privacy: what NOT to send to external AI tools</span>
+          <span class="ct-badge th">THEORY</span>
+        </div></div>
+      <div class="cc-proj">
+        <div class="cc-pl">🎯 Project You'll Build</div>
+        <div class="cc-pt">Choose your domain · Complete 3 real tasks · 5-prompt template set ready to use Monday</div>
+      </div>
+      <div class="cc-tools"><strong>Tools:</strong> Claude · ChatGPT · Canva AI · Notion AI · Claude MCP</div>
+    </div>
+    <div class="curr-panel" id="panel-7" style='display:none'>
+      <h3 class="cc-n">AI Product Thinking & Rapid Prototyping</h3>
+      <div class="cc-tag">Build working AI tools — no code needed.</div>
+      <div class="cc-topics"><div class="ct-row">
+          <span class="ct-dot" style="background:#166534"></span>
+          <span class="ct-txt">AI use case archetypes: Classify, Summarise, Recommend, Predict, Generate</span>
+          <span class="ct-badge th">THEORY</span>
+        </div><div class="ct-row">
+          <span class="ct-dot" style="background:#166534"></span>
+          <span class="ct-txt">Spot a high-value AI opportunity and pitch it to leadership</span>
+          <span class="ct-badge ">PRACTICAL</span>
+        </div><div class="ct-row">
+          <span class="ct-dot" style="background:#166534"></span>
+          <span class="ct-txt">Lovable, v0.dev, Bolt.new — plain English to working app</span>
+          <span class="ct-badge tl">TOOL</span>
+        </div><div class="ct-row">
+          <span class="ct-dot" style="background:#166534"></span>
+          <span class="ct-txt">Live demo: English description → working UI → live link in 20 mins</span>
+          <span class="ct-badge pr">PROJECT</span>
+        </div><div class="ct-row">
+          <span class="ct-dot" style="background:#166534"></span>
+          <span class="ct-txt">Responsible AI basics: trust, override, protect users</span>
+          <span class="ct-badge th">THEORY</span>
+        </div></div>
+      <div class="cc-proj">
+        <div class="cc-pl">🎯 Project You'll Build</div>
+        <div class="cc-pt">Plain English business app → working UI deployed to live link · 3 prioritised AI use cases with ROI</div>
+      </div>
+      <div class="cc-tools"><strong>Tools:</strong> Lovable · v0.dev / Vercel · Miro / FigJam · ChatGPT · Claude</div>
+    </div>
+    <div class="curr-panel" id="panel-8" style='display:none'>
+      <h3 class="cc-n">AI-Powered Operations & Project Management</h3>
+      <div class="cc-tag">The session that changes how you run your week.</div>
+      <div class="cc-topics"><div class="ct-row">
+          <span class="ct-dot" style="background:#14532D"></span>
+          <span class="ct-txt">Meeting intelligence — agendas, transcription, action items</span>
+          <span class="ct-badge ">PRACTICAL</span>
+        </div><div class="ct-row">
+          <span class="ct-dot" style="background:#14532D"></span>
+          <span class="ct-txt">Project planning — goal → phased plan with milestones</span>
+          <span class="ct-badge ">PRACTICAL</span>
+        </div><div class="ct-row">
+          <span class="ct-dot" style="background:#14532D"></span>
+          <span class="ct-txt">Speak a process, get a publish-ready SOP back</span>
+          <span class="ct-badge tl">TOOL</span>
+        </div><div class="ct-row">
+          <span class="ct-dot" style="background:#14532D"></span>
+          <span class="ct-txt">Status reports — messy inputs to crisp 1-page update</span>
+          <span class="ct-badge pr">PROJECT</span>
+        </div><div class="ct-row">
+          <span class="ct-dot" style="background:#14532D"></span>
+          <span class="ct-txt">Claude Cowork demo — autonomous multi-step ops</span>
+          <span class="ct-badge tl">TOOL</span>
+        </div></div>
+      <div class="cc-proj">
+        <div class="cc-pl">🎯 Project You'll Build</div>
+        <div class="cc-pt">Meeting minutes from real transcript · Project plan with risk register · One SOP for a weekly process</div>
+      </div>
+      <div class="cc-tools"><strong>Tools:</strong> Claude · ChatGPT · Notion AI · Claude MCP</div>
+    </div>
+    <div class="curr-panel" id="panel-9" style='display:none'>
+      <h3 class="cc-n">AI Strategy, Governance & Enterprise Adoption</h3>
+      <div class="cc-tag">How to lead the AI shift in your organisation.</div>
+      <div class="cc-topics"><div class="ct-row">
+          <span class="ct-dot" style="background:#0A3F1E"></span>
+          <span class="ct-txt">Present AI opportunities to leadership in business language</span>
+          <span class="ct-badge ">PRACTICAL</span>
+        </div><div class="ct-row">
+          <span class="ct-dot" style="background:#0A3F1E"></span>
+          <span class="ct-txt">Build vs Buy vs Partner — decision framework for any AI investment</span>
+          <span class="ct-badge th">THEORY</span>
+        </div><div class="ct-row">
+          <span class="ct-dot" style="background:#0A3F1E"></span>
+          <span class="ct-txt">Change management — introducing AI to a resistant team</span>
+          <span class="ct-badge ">PRACTICAL</span>
+        </div><div class="ct-row">
+          <span class="ct-dot" style="background:#0A3F1E"></span>
+          <span class="ct-txt">CAPSTONE: Present AI Integration Proposal to live panel</span>
+          <span class="ct-badge pr">PROJECT</span>
+        </div></div>
+      <div class="cc-proj">
+        <div class="cc-pl">🎯 Project You'll Build</div>
+        <div class="cc-pt">CAPSTONE — AI Integration Proposal: Problem → Workflow → Tools → ROI → Governance Plan</div>
+      </div>
+      <div class="cc-tools"><strong>Tools:</strong> Claude · ChatGPT · Miro / FigJam · Notion AI · Power BI / Looker Studio</div>
+    </div>
+    <div class="curr-panel" id="panel-10" style='display:none'>
+      <h3 class="cc-n">Placement & Career Support</h3>
+      <div class="cc-tag">We don't stop when the programme ends.</div>
+      <div class="cc-topics"><div class="ct-row">
+          <span class="ct-dot" style="background:#F37021"></span>
+          <span class="ct-txt">AI-ready resume writing — position yourself as an AI professional</span>
+          <span class="ct-badge tl">TOOL</span>
+        </div><div class="ct-row">
+          <span class="ct-dot" style="background:#F37021"></span>
+          <span class="ct-txt">Package 9 module projects into a shareable portfolio URL</span>
+          <span class="ct-badge pr">PROJECT</span>
+        </div><div class="ct-row">
+          <span class="ct-dot" style="background:#F37021"></span>
+          <span class="ct-txt">LinkedIn optimisation for AI roles — what recruiters search for</span>
+          <span class="ct-badge ">PRACTICAL</span>
+        </div><div class="ct-row">
+          <span class="ct-dot" style="background:#F37021"></span>
+          <span class="ct-txt">Mock interviews — AI Solutions Specialist, BA, Process Manager</span>
+          <span class="ct-badge ">PRACTICAL</span>
+        </div><div class="ct-row">
+          <span class="ct-dot" style="background:#F37021"></span>
+          <span class="ct-txt">Salary benchmarks and how to negotiate your AI role</span>
+          <span class="ct-badge th">THEORY</span>
+        </div><div class="ct-row">
+          <span class="ct-dot" style="background:#F37021"></span>
+          <span class="ct-txt">BlueTick hiring partner network — first access to roles</span>
+          <span class="ct-badge tl">TOOL</span>
+        </div></div>
+      <div class="cc-proj">
+        <div class="cc-pl">🎯 Project You'll Build</div>
+        <div class="cc-pt">AI-ready resume + portfolio URL + 2 mock interviews + 10 target companies with outreach templates</div>
+      </div>
+      <div class="cc-tools"><strong>Tools:</strong> Claude · ChatGPT · Notion AI · LinkedIn · Canva AI</div>
+    </div></div>
+
+  <div class="sc"><a href="#apply" class="btn btn-p" style="padding:13px 28px;">Apply Now</a></div>
+
+  <div class="sh" style="margin-top:40px;">
+    <div class="ey">Market Reality</div>
+    <h2>AI Is No Longer a Tech Skill.<br><span class="hr">It's Every Professional's Skill.</span></h2>
+    <p class="lead">Right now, AI is already inside every major business function. The question is: are you using it?</p>
+  </div>
+  <div class="fm3">
+    <div class="fc"><div class="fc-n">85%</div><div class="fc-t">of companies now check for AI skills when hiring — even for non-technical roles.</div></div>
+    <div class="fc"><div class="fc-n">3.5×</div><div class="fc-t">more likely to get promoted — professionals who show AI skills vs. those who don't.</div></div>
+    <div class="fc"><div class="fc-n">60–150%</div><div class="fc-t">average salary jump for non-engineers who can show real AI work in their domain.</div></div>
+  </div>
+</section>
+
+<!-- CORE VALUE -->
+<section class="sec">
+  <div class="sh">
+    <div class="ey mt">The Core Value</div>
+    <h2>Your Domain Knowledge + AI Fluency =<br><span class="hp">A Profile the Market Can't Find.</span></h2>
+    <p class="lead">The fastest-growing AI roles all require domain understanding that engineers typically lack. This programme gives you the AI layer to sit on top of what you already know.</p>
+  </div>
+  <div class="br-t"><div class="br-h"><div class="bl">What You Already Know</div><div class="br-r">What This Track Adds</div></div><div class="br-row"><div class="br-c l">Finance knowledge — budgets, forecasting, reporting</div><div class="br-c r">AI-powered financial analysis, invoice extraction, and forecast narrative generation</div></div><div class="br-row"><div class="br-c l">HR knowledge — hiring, onboarding, performance</div><div class="br-c r">AI-driven JD writing, resume screening, policy Q&A, and interview question generation</div></div><div class="br-row"><div class="br-c l">Marketing & sales knowledge — funnels, copy, campaigns</div><div class="br-c r">AI content strategy, campaign generation, customer segmentation, and ad copy at scale</div></div><div class="br-row"><div class="br-c l">Operations knowledge — processes, workflows, SOPs</div><div class="br-c r">AI workflow automation, SOP generation, demand planning, and AI project management</div></div><div class="br-row"><div class="br-c l">Stakeholder communication & reporting</div><div class="br-c r">AI-generated executive summaries, insight briefs, and board-ready status updates</div></div></div>
+</section>
+
+<!-- TOOLS -->
+<section class="sec s-lt">
+  <div class="sh">
+    <div class="ey">Tools You'll Master</div>
+    <h2>16 AI Tools. <span class="hr">All No-Code. All in Demand.</span></h2>
+    <p class="lead">The exact tools real business teams are using right now. No Python. No programming.</p>
+  </div>
+  <div class="tg"><div class="tp">Fireflies.ai</div><div class="tp">Claude</div><div class="tp">NotebookLM</div><div class="tp">Perplexity AI</div><div class="tp">Gamma.app</div><div class="tp">Canva AI</div><div class="tp">n8n</div><div class="tp">Zapier</div><div class="tp">Julius AI</div><div class="tp">Power BI Copilot</div><div class="tp">Looker Studio</div><div class="tp">Notion AI</div><div class="tp">Lovable</div><div class="tp">v0.dev</div><div class="tp">Claude MCP</div><div class="tp">Miro / FigJam</div></div>
+  <div class="tools-meta">Bonus: Each tool comes with a domain template ready to use from Day 1.</div>
+</section>
+
+<!-- CAREERS -->
+<section class="sec">
+  <div class="sh">
+    <div class="ey mt">Career Outcomes</div>
+    <h2>Roles That Didn't Exist 5 Years Ago.<br><span class="hr">All Hiring Now.</span></h2>
+    <p class="lead">None require an engineering degree. All require domain knowledge plus AI fluency.</p>
+  </div>
+  <div class="cg"><div class="cv" style="animation-delay:0.0s">
+  <div class="cv-tag">High Demand · Entry to Mid</div>
+  <h3 class="cv-t">AI Solutions Specialist</h3>
+  <p class="cv-d">Identify business problems, design AI solutions, and manage the rollout. The bridge between business and AI engineering.</p>
+  <div class="cv-s"><div class="cv-sn">₹12L–₹25L+</div><div class="cv-sl">Salary Range</div></div>
+</div><div class="cv" style="animation-delay:0.15s">
+  <div class="cv-tag">Fastest Growing BA Track</div>
+  <h3 class="cv-t">AI Business Analyst</h3>
+  <p class="cv-d">Translate business requirements into AI use cases, evaluate AI outputs, and present impact to leadership.</p>
+  <div class="cv-s"><div class="cv-sn">₹15L–₹30L+</div><div class="cv-sl">Salary Range</div></div>
+</div><div class="cv" style="animation-delay:0.3s">
+  <div class="cv-tag">Operations Track</div>
+  <h3 class="cv-t">AI Process / Automation Manager</h3>
+  <p class="cv-d">Design, build, and run AI-powered workflows across Finance, HR, Ops, and Sales. No code required.</p>
+  <div class="cv-s"><div class="cv-sn">₹18L–₹35L+</div><div class="cv-sl">Salary Range</div></div>
+</div></div>
+</section>
+
+<!-- PROOF -->
+<div class="pr">
+  <div class="pr-t">
+    <div class="pr-ey">Why People Trust Bluetick</div>
+    <h3>One Transformation at a Time.</h3>
+  </div>
+  <div class="pr-g">
+    <div class="pr-i"><div class="pr-n">10,000+</div><div class="pr-l">Professionals Upskilled</div></div>
+    <div class="pr-i"><div class="pr-n">1:15</div><div class="pr-l">Mentor Ratio</div></div>
+    <div class="pr-i"><div class="pr-n">97%</div><div class="pr-l">Career Transition</div></div>
+    <div class="pr-i"><div class="pr-n">30+</div><div class="pr-l">Countries</div></div>
+  </div>
+  <div class="pr-cta"><a href="#apply" class="btn btn-p" style="padding:13px 28px;">Apply Now</a></div>
+</div>
+
+<!-- FAQ -->
+<section class="sec s-lt">
+  <div class="sh">
+    <div class="ey mt">FAQ</div>
+    <h2>Questions You're Probably Thinking About.<br><span class="hp">Straight Answers.</span></h2>
+  </div>
+  <div class="fq-cat">Eligibility</div><div class="fq-i op">
+  <div class="fq-q" onclick="this.parentElement.classList.toggle('op')">I have no technical background at all. Can I follow this programme?<span class="fq-ic">+</span></div>
+  <div class="fq-a"><p>Yes — completely. This programme was built specifically for people with no technical background. There is no coding anywhere. Every tool is no-code or low-code. If you can use WhatsApp, Google Docs, and Excel, you have everything you need to start.</p></div>
+</div><div class="fq-i">
+  <div class="fq-q" onclick="this.parentElement.classList.toggle('op')">I'm a fresher — just out of college. Is this the right time?<span class="fq-ic">+</span></div>
+  <div class="fq-a"><p>Absolutely. You will enter the job market with a portfolio of real AI projects and a skill set most graduates — including engineering grads — do not have. That is a significant edge from Day 1 of your career.</p></div>
+</div><div class="fq-i">
+  <div class="fq-q" onclick="this.parentElement.classList.toggle('op')">I am working full-time. Can I manage this alongside my job?<span class="fq-ic">+</span></div>
+  <div class="fq-a"><p>Yes — and this is exactly who this programme is built for. All sessions are on weekends only. No leave required, no weekday commitments. Many participants finish without their employer even knowing they were upskilling.</p></div>
+</div><div class="fq-i">
+  <div class="fq-q" onclick="this.parentElement.classList.toggle('op')">Will employers take me seriously as an AI professional if I am not an engineer?<span class="fq-ic">+</span></div>
+  <div class="fq-a"><p>The employers who are building AI products right now are struggling to find people who understand both the AI tools and the business domain. A non-engineer who can show real AI outputs in Finance, HR, or Marketing is often more valuable than a developer with no domain knowledge.</p></div>
+</div><div class="fq-cat">The Programme</div><div class="fq-i">
+  <div class="fq-q" onclick="this.parentElement.classList.toggle('op')">How is this different from a YouTube tutorial or a free online course?<span class="fq-ic">+</span></div>
+  <div class="fq-a"><p>A YouTube video teaches a concept. This programme builds a skill, a portfolio, and a career. Every module ends with a real deliverable you can show. By the end, you have 9 projects live on the internet — not a certificate PDF.</p></div>
+</div><div class="fq-i">
+  <div class="fq-q" onclick="this.parentElement.classList.toggle('op')">What is the weekly time commitment?<span class="fq-ic">+</span></div>
+  <div class="fq-a"><p>Weekends only — Saturday and Sunday, 4 hours each day. About 8 hours a week. The programme is designed so you finish in 2 months without disrupting your weekdays.</p></div>
+</div><div class="fq-i">
+  <div class="fq-q" onclick="this.parentElement.classList.toggle('op')">Is it online or offline?<span class="fq-ic">+</span></div>
+  <div class="fq-a"><p>Both. You can attend in-person at our Bangalore centre, or join live online from anywhere in the world. All sessions are recorded and available within 24 hours.</p></div>
+</div><div class="fq-i">
+  <div class="fq-q" onclick="this.parentElement.classList.toggle('op')">What if I miss a session?<span class="fq-ic">+</span></div>
+  <div class="fq-a"><p>Sessions are recorded and accessible within 24 hours. You also get written notes, the project brief, and access to mentor office hours so you never fall behind.</p></div>
+</div><div class="fq-i">
+  <div class="fq-q" onclick="this.parentElement.classList.toggle('op')">Do I need to buy any tools or software?<span class="fq-ic">+</span></div>
+  <div class="fq-a"><p>No. Every tool used in this programme has a free tier that is sufficient for all modules. There are no additional costs beyond the programme fee.</p></div>
+</div><div class="fq-cat">Placement & Career</div><div class="fq-i">
+  <div class="fq-q" onclick="this.parentElement.classList.toggle('op')">Will I definitely get a job after this?<span class="fq-ic">+</span></div>
+  <div class="fq-a"><p>No honest institution can promise a specific job — and we won't. What we can promise: every participant who completes gets 100% placement support — resume prep, portfolio review, 1:1 mock interviews, and referrals to companies in our hiring network.</p></div>
+</div><div class="fq-i">
+  <div class="fq-q" onclick="this.parentElement.classList.toggle('op')">What kind of salary jump can I expect?<span class="fq-ic">+</span></div>
+  <div class="fq-a"><p>It depends on your current role, experience, and which direction you move. Participants who successfully transition report between 60% and 150% salary increases. We share actual data with you during the programme.</p></div>
+</div><div class="fq-i">
+  <div class="fq-q" onclick="this.parentElement.classList.toggle('op')">I already have a job. Can I use this for a promotion instead of switching?<span class="fq-ic">+</span></div>
+  <div class="fq-a"><p>Absolutely — and many of our participants do exactly this. The moment your organisation has any AI initiative, you become the most useful person in the room. Several participants have been made internal AI leads within 3 months of completing.</p></div>
+</div><div class="fq-cat">Fees & Payment</div><div class="fq-i">
+  <div class="fq-q" onclick="this.parentElement.classList.toggle('op')">Are EMI options available?<span class="fq-ic">+</span></div>
+  <div class="fq-a"><p>Yes. Flexible EMI plans starting from ₹0 down payment — zero-cost, meaning no added interest. Our team walks you through the options when you apply.</p></div>
+</div><div class="fq-i">
+  <div class="fq-q" onclick="this.parentElement.classList.toggle('op')">Will I receive a certificate after completing the programme?<span class="fq-ic">+</span></div>
+  <div class="fq-a"><p>Yes. You receive a Bluetick AI Academy completion certificate. But more importantly, you receive a portfolio URL — a live link to real AI projects you built, which carries far more weight with employers than any certificate PDF.</p></div>
+</div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="fcta">
+  <h2>The AI economy isn't just for engineers.</h2>
+  <h2 style="font-weight:600;font-size:clamp(18px,3vw,26px);margin-top:6px;"><span class="ac">It belongs to everyone who starts before it becomes a requirement.</span></h2>
+  <p style="margin-top:14px;">That time is now. The next batch fills fast.</p>
+  <a href="#apply" class="btn btn-p" style="display:inline-flex;margin-top:8px;padding:15px 30px;font-size:16px;">Apply Now → Secure Your Seat</a>
+</section>
+
+<!-- FOOTER -->
+<!-- FOOTER -->
+<footer class="ft">
+  <div class="ft-contact-row">
+    <a href="mailto:info@bluetickacademy.ai">✉ info@bluetickacademy.ai</a>
+    <a href="tel:+919606681814">📞 +91-9606 6818 14</a>
+  </div>
+  <div class="ft-top">
+    <div class="ft-ql">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#curriculum">Our Courses</a></li>
+        <li><a href="#" onclick="document.getElementById('hireModal').style.display='flex';return false;">Hire From Us</a></li>
+      </ul>
+    </div>
+    <div class="ft-nl">
+      <h4>Sign up to our newsletter</h4>
+      <p>Stay updated on hiring, placements &amp; course announcements.</p>
+      <div class="ft-nl-form">
+        <input class="ft-nl-input" type="email" placeholder="Email address*"/>
+        <button class="ft-nl-btn">SUBMIT</button>
+      </div>
+    </div>
+  </div>
+  <div class="ft-bottom">
+    <p>&copy; 2026 BlueTick AI Academy. All Rights Reserved.</p>
+    <div class="ft-legal">
+      <a href="https://bluetickacademy.ai/privacypolicy/" target="_blank" rel="noopener">Privacy Policy</a>
+      <a href="https://bluetickacademy.ai/termsandcondition/" target="_blank" rel="noopener">Terms &amp; Conditions</a>
+      <a href="https://bluetickacademy.ai/contact_us/" target="_blank" rel="noopener">Contact Us</a>
+    </div>
+  </div>
+</footer>
+
+<!-- HIRING ENQUIRY MODAL -->
+<div class="hire-overlay" id="hireModal" onclick="if(event.target===this)closeHire()">
+  <div class="hire-box">
+    <button class="hire-close-btn" onclick="closeHire()">&#x2715;</button>
+    <h3>Hiring Enquiry</h3>
+    <div class="hire-fields">
+      <input class="hire-field" type="text" placeholder="Name"/>
+      <input class="hire-field" type="tel" placeholder="Number"/>
+      <input class="hire-field" type="email" placeholder="Email"/>
+      <input class="hire-field" type="text" placeholder="Company Name"/>
+      <button class="hire-submit-btn">SUBMIT</button>
+    </div>
+  </div>
+</div>
+
+<!-- FLOATING CTA (mobile) -->
+<div class="fl" id="fl" aria-hidden="true">
+  <a href="#curriculum" class="btn btn-g" style="font-size:14px;">View Curriculum</a>
+  <a href="#apply" class="btn btn-p" style="font-size:14px;">Apply Now</a>
+</div>
+
+<script>
+/* ── Scroll nav ── */
+(function(){
+  const nav = document.getElementById('nav');
+  let last = 0;
+  window.addEventListener('scroll', function(){
+    const y = window.scrollY;
+    nav.classList.toggle('scrolled', y > 80);
+    last = y;
+  }, {passive:true});
+})();
+
+/* ── Curriculum tabs ── */
+(function(){
+  const wrap = document.getElementById('ctWrap');
+  const tabs = document.getElementById('ctabs');
+  const fade = document.getElementById('ctFade');
+
+  tabs.addEventListener('scroll', function(){
+    wrap.classList.toggle('sd', tabs.scrollLeft > 30);
+  }, {passive:true});
+
+  window.selTab = function(btn){
+    document.querySelectorAll('.ct-tab').forEach(function(t){ t.classList.remove('on'); });
+    btn.classList.add('on');
+    const pid = btn.dataset.panel;
+    document.querySelectorAll('.curr-panel').forEach(function(p){
+      p.style.display = p.id === 'panel-' + pid ? 'block' : 'none';
+    });
+    // scroll tab into view
+    btn.scrollIntoView({behavior:'smooth', block:'nearest', inline:'center'});
+  };
+})();
+
+/* ── Captcha ── */
+(function(){
+  const a = Math.floor(Math.random()*9)+1;
+  const b = Math.floor(Math.random()*9)+1;
+  const q = document.getElementById('cq');
+  if(q){ q.textContent = a + ' + ' + b + ' = ?'; q.dataset.ans = a+b; }
+})();
+
+/* ── Form submit ── */
+window.handleForm = function(e){
+  e.preventDefault();
+  const q = document.getElementById('cq');
+  const ans = document.getElementById('f-cap');
+  if(q && ans && parseInt(ans.value) !== parseInt(q.dataset.ans)){
+    alert('Please check your answer to the captcha.'); return;
+  }
+  // Replace with your actual form endpoint
+  alert('Thank you! Our team will reach out within 24 hours.');
+  e.target.reset();
+};
+
+/* ── FAQ toggle handled by onclick attributes on .fq-q elements ── */
+
+function closeHire(){document.getElementById('hireModal').style.display='none';}
+</script>
+</body>
+</html>

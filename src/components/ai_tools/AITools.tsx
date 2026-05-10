@@ -74,14 +74,34 @@ export default function AIDashboardSection() {
 
   return (
     <section
-      style={{
-        backgroundImage: `url(/img/AI_BG/TechBack.webp)`,
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-      }}
-      className="relative w-full min-h-[40vh] py-7 md:py-10 flex flex-col items-center justify-center overflow-hidden"
+      className="relative w-full min-h-[40vh] py-10 md:py-14 flex flex-col items-center justify-center overflow-hidden bg-[#0b1a3d]"
     >
+      {/* Dark blue background glows */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -top-32 -left-32 w-[500px] h-[500px] rounded-full opacity-15 blur-3xl"
+        style={{
+          background: "radial-gradient(circle, #4ecafc 0%, transparent 70%)",
+        }}
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -bottom-32 -right-32 w-[500px] h-[500px] rounded-full opacity-10 blur-3xl"
+        style={{
+          background: "radial-gradient(circle, #7b61ff 0%, transparent 70%)",
+        }}
+      />
+      {/* Subtle dot grid */}
+      <div
+        aria-hidden
+        className="absolute inset-0 opacity-[0.05]"
+        style={{
+          backgroundImage:
+            "radial-gradient(circle at 1px 1px, rgba(78,202,252,0.4) 1px, transparent 0)",
+          backgroundSize: "32px 32px",
+        }}
+      />
+
       <div className="relative z-10 w-full px-2 text-center">
         {/* HEADING */}
         <motion.div
@@ -90,8 +110,15 @@ export default function AIDashboardSection() {
           className="mb-10 md:mb-14"
         >
           <h2 className="font-extrabold leading-tight">
-            <span className="block text-5xl md:text-7xl text-[#4ecafc] mb-2">50+</span>
-            <span className="block text-xl md:text-3xl font-bold tracking-widest">
+            <span
+              className="block text-5xl md:text-7xl mb-2 bg-gradient-to-b from-[#4ecafc] via-[#7b61ff] to-[#4ecafc] bg-clip-text text-transparent"
+              style={{
+                filter: "drop-shadow(0 0 20px rgba(78,202,252,0.2))",
+              }}
+            >
+              50+
+            </span>
+            <span className="block text-xl md:text-3xl font-bold tracking-widest text-white">
               AI TOOLS &<br /> TECHNOLOGIES
             </span>
           </h2>
@@ -109,8 +136,9 @@ export default function AIDashboardSection() {
             mx-auto
             overflow-x-auto
             rounded-[1rem]
-            bg-[#0c142c]/5 backdrop-blur-xl
-            border border-white/10
+            bg-white/80 backdrop-blur-xl
+            border border-slate-200/50
+            shadow-[0_0_40px_rgba(78,202,252,0.08)]
             hide-scrollbar
           "
         >
@@ -137,18 +165,20 @@ function ToolCard({ tool }: { tool: Tool }) {
         min-w-[90px] w-[90px] h-[90px]
         md:min-w-[150px] md:w-[150px] md:h-[150px]
         rounded-3xl
-        bg-[#0c142c]/20 md:bg-[#0c142c]/10 backdrop-blur-md md:backdrop-blur-3xl
-        border border-[#0c142c]/30 md:border-[#0c142c]/20
+        bg-white/90 backdrop-blur-md
+        border border-slate-200/50
         flex flex-col items-center justify-center
         cursor-pointer
         relative overflow-hidden
         flex-shrink-0
+        shadow-lg hover:shadow-xl
+        transition-all duration-300
       "
       style={{
-        boxShadow: `inset 0 0 15px rgba(255,255,255,0.05), 0 0 25px ${tool.color}33`,
+        boxShadow: `0 4px 20px rgba(0,0,0,0.08), inset 0 0 15px rgba(255,255,255,0.1)`,
       }}
     >
-      <div className="absolute inset-0 bg-gradient-to-tr from-[#0c142c]/10 md:from-[#0c142c]/5 via-transparent to-[#0c142c]/15 md:to-[#0c142c]/10 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-tr from-white/20 via-transparent to-slate-100/20 pointer-events-none" />
       <Image
         src={tool.iconSrc}
         alt={tool.label}
@@ -156,14 +186,14 @@ function ToolCard({ tool }: { tool: Tool }) {
         height={200}
         className="w-[65px] h-[70px] md:w-[70px] md:h-[70px] object-contain"
         style={{
-          filter: `drop-shadow(0 0 10px ${tool.color}aa)`,
+          filter: `drop-shadow(0 0 8px ${tool.color}66)`,
         }}
         onError={(e) => {
           console.log(`Failed to load icon: ${tool.iconSrc}`);
           e.currentTarget.style.display = 'none';
         }}
       />
-      <span className="pb-1 md:pb-2 text-[7px] md:text-[10px] font-semibold uppercase tracking-widest px-1 text-center leading-tight truncate w-full">
+      <span className="pb-1 md:pb-2 text-[7px] md:text-[10px] font-semibold uppercase tracking-widest px-1 text-center leading-tight truncate w-full text-slate-800">
         {tool.label}
       </span>
     </motion.div>
