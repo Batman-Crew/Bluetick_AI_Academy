@@ -53,7 +53,7 @@ export default function Header({ formType, setFormType }) {
                                 } min-[1050px]:flex fixed top-[80px] left-0 z-[5] max-[500px]:p-[15px] max-[1049px]:p-[35px] min-[1050px]:static bg-white min-[1050px]:bg-transparent h-full max-[1049px]:w-full flex flex-col min-[1050px]:flex-row gap-[15px] min-[1050px]:gap-[40px] min-[1050px]:items-center font-[400] text-[18px] text-black min-[1050px]:text-white capitalize max-[1024px]:overflow-y-scroll duration-300`}
                         >
 
-                            <Link href="#courses">
+                            <Link href="#coursess">
                                 <div onClick={() => setMenuOpen(false)} className="py-[10px] min-[1050px]:py-0">
                                     <p>Our Courses</p>
                                 </div>

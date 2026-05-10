@@ -242,7 +242,7 @@ const TrackCard = ({ track }: { track: Track }) => {
 
 const FindYourTrack = () => {
   return (
-    <section className="relative w-full overflow-hidden bg-[#0c142c] py-14 md:py-20">
+    <section id="coursess" className="relative w-full overflow-hidden bg-[#0c142c] py-14 md:py-20">
       {/* Subtle dotted grid background */}
       <div
         aria-hidden
