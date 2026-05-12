@@ -63,7 +63,7 @@ const tracks: Track[] = [
       {
         label: "Are you from Non-Coding background?",
         cta: "Explore this track",
-        href: "#courses",
+        href: "/Gen-AI-for-non-coders",
         isScroll: false,
       },
     ],

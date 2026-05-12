@@ -306,7 +306,7 @@ export default function LearningAdvisorForm({ formType, setFormType }) {
         <button
           type="submit"
           disabled={submitting}
-          className={`overflow-hidden transition-transform duration-300 cursor-pointer text-white bg-gradient-to-b from-[#FD9055] to-[#FE4855] font-medium rounded-lg text-lg px-8 w-full py-1 md:py-2 text-center my-3 uppercase ${submitting ? "opacity-60 cursor-not-allowed" : "hover:scale-105"}`}
+          className={`overflow-hidden transition-transform duration-300 cursor-pointer text-white bg-gradient-to-b from-[#FD9055] to-[#FE4855] font-bold rounded-lg text-lg px-8 w-full py-1 md:py-2 text-center my-3 uppercase ${submitting ? "opacity-60 cursor-not-allowed" : "hover:scale-105"}`}
         >
           {submitting ? "Submitting..." : formType === "franchisee" || formType === "hire" ? "Submit" : "REGISTER"}
         </button>

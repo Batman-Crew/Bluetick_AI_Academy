@@ -128,7 +128,7 @@ function HomeClient() {
 
       <Header setFormType={setFormType} formType={formType} />
 
-      <div className="scroll-smooth">
+      <div className="scroll-smooth overflow-x-hidden">
         {/* Banner section start */}
         <section
           className="md:py-[40px] max-[768px]:pb-[20px] max-[768px]:pt-[130px] max-[768px]:mt-[-80px] relative"
@@ -428,158 +428,7 @@ function HomeClient() {
         {/* Courses hidden temporarily */}
 
         {/* ====== Section 11: Stats + Learners from 30+ Countries (Your Dream Career) ====== */}
-        <section className="relative my-[40px] md:my-[60px] overflow-hidden">
-          {/* Soft layered background */}
-          <div
-            aria-hidden
-            className="absolute inset-0 -z-10"
-            style={{
-              background:
-                "linear-gradient(180deg, #ffffff 0%, #f7faff 40%, #fff5ef 100%)",
-            }}
-          />
-          <div
-            aria-hidden
-            className="pointer-events-none absolute -top-24 right-[-100px] w-[420px] h-[420px] rounded-full opacity-30 blur-3xl -z-10"
-            style={{
-              background: "radial-gradient(circle, #4ecafc 0%, transparent 70%)",
-            }}
-          />
-          <div
-            aria-hidden
-            className="pointer-events-none absolute bottom-0 -left-24 w-[420px] h-[420px] rounded-full opacity-25 blur-3xl -z-10"
-            style={{
-              background: "radial-gradient(circle, #FE7C55 0%, transparent 70%)",
-            }}
-          />
-
-          <div className="container min-[1440px]:max-w-[1440px] mx-auto px-3 md:px-6 py-10 md:py-14">
-
-            {/* TOP: Stats + shoe + CTA */}
-            <div className="grid sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2">
-              {/* Left Content */}
-              <div>
-                <p className="font-bold text-[22px] md:text-[28px]">
-                Your Dream AI Career, Our Mission
-                  <br />
-                  <span className="bg-[#FBE7C1] font-bold">
-                  One transformation at a Time!
-                  </span>
-                </p>
-                <div className="grid grid-cols-3 gap-4 mt-4">
-                  <div className="text-start mt-[40px] px-[2px] md:px-[10px] rounded-2xl bg-white/60 backdrop-blur-sm border border-white/80 shadow-[0_8px_25px_rgba(78,202,252,0.12)] p-3 md:p-4 transition-all duration-300 hover:-translate-y-1">
-                    <div className="flex justify-start">
-                      <Image
-                        src="/img/student.svg"
-                        alt="no icons"
-                        className="w-[88px] h-[79px] md:w-[88px] md:h-[88px] object-contain"
-                        width={88}
-                        height={88}
-                      />
-                    </div>
-                    <p className="text-[21px] md:text-[24px] font-extrabold mt-3 bg-gradient-to-r from-[#FE4855] to-[#FD9055] bg-clip-text text-transparent">
-                      10,000<span>+</span>
-                    </p>
-                    <p className="text-neutral-700 text-[13px] md:text-[14px] font-medium">
-                    Professionals Upskilled
-                    </p>
-                  </div>
-                  <div className="text-start mt-[40px] px-[2px] md:px-[10px] rounded-2xl bg-white/60 backdrop-blur-sm border border-white/80 shadow-[0_8px_25px_rgba(78,202,252,0.12)] p-3 md:p-4 transition-all duration-300 hover:-translate-y-1">
-                    <div className="flex justify-start">
-                      <Image
-                        src="/img/trainer.svg"
-                        alt="no icons"
-                        className="w-[88px] h-[79px] md:w-[88px] md:h-[88px] object-contain"
-                        width={88}
-                        height={88}
-                      />
-                    </div>
-                    <p className="text-[21px] md:text-[24px] font-extrabold mt-3 bg-gradient-to-r from-[#4ecafc] to-[#7b61ff] bg-clip-text text-transparent">
-                      1:15
-                    </p>
-                    <p className="text-neutral-700 text-[13px] md:text-[14px] font-medium">
-                    Mentor-to-Learner Ratio
-                    </p>
-                  </div>
-                  <div className="text-start mt-[40px] px-[2px] md:px-[10px] rounded-2xl bg-white/60 backdrop-blur-sm border border-white/80 shadow-[0_8px_25px_rgba(78,202,252,0.12)] p-3 md:p-4 transition-all duration-300 hover:-translate-y-1">
-                    <div className="flex justify-start">
-                      <Image
-                        src="/img/record.svg"
-                        alt="no icons"
-                        className="w-[88px] h-[79px] md:w-[88px] md:h-[88px] object-contain"
-                        width={88}
-                        height={88}
-                      />
-                    </div>
-                    <p className="text-[21px] md:text-[24px] font-extrabold mt-3 bg-gradient-to-r from-[#10b981] to-[#4ecafc] bg-clip-text text-transparent">
-                      97%
-                    </p>
-                    <p className="text-neutral-700 text-[13px] md:text-[14px] font-medium">
-                    Career Transition Success
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Right Content */}
-              <div className="relative w-full flex items-end max-w-[80%] ml-auto">
-                <Image
-                  src="/img/shoe.svg"
-                  alt="Shoe"
-                  className="absolute right-0 top-0 h-full w-[50%] hidden lg:block"
-                  width={400}
-                  height={400}
-                />
-
-                <div className="max-[550px]:left-[-55px] relative block lg:hidden mt-8">
-                  <Image
-                    src="/img/shoe_1.svg"
-                    alt="Shoe"
-                    className="w-full h-auto mx-auto"
-                    width={400}
-                    height={400}
-                  />
-                </div>
-
-                <div className="absolute bottom-[-15px] max-[400px]:right-0 min-[400px]:left-25 text-black">
-                  <p className=" text-[15px] md:text-[24px] font-bold">
-                    <strong className="text-[#FD8A55] font-bold text-[21px] md:text-[24px]">
-                      Take a Step Now
-                    </strong>
-                    <br />
-                    Let's build it Together!
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Visual divider */}
-            <div className="relative my-12 md:my-16 flex items-center justify-center">
-              <div
-                aria-hidden
-                className="h-px w-full max-w-3xl"
-                style={{
-                  background:
-                    "linear-gradient(90deg, transparent, rgba(78,202,252,0.4), rgba(123,97,255,0.4), rgba(254,124,85,0.4), transparent)",
-                }}
-              />
-              <span className="absolute bg-white/80 backdrop-blur-sm border border-[#4ecafc]/30 rounded-full px-4 py-1 text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] text-slate-600">
-                And our reach is global
-              </span>
-            </div>
-
-            {/* BOTTOM: Map */}
-            <div className="container min-[1440px]:max-w-[1440px] mx-auto px-1 md:px-4">
-              <p className="font-semibold text-[26px] md:text-[36px] text-center text-[#242424] mb-8 md:mb-10">
-                Learners from 30
-                <span className="bg-gradient-to-r from-[#FE7C55] to-[#FE4855] bg-clip-text text-transparent font-extrabold">
-                  + Countries
-                </span>
-              </p>
-              <MapWithPoints />
-            </div>
-          </div>
-        </section>
+        
 
         {/* ====== Section 10: Become a Prod... (AI Engineer in 14 Weekends) ====== */}
         <AIHeroSection />
@@ -591,7 +440,7 @@ function HomeClient() {
         {/* Projects Start */}
         <section
           id="from1"
-          className="relative my-[40px] md:my-[60px] px-4 md:px-6 py-10 md:py-14 overflow-hidden"
+          className="relative px-4 md:px-6 py-10 md:py-14 overflow-hidden"
           style={{
             background:
               "linear-gradient(135deg, #f7faff 0%, #eef4ff 35%, #ecf0ff 65%, #fff5ef 100%)",
@@ -652,7 +501,7 @@ function HomeClient() {
         <AIDashboardSection /> 
 
         {/* FAQs Section */}
-        <section className="my-[40px] md:my-[60px]">
+        <section className="relative overflow-hidden mb-[40px] md:mb-[60px]">
           {/* Soft layered background */}
           <div
             aria-hidden

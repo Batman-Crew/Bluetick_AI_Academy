@@ -4,7 +4,7 @@ import { TrendingUp, BarChart3, Briefcase } from "lucide-react";
 
 const stats = [
   {
-    number: "₹12-45L",
+    number: "₹12 - 45L",
     text: "Salary range for 0-2+ years AI Engineers",
     icon: <TrendingUp className="h-8 w-8 text-[#1e3a8a]" />,
   },
