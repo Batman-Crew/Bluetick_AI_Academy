@@ -47,6 +47,30 @@ export async function POST(req) {
       body.name = body.email.split("@")[0] || "Subscriber";
     }
 
+    if (formType === "nonengineers") {
+      leadSource = "Non-Engineers Landing Page";
+      leadSourceDetail = "Gen AI for Non-Engineers Form";
+      description = `Background: ${body.background || ""}, Learning Mode: ${body.learningMode || ""}, Batch: ${body.batch || ""}`;
+    }
+
+    if (formType === "product-manager") {
+      leadSource = "Product Manager Landing Page";
+      leadSourceDetail = "Gen AI for Product Managers Form";
+      description = `Background: ${body.background || ""}, Learning Mode: ${body.learningMode || ""}, Batch: ${body.batch || ""}`;
+    }
+
+    if (formType === "testing") {
+      leadSource = "Testing Engineers Landing Page";
+      leadSourceDetail = "Gen AI for Testing Engineers Form";
+      description = `Background: ${body.background || ""}, Learning Mode: ${body.learningMode || ""}, Batch: ${body.batch || ""}`;
+    }
+
+    if (formType === "devops") {
+      leadSource = "DevOps Engineers Landing Page";
+      leadSourceDetail = "Gen AI for DevOps Engineers Form";
+      description = `Background: ${body.background || ""}, Learning Mode: ${body.learningMode || ""}, Batch: ${body.batch || ""}`;
+    }
+
     // Build Zoho Bigin Payload
     const payload = {
       data: [

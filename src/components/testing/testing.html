@@ -665,8 +665,26 @@ window.handleForm=function(e){
   e.preventDefault();
   var q=document.getElementById('cq'),ans=document.getElementById('f-cap');
   if(q&&ans&&parseInt(ans.value)!==parseInt(q.dataset.ans)){alert('Please check your captcha answer.');return;}
-  alert('Thank you! Our team will reach out within 24 hours.');
-  e.target.reset();
+  var btn=e.target.querySelector('button[type="submit"]');
+  var originalText=btn.textContent;
+  btn.disabled=true; btn.textContent='Submitting…';
+  var data={
+    formType:'testing',
+    name:document.getElementById('f-name').value,
+    mobile:document.getElementById('f-phone').value,
+    email:document.getElementById('f-email').value,
+    background:document.getElementById('f-bg').value,
+    learningMode:document.getElementById('f-mode').value,
+    batch:document.getElementById('f-batch').value
+  };
+  fetch('/api/zoho-lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)})
+  .then(function(res){return res.json();})
+  .then(function(result){
+    if(result.success){alert('Thank you! Our team will reach out within 24 hours.');e.target.reset();}
+    else{alert('Something went wrong. Please try again.');console.error('Zoho error:',result.error);}
+  })
+  .catch(function(err){alert('Something went wrong. Please try again.');console.error('Submission error:',err);})
+  .finally(function(){btn.disabled=false;btn.textContent=originalText;});
 };
 /* FAQ handled by onclick */
 
